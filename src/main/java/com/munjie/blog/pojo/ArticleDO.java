@@ -25,13 +25,12 @@ public class ArticleDO implements Serializable {
     @Id
     private Integer id;
 
-    //@Field(type = FieldType.Keyword)
     private String articleId;
 
     private Integer userId;
-    //@Field(type = FieldType.Text, analyzer = "ik_max_word",searchAnalyzer = "ik_max_word")
+
     private String articleTitle;
-    //@Field(type = FieldType.Text, analyzer = "ik_max_word",searchAnalyzer = "ik_max_word")
+
     private String articleContent;
 
     private Integer articleViews;

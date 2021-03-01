@@ -30,6 +30,9 @@ public interface ArticleMapper {
     int updateArticleView(@Param("articleId")String articleId);
 
 
+    int updateArticleById(ArticleDO articleDO);
+
+
     List<ArticleDO> listArticleByTag(@Param("tagName")String tagName);
 
 }

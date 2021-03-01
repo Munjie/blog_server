@@ -57,4 +57,24 @@ ORDER BY
 
     </select>
 
+    <update id="updateArticleById" parameterType="com.munjie.blog.pojo.ArticleDO">
+    update article
+    set
+    user_id = #{userId},
+    article_title = #{articleTitle},
+    article_content = #{articleContent},
+    article_views = #{articleViews},
+    article_comment_count = #{articleCommentCount},
+    article_publish_time = #{articlePublishTime},
+    article_update_time = #{articleUpdateTime},
+    article_create_time = #{articleCreateTime},
+    article_like_count = #{articleLikeCount},
+    article_image = #{articleImage},
+    article_intro = #{articleIntro},
+    status = #{status},
+    article_html=#{articleHtml}
+    where id = #{id}
+</update>
+
+
 </mapper>

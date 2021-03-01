@@ -7,10 +7,12 @@ import com.munjie.blog.pojo.ReplyDO;
 import com.munjie.blog.service.CommentService;
 import com.munjie.blog.utils.CommonUtil;
 import com.munjie.blog.utils.DateUtil;
+import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -45,28 +47,16 @@ public class CommentServiceImpl implements CommentService {
 
     @Override
     public JSONObject listCommentsByArticleId(String articleId) {
-
         JSONObject jsonObject = new JSONObject();
         List<CommentDO> result = getAllCommentByBlogId(articleId);
-        /*List<CommentDO> all = commentMapper.listCommentsByArticleId(articleId);
-        Map<Integer, CommentDO> map = new HashMap<>();
-        List<CommentDO> result = new ArrayList<>();
-        for (CommentDO c : all) {
-            if (c.getParentId() == null) {
-                result.add(c);
+    if (CollectionUtils.isNotEmpty(result)) {
+        for (CommentDO co : result) {
+            if (co != null && StringUtils.isNotEmpty(co.getCreateTime())){
+                Date date = DateUtil.paresDate(co.getCreateTime());
+                co.setCreateTime(DateUtil.getPastTime(date));
             }
-            map.put(c.getCommentId(), c);
         }
-        for (CommentDO c : all) {
-            if (c.getParentId() != null) {
-                CommentDO parent = map.get(c.getParentId());
-                if (parent.getChildren() == null) {
-                    parent.setChildren(new ArrayList<>());
-                }
-                parent.getChildren().add(c);
-            }
-        }*/
-
+    }
         jsonObject.put("count",result.size());
         jsonObject.put("list",result);
         return jsonObject;
@@ -80,6 +70,14 @@ public class CommentServiceImpl implements CommentService {
             CommentDO commentDO = commentMapper.selectCommentById(commentId);
             //查找所有父级评论下的子评论
             List<ReplyDO> replyDOS = commentMapper.listCommentsByParentId(commentDO.getCommentId());
+            if (CollectionUtils.isNotEmpty(replyDOS)){
+                for (ReplyDO replyDO : replyDOS) {
+                    if (StringUtils.isNotEmpty(replyDO.getCreateTime())){
+                        Date date = DateUtil.paresDate(replyDO.getCreateTime());
+                        replyDO.setCreateTime(DateUtil.getPastTime(date));
+                    }
+                }
+            }
             commentDO.setChildren(replyDOS);
             result.add(commentDO);
         }

@@ -2,6 +2,7 @@ package com.munjie.blog.utils;
 
 import lombok.SneakyThrows;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -48,7 +49,7 @@ public class DateUtil {
     }
 
     public static String getPastTime(Date date) {
-        long delta = new Date().getTime() - date.getTime();
+        long delta =  System.currentTimeMillis() - date.getTime();
         if (delta < 1L * ONE_MINUTE) {
             long seconds = toSeconds(delta);
             return (seconds <= 0 ? 1 : seconds) + ONE_SECOND_AGO;
@@ -77,8 +78,11 @@ public class DateUtil {
         }
     }
 
-    public static void main(String [] args){
-        String pastTime = getPastTime(new Date());
+    public static void main(String [] args) throws ParseException {
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Date parse = formatter.parse("2021-02-15 15:30:23");
+        String pastTime = getPastTime(parse);
+        System.out.println(pastTime);
 
 
     }

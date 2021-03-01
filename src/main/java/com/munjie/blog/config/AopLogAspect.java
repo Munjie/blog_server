@@ -1,5 +1,6 @@
 package com.munjie.blog.config;
 
+import com.munjie.blog.utils.AddressUtil;
 import com.munjie.blog.utils.AopLogAspectUtil;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.Signature;
@@ -48,7 +49,8 @@ public class AopLogAspect {
         HttpServletRequest request = attributes.getRequest();
         LOGGER.info("请求URL ={}", request.getRequestURL().toString());
         LOGGER.info("请求方式 ={}", request.getMethod());
-        //  LOGGER.info("请求IP ={}", request.getRemoteAddr());
+        LOGGER.info("请求IP ={}", request.getRemoteAddr());
+        LOGGER.info("请求来源地区 ={}", AddressUtil.getAddress(request));
         LOGGER.info("请求类名={}", joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature().getName());
         Signature signature = joinPoint.getSignature();
         LOGGER.info("方法名={}", signature.getName());

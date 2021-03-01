@@ -2,6 +2,9 @@ server:
   port: 8088
   servlet:
     context-path: /blog
+  use-forward-headers: true
+  tomcat:
+    remote-ip-header: X-Real-IP
 
 #加密
 jasypt:

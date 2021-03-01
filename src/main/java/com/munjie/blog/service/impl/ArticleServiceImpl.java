@@ -69,6 +69,7 @@ public class ArticleServiceImpl implements ArticleService {
 
     @Override
     public ArticleDTO listArticles(Integer pageSize, Integer pageNo) {
+        LOGGER.info("");
         PageHelper.startPage(pageNo, pageSize);
         List<ArticleDO> list = articleMapper.listArticle();
         list.forEach(article ->
@@ -113,7 +114,7 @@ public class ArticleServiceImpl implements ArticleService {
     @Override
     public ArticleDTO listSearch(Integer pageSize, Integer pageNo, String content) {
 
-        Sort createTime = Sort.by("articleCreateTime").ascending();
+        Sort createTime = Sort.by("articleCreateTime").descending();
         Pageable pageable = PageRequest.of(pageNo, pageSize,createTime);
         MatchQueryBuilder matchQueryBuilder = QueryBuilders.matchQuery("articleContent", content);
         QueryBuilders.commonTermsQuery("articleContent",content);
@@ -141,27 +142,33 @@ public class ArticleServiceImpl implements ArticleService {
 
     @Override
     public int publishArticle(ArticleDO articleDO) {
-        articleDO.setArticleCreateTime(new Date());
-        articleDO.setArticlePublishTime(new Date());
-        articleDO.setArticleViews(1);
-        // articleDO.setStatus("");
-        String blogId = DateUtil.getBlogId();
-        articleDO.setArticleId(blogId);
-        List<String> tags = articleDO.getTags();
-        List<TagDO> tagDOList= new ArrayList<>();
-        for (String str: tags
-        ) {
-            if (StringUtils.isNotEmpty(str)) {
-                TagDO tagDO = new TagDO();
-                tagDO.setTagName(str);
-                tagDO.setArticleId(blogId);
-                tagDOList.add(tagDO);
+        int i;
+        if (StringUtils.isNotEmpty(articleDO.getArticleId())){
+            articleDO.setArticleCreateTime(new Date());
+            articleDO.setArticleUpdateTime(new Date());
+            articleDO.setArticlePublishTime(new Date());
+            i = articleMapper.updateArticleById(articleDO);
+        }else{
+            articleDO.setArticleCreateTime(new Date());
+            articleDO.setArticlePublishTime(new Date());
+            articleDO.setArticleViews(1);
+            // articleDO.setStatus("");
+            String blogId = DateUtil.getBlogId();
+            articleDO.setArticleId(blogId);
+            List<String> tags = articleDO.getTags();
+            List<TagDO> tagDOList= new ArrayList<>();
+            for (String str: tags) {
+                if (StringUtils.isNotEmpty(str)) {
+                    TagDO tagDO = new TagDO();
+                    tagDO.setTagName(str);
+                    tagDO.setArticleId(blogId);
+                    tagDOList.add(tagDO);
+                }
             }
+            i = tagMapper.insertForeachTags(tagDOList);
+            i = articleMapper.saveArticle(articleDO);
         }
-        int i1 = tagMapper.insertForeachTags(tagDOList);
-        int i = articleMapper.saveArticle(articleDO);
         ArticleDO save = articleRepository.save(articleDO);
-        LOGGER.info("",save);
         return i;
     }
 

@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: dev
+    active: pro
   servlet:
     multipart:
       max-file-size: 1GB
@@ -19,3 +19,11 @@ pagehelper:
   supportMethodsArguments: true
   params: count=countSql
   returnPageInfo: check
+
+mybatis-plus:
+  type-aliases-package: com.munjie.blog.pojo
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    jdbc-type-for-null: null
+  global-config:
+    banner: false

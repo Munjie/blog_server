@@ -29,7 +29,7 @@
 
     <select id="getCommentIdByBlogId" resultType="java.lang.Integer">
 
-          select * from comment  WHERE article_id = #{articleId} and parent_id is null ORDER BY create_time DESC
+          select * from comment  WHERE article_id = #{articleId} and parent_id is null or  parent_id = 0 ORDER BY create_time DESC
 
     </select>
 

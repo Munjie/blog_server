@@ -47,13 +47,13 @@ public class AopLogAspect {
         // 接收到请求，记录请求日志
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = attributes.getRequest();
-        LOGGER.info("请求URL ={}", request.getRequestURL().toString());
-        LOGGER.info("请求方式 ={}", request.getMethod());
-        LOGGER.info("请求IP ={}", request.getRemoteAddr());
-        LOGGER.info("请求来源地区 ={}", AddressUtil.getAddress(request));
-        LOGGER.info("请求类名={}", joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature().getName());
+        LOGGER.info("请求URL =", request.getRequestURL().toString());
+        LOGGER.info("请求方式 =", request.getMethod());
+        LOGGER.info("请求IP =", request.getRemoteAddr());
+        LOGGER.info("请求来源地区 =", AddressUtil.getAddress(request));
+        LOGGER.info("请求类名=", joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature().getName());
         Signature signature = joinPoint.getSignature();
-        LOGGER.info("方法名={}", signature.getName());
+        LOGGER.info("方法名=", signature.getName());
         Object[] args = joinPoint.getArgs();
         String classType = joinPoint.getTarget().getClass().getName();
         Class<?> clazz = Class.forName(classType);
@@ -61,7 +61,7 @@ public class AopLogAspect {
         String methodName = joinPoint.getSignature().getName(); // 获取方法名称
         // 获取参数名称和值
         StringBuffer sb = AopLogAspectUtil.getNameAndArgs(this.getClass(), clazzName, methodName, args);
-        LOGGER.info("请求报文={}", sb);
+        LOGGER.info("请求报文=", sb);
     }
 
 
@@ -70,7 +70,7 @@ public class AopLogAspect {
     public void doAfterReturning(Object ret) throws Throwable {
         // 处理完请求，返回内容
         if (ret != null) {
-            LOGGER.info("返回响应结果={}", ret);
+            LOGGER.info("返回响应结果=", ret);
         }
     }
 }

@@ -190,4 +190,9 @@ public class ArticleServiceImpl implements ArticleService {
         PageInfo<ArticleDO> articleDOPageInfo = new PageInfo<>(list);
         return (new ArticleDTO(articleDOPageInfo.getList(),articleDOPageInfo.getTotal()));
     }
+
+    @Override
+    public int updateStatusById(String articleId, String status) {
+        return articleMapper.updateStatusById(articleId,status);
+    }
 }

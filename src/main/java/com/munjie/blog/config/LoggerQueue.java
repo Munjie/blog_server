@@ -1,24 +1,26 @@
 package com.munjie.blog.config;
+
 import com.munjie.blog.pojo.LoggerMessage;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
-/**
- * @Auther: munjie
- * @Date: 2/25/2021 22:42
- * @Description:
+
+/*
+ * 创建一个阻塞队列，作为日志系统输出的日志的一个临时载体
  */
 public class LoggerQueue {
-    //队列大小
+    // 队列大小
     public static final int QUEUE_MAX_SIZE = 10000;
     private static LoggerQueue alarmMessageQueue = new LoggerQueue();
-    //阻塞队列
+    // 阻塞队列
     private BlockingQueue blockingQueue = new LinkedBlockingQueue<>(QUEUE_MAX_SIZE);
 
-    private LoggerQueue() {
+    private LoggerQueue()
+    {
     }
 
-    public static LoggerQueue getInstance() {
+    public static LoggerQueue getInstance()
+    {
         return alarmMessageQueue;
     }
 
@@ -28,8 +30,9 @@ public class LoggerQueue {
      * @param log
      * @return
      */
-    public boolean push(LoggerMessage log) {
-        return this.blockingQueue.add(log);//队列满了就抛出异常，不阻塞
+    public boolean push(LoggerMessage log)
+    {
+        return this.blockingQueue.add(log);// 队列满了就抛出异常，不阻塞
     }
 
     /**
@@ -37,11 +40,15 @@ public class LoggerQueue {
      *
      * @return
      */
-    public LoggerMessage poll() {
+    public LoggerMessage poll()
+    {
         LoggerMessage result = null;
-        try {
+        try
+        {
             result = (LoggerMessage) this.blockingQueue.take();
-        } catch (InterruptedException e) {
+        }
+        catch (InterruptedException e)
+        {
             e.printStackTrace();
         }
         return result;

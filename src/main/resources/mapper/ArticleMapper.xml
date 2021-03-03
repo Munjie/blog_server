@@ -3,7 +3,7 @@
 <mapper namespace="com.munjie.blog.dao.ArticleMapper">
     <select id="listArticle" resultType="com.munjie.blog.pojo.ArticleDO">
 
-         select * from article  order by article_create_time desc
+         select * from article where status = '1'  order by article_create_time desc
 
   </select>
 
@@ -74,6 +74,13 @@ ORDER BY
     status = #{status},
     article_html=#{articleHtml}
     where id = #{id}
+</update>
+
+    <update id="updateStatusById" parameterType="java.lang.String">
+    update article
+    set
+    status = #{status}
+    where article_id = #{articleId}
 </update>
 
 

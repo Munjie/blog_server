@@ -157,12 +157,12 @@
             <version>1.54</version>
         </dependency>
         <!--热部署插件-->
-        <dependency>
+<!--        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <scope>runtime</scope>
             <optional>true</optional>
-        </dependency>
+        </dependency>-->
         <!--junit测试-->
         <dependency>
             <groupId>junit</groupId>

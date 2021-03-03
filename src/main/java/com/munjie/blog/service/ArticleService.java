@@ -24,4 +24,6 @@ public interface ArticleService {
     ArticleDTO listBack(Integer pageSize, Integer pageNo);
 
     ArticleDTO tagArticles(Integer pageSize, Integer pageNo, String tagName);
+
+    int updateStatusById(String articleId,String status);
 }

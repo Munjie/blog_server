@@ -124,4 +124,11 @@ public class BackController {
         int i = tagService.addTag(tag);
         return Response.ok("success");
     }
+
+    @ApiOperation("是否发布")
+    @PostMapping("/changeSwitch")
+    public Response changeSwitch(String articleId,String status) {
+        int i = articleService.updateStatusById(articleId, status);
+        return Response.ok("success");
+    }
 }

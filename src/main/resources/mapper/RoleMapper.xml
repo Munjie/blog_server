@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.munjie.blog.dao.RoleMapper">
+    <select id="listModuleById"  resultType="com.munjie.blog.pojo.ModuleDTO">
+        SELECT
+            id,url,name,type,imgUrl,sort,moduleId
+        FROM
+            module m
+        WHERE
+                moduleId IN (
+                SELECT
+                    moduleId
+                FROM
+                    privilege
+                WHERE
+                        roleid IN (
+                        SELECT
+                            roleId from user
+                        WHERE
+                            userNo = #{id}
+                    )
+            ) and  (m.parent is null or m.parent = '') order by sort asc;
+    </select>
+
+    <select id="listModuleByParent" resultType="com.munjie.blog.pojo.ModuleDTO">
+        SELECT
+            *
+        FROM
+            module
+        WHERE parent =#{parent}
+        order by sort asc;
+    </select>
+
+
+    <select id="listParent"  resultType="java.lang.String">
+        select distinct  m.parent from module m  where  m.parent  is not null
+    </select>
+
+</mapper>

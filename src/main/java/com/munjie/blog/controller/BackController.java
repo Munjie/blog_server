@@ -15,6 +15,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
 /**
@@ -130,5 +131,11 @@ public class BackController {
     public Response changeSwitch(String articleId,String status) {
         int i = articleService.updateStatusById(articleId, status);
         return Response.ok("success");
+    }
+
+    @ApiOperation("获取菜单")
+    @GetMapping("/getMenus")
+    public Response getMenus(HttpServletRequest request) {
+        return userService.getMenus(request);
     }
 }

@@ -12,9 +12,9 @@ jasypt:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://47.103.65.208:3306/blog?usessl = false&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://121.41.25.51:3306/blog?usessl = false&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=Asia/Shanghai
     username: root
-    password: 3edc$RFV5tgb
+    password: 1qaz@WSX3edc
     type: com.zaxxer.hikari.HikariDataSource
     hikari:
       minimum-idle: 5
@@ -37,7 +37,7 @@ spring:
   redis:
     host: 47.103.65.208
     port: 6379
-    password: 1qaz@WSX
+    password: 1qaz@WSX3edc
 
 #日志配置
 logging:

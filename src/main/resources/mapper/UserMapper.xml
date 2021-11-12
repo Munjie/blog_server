@@ -3,7 +3,7 @@
 <mapper namespace="com.munjie.blog.dao.UserMapper">
     <select id="getUser" resultType="com.munjie.blog.pojo.UserDO">
 
-         select * from user  WHERE user_name = #{userName}
+         select * from user  WHERE userName = #{userName}
 
   </select>
 

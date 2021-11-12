@@ -3,17 +3,24 @@ package com.munjie.blog.service.impl;
 import com.alibaba.fastjson.JSONObject;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
+import com.munjie.blog.dao.RoleMapper;
 import com.munjie.blog.dao.UserMapper;
+import com.munjie.blog.pojo.ModuleDTO;
 import com.munjie.blog.pojo.Response;
 import com.munjie.blog.pojo.UserDO;
 import com.munjie.blog.service.UserService;
 import com.munjie.blog.utils.CommonUtil;
+import org.apache.commons.collections4.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import redis.clients.jedis.Jedis;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  * @Auther: munjie
@@ -37,6 +44,9 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserMapper userMapper;
+
+    @Autowired
+    private RoleMapper roleMapper;
 
     public static String getToken(String userName, String password) {
         Date start = new Date();
@@ -84,5 +94,31 @@ public class UserServiceImpl implements UserService {
         jsonObject.put("expTime",5000);
         return Response.ok(jsonObject);
 
+    }
+
+    @Override
+    public Response getMenus(HttpServletRequest request) {
+        UserDO user = null;
+        String id = "1";
+        HttpSession session = request.getSession();
+        if (session != null) {
+            user = (UserDO) session.getAttribute("user");
+        }
+        List<ModuleDTO> moduleEntities = new ArrayList<>();
+        if (id != null) {
+            moduleEntities = roleMapper.listModuleById(id);
+        }
+        List<String> list = roleMapper.listParent();
+        for (ModuleDTO mo:moduleEntities) {
+            if (mo != null && CollectionUtils.isNotEmpty(list)) {
+                for (String str:list) {
+                    if (str.equals(mo.getName())) {
+                        List<ModuleDTO> moduleEntities1 = roleMapper.listModuleByParent(mo.getName());
+                        mo.setChildren(moduleEntities1);
+                    }
+                }
+            }
+        }
+        return Response.ok(moduleEntities);
     }
 }

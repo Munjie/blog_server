@@ -21,10 +21,12 @@ public class UserDO implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    private String id;
+    private Integer id;
     private String userName;
+    private String userNo;
     private String password;
     private String email;
+    private Integer roleId;
     private Date createTime;
 
 

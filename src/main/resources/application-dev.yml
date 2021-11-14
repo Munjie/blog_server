@@ -45,6 +45,7 @@ logging:
     # root日志以WARN级别输出
     root: info
     # 此包下所有class以DEBUG级别输出
+    com.munjie.blog.dao: debug
 
 #文件目录
 logpath: D:/BLOG_LOG/
@@ -57,3 +58,13 @@ elasticsearch:
   port: 9300
   clustername: elasticsearch
   poolsize: 5
+
+#百度地图算路配置
+baidu:
+  originAdd: 无锡江阴市亚包大道199号
+  key: ihobW2ZNw3i96MOadGGRx2BN7pjxX3bQ
+  geocoding: https://api.map.baidu.com/geocoding/v3/?address=
+  routematrix: https://api.map.baidu.com/routematrix/v2/driving
+  logisticsRoutematrix: https://api.map.baidu.com/logistics_routematrix/v1/truck
+
+

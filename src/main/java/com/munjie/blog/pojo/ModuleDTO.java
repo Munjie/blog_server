@@ -6,6 +6,9 @@ import lombok.ToString;
 import java.io.Serializable;
 import java.util.List;
 
+/**
+ * @author 86158
+ */
 @Data
 @ToString
 public class ModuleDTO implements Serializable {

@@ -1,27 +1,15 @@
 package com.munjie.blog.config;
 
-import com.munjie.blog.exception.ParamsException;
-import com.munjie.blog.service.ParamCheck;
-import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.annotation.Around;
-import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
-import org.aspectj.lang.annotation.Pointcut;
-import org.aspectj.lang.reflect.MethodSignature;
-import org.springframework.stereotype.Component;
-
-import java.lang.reflect.Method;
-
 /**
  * @Auther: munjie
  * @Date: 2/19/2021 21:46
  * @Description:
  */
-@Component
-@Aspect
+/*@Component
+@Aspect*/
 public class ParamsCheckAspect {
 
-    @Pointcut("execution(* com.munjie.blog.controller.*.*(..))")
+/*    @Pointcut("execution(* com.munjie.blog.controller.*.*(..))")
     public void checkParams() {
 
     }
@@ -56,5 +44,5 @@ public class ParamsCheckAspect {
     @Before("checkParams()")
     public void before(){
         System.out.println("执行了before");
-    }
+    }*/
 }

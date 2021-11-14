@@ -4,6 +4,7 @@ import lombok.Data;
 import lombok.ToString;
 
 /**
+ * @author 86158
  * @Auther: munjie
  * @Date: 2/19/2021 22:12
  * @Description:
@@ -13,9 +14,9 @@ import lombok.ToString;
 public class BlogInfoDTO {
 
     private String blogName;
-    private int articleCount;
+    private Integer articleCount;
     private String avatar;
-    private int categoryCount;
+    private Integer categoryCount;
     private String github;
     private String sign;
 }

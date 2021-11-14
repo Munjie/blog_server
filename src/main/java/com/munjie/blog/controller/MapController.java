@@ -1,24 +1,10 @@
 package com.munjie.blog.controller;
 
 
-
-import java.io.UnsupportedEncodingException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import javax.servlet.http.HttpServletRequest;
-
-import com.munjie.blog.utils.HttpClientUtil;
-import lombok.SneakyThrows;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 
-import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
+import java.io.UnsupportedEncodingException;
 
 @Controller
 @RequestMapping("/map")
@@ -33,7 +19,7 @@ public class MapController {
      * @throws UnsupportedEncodingException
      */
     //@RequestMapping(value = "showMap",method = RequestMethod.POST)
-    public static String showMap(@RequestParam("origins") String origins,
+   /* public static String showMap(@RequestParam("origins") String origins,
                                  @RequestParam("destinations") String destinations
                                  ) throws UnsupportedEncodingException {
         String ak = "ihobW2ZNw3i96MOadGGRx2BN7pjxX3bQ";
@@ -78,12 +64,12 @@ public class MapController {
         }
         mapList.add(map);
         return "map";
-    }
+    }*/
 
-    @SneakyThrows
+ /*   @SneakyThrows
     public static void main(String[] args) {
-        String s = MapController.showMap("上海", "北京");
-    }
+        String s = MapController.showMap("无锡江阴市亚包大道199号GLP仓库", "安徽宣城");
+    }*/
 
 
 }

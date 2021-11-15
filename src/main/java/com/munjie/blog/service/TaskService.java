@@ -22,7 +22,7 @@ public interface TaskService {
     PageInfo<TaskInfoDO> page(Map<String, Object> map);
 
 
-    Response deleteTask(Integer id);
+    Response deleteTask(String taskId) throws Exception;
 
     TaskInfoDTO listTask(Integer pageSize, Integer pageNo);
 

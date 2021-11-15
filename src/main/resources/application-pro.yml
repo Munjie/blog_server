@@ -15,9 +15,9 @@ jasypt:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://47.103.65.208:3306/blog?usessl = false&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://121.41.25.51:3306/blog?usessl = false&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=Asia/Shanghai
     username: root
-    password: 3edc$RFV5tgb
+    password: 1qaz@WSX3edc
     type: com.zaxxer.hikari.HikariDataSource
     hikari:
       minimum-idle: 5
@@ -60,3 +60,11 @@ elasticsearch:
   port: 9300
   clustername: elasticsearch
   poolsize: 5
+
+#百度地图算路配置
+baidu:
+  originAdd: 无锡江阴市亚包大道199号
+  key: ihobW2ZNw3i96MOadGGRx2BN7pjxX3bQ
+  geocoding: https://api.map.baidu.com/geocoding/v3/?address=
+  routematrix: https://api.map.baidu.com/routematrix/v2/driving
+  logisticsRoutematrix: https://api.map.baidu.com/logistics_routematrix/v1/truck

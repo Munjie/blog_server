@@ -13,4 +13,6 @@ public interface AddressMapper {
 
     List<AddressDO> listAddress(String taskId);
 
+    int deleteAddressByTaskId(String taskId);
+
 }

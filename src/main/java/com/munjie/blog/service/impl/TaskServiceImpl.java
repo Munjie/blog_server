@@ -14,6 +14,7 @@ import com.munjie.blog.pojo.TaskInfoDO;
 import com.munjie.blog.pojo.TaskInfoDTO;
 import com.munjie.blog.service.TaskService;
 import com.munjie.blog.utils.HttpClientUtil;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
@@ -41,18 +42,15 @@ import java.util.Map;
 @Transactional
 public class TaskServiceImpl implements TaskService {
 
-        protected static final Logger LOGGER = LoggerFactory.getLogger(TaskServiceImpl.class);
+    protected static final Logger LOGGER = LoggerFactory.getLogger(TaskServiceImpl.class);
 
-    @Value("${baidu.originAdd}")
-    private String originAdd;
     @Value("${baidu.key}")
     private String key;
     @Value("${baidu.geocoding}")
     private String geocoding;
     @Value("${baidu.routematrix}")
     private String routematrix;
-    @Value("${baidu.logisticsRoutematrix}")
-    private String logisticsRoutematrix;
+
 
         //2003格式
         private static final String SUFFIX_XLS = ".xls";
@@ -143,11 +141,17 @@ public class TaskServiceImpl implements TaskService {
                                             address.setAddress(add);
                                         }
                                         if (flag) {
-                                            Map<String, String> stringStringMap = calcMap(province + country);
+                                            Map<String, String> stringStringMap = calcMap(info.getOriginAdd(),province + country);
                                             address.setCreateTime(new Date());
                                             address.setTaskId(taskId);
-                                            address.setDistance(stringStringMap.get("mZlc"));
-                                            address.setDuration(stringStringMap.get("mTime"));
+                                            if (stringStringMap != null) {
+                                                if (stringStringMap.get("mZlc") != null) {
+                                                    address.setDistance(stringStringMap.get("mZlc"));
+                                                }
+                                                if (stringStringMap.get("mTime") != null) {
+                                                    address.setDuration(stringStringMap.get("mTime"));
+                                                }
+                                            }
                                             int i1 = addressMapper.addAddress(address);
                                         }
                                     } catch (CustomizeException e) {
@@ -166,7 +170,7 @@ public class TaskServiceImpl implements TaskService {
             return null;
         }
 
-    public  Map<String, String> calcMap(String destinations) {
+    public  Map<String, String> calcMap(String originAdd,String destinations) {
         Map<String, String> params = new HashMap<String, String>(16);
         // 起始点
         String originDouble = HttpClientUtil
@@ -176,35 +180,53 @@ public class TaskServiceImpl implements TaskService {
                 .doGet(geocoding+destinations+"&output=json&ak="+key);
         JSONObject jsonObjectOri = JSONObject.parseObject(originDouble);
         JSONObject jsonObjectDes = JSONObject.parseObject(desDouble);
-        String oriLng = jsonObjectOri.getJSONObject("result").getJSONObject("location").getString("lng");// 经度值ֵ
-        String oriLat = jsonObjectOri.getJSONObject("result").getJSONObject("location").getString("lat");// 纬度值ֵ
+       // String oriLng = jsonObjectOri.getJSONObject("result").getJSONObject("location").getString("lng");// 经度值ֵ
+        // String oriLat = jsonObjectOri.getJSONObject("result").getJSONObject("location").getString("lat");// 纬度值ֵ
+        // String desLng = jsonObjectDes.getJSONObject("result").getJSONObject("location").getString("lng");
+        // String desLat = jsonObjectDes.getJSONObject("result").getJSONObject("location").getString("lat");
+        if (jsonObjectOri != null && jsonObjectDes != null) {
+            JSONObject oriJSONObject = jsonObjectOri.getJSONObject("result");
+            JSONObject desJSONObject = jsonObjectDes.getJSONObject("result");
+            if (oriJSONObject != null && desJSONObject != null) {
+                JSONObject oriJSONObjectJSONObject = oriJSONObject.getJSONObject("location");
+                JSONObject desJSONObjectJSONObject = desJSONObject.getJSONObject("location");
+                if (oriJSONObjectJSONObject != null && desJSONObjectJSONObject != null) {
+                    String oriLng = oriJSONObjectJSONObject.getString("lng");
+                    String oriLat = oriJSONObjectJSONObject.getString("lat");
+                    String desLng = desJSONObjectJSONObject.getString("lng");
+                    String desLat = desJSONObjectJSONObject.getString("lat");
+                    params.put("output", "json");//输出方式为json
+                    params.put("tactics", "11");//10不走高速11常规路线12 距离较短（考虑路况）13距离较短（不考虑路况）
+                    params.put("ak", key);
+                    // origins 起点 destinations 目的地
+                    String originsLaLn = "?origins="+oriLat + "," + oriLng;
+                    String destinationsLaLn = "&destinations="+oriLat + "," + oriLng;
+                    params.put("origins", oriLat + "," + oriLng + "|" + oriLat + "," + oriLng);
+                    params.put("destinations", desLat + "," + desLng + "|" + desLat + "," + desLng);
+                }
 
-        String desLng = jsonObjectDes.getJSONObject("result").getJSONObject("location").getString("lng");
-        String desLat = jsonObjectDes.getJSONObject("result").getJSONObject("location").getString("lat");
-        params.put("output", "json");//输出方式为json
-      //  params.put("tactics", "11");//10不走高速11常规路线12 距离较短（考虑路况）13距离较短（不考虑路况）
-        params.put("ak", key);
-        // origins 起点 destinations 目的地
-        String originsLaLn = "?origins="+oriLat + "," + oriLng;
-        String destinationsLaLn = "&destinations="+oriLat + "," + oriLng;
-        params.put("origins", oriLat + "," + oriLng + "|" + oriLat + "," + oriLng);
-        params.put("destinations", desLat + "," + desLng + "|" + desLat + "," + desLng);
+            }
+        }
+
 
         String result = HttpClientUtil.doGet(routematrix, params);
-
-        JSONArray jsonArray = JSONObject.parseObject(result).getJSONArray("result");
-        //获取json长度
-        int  JsonLen = 0;
-        for (Object object : jsonArray) {
-            JsonLen++;
-        }
-        Map<String,String> map = null;
-        int i;
-        for (i = 0; i < JsonLen; i++) {
-            map = new HashMap<String,String>();
-            map.put("mTime",jsonArray.getJSONObject(i).getJSONObject("duration").getString("text"));
-            map.put("mZlc",jsonArray.getJSONObject(i).getJSONObject("distance").getString("text"));
-            map.put("mZzlc",jsonArray.getJSONObject(i).getJSONObject("distance").getString("value"));
+        Map<String,String> map = null ;
+        if (StringUtils.isNotEmpty(result)) {
+            JSONArray jsonArray = JSONObject.parseObject(result).getJSONArray("result");
+            if (jsonArray != null) {
+                //获取json长度
+                int  JsonLen = 0;
+                for (Object object : jsonArray) {
+                    JsonLen++;
+                }
+                int i;
+                for (i = 0; i < JsonLen; i++) {
+                    map = new HashMap<String,String>();
+                    map.put("mTime",jsonArray.getJSONObject(i).getJSONObject("duration").getString("text"));
+                    map.put("mZlc",jsonArray.getJSONObject(i).getJSONObject("distance").getString("text"));
+                    map.put("mZzlc",jsonArray.getJSONObject(i).getJSONObject("distance").getString("value"));
+                }
+            }
         }
         return map;
     }
@@ -215,8 +237,10 @@ public class TaskServiceImpl implements TaskService {
         }
 
         @Override
-        public Response deleteTask(Integer id) {
-            return null;
+        public Response deleteTask(String taskId) throws Exception {
+            int i = taskInfoMapper.deleteTask(taskId);
+            int i1 = addressMapper.deleteAddressByTaskId(taskId);
+            return Response.ok("删除成功");
         }
 
     @Override

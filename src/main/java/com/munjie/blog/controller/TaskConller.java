@@ -76,4 +76,10 @@ public class TaskConller {
         ExportExcelUtils.export(excelName,addressDOList,fieldMap,response);
     }
 
+    @ApiOperation("删除任务")
+    @GetMapping("/deleteTask/{taskId}")
+    public Response deleteArticle(@PathVariable("taskId")String taskId) throws Exception {
+        return taskService.deleteTask(taskId);
+    }
+
 }

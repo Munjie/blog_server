@@ -10,7 +10,7 @@ public interface TaskInfoMapper {
 
 
 
-    int deleteById(Integer taskId);
+    int  deleteTask(String taskId);
 
     int insert(TaskInfoDO taskInfoDO);
 

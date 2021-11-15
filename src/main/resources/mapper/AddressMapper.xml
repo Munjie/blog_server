@@ -8,7 +8,11 @@
                 #{taskId,jdbcType=VARCHAR},#{duration,jdbcType=VARCHAR})
     </insert>
     <select id="listAddress" resultType="com.munjie.blog.pojo.AddressDO">
-        select * from address where taskId = #{taskId}
+        select * from address where taskId = #{taskId} order by province,distance desc
     </select>
+
+    <delete id="deleteAddressByTaskId" parameterType="java.lang.String">
+        delete from address  where taskId = #{taskId}
+    </delete>
 
 </mapper>

@@ -3,9 +3,9 @@
 <mapper namespace="com.munjie.blog.dao.TaskInfoMapper">
 
     <insert id="insert" parameterType="com.munjie.blog.pojo.TaskInfoDO">
-        insert into task_info (id, taskName, taskId,taskDescription,createTime)
+        insert into task_info (id, taskName, taskId,taskDescription,createTime,originAdd)
         values (#{id,jdbcType=INTEGER}, #{taskName,jdbcType=VARCHAR}, #{taskId,jdbcType=VARCHAR},
-                #{taskDescription,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP})
+                #{taskDescription,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP},#{originAdd,jdbcType=VARCHAR})
     </insert>
 
     <select id="listTask" resultType="com.munjie.blog.pojo.TaskInfoDO">
@@ -13,5 +13,9 @@
         select * from task_info order by createTime desc
 
     </select>
+
+    <delete id="deleteTask" parameterType="java.lang.String">
+        delete from task_info where taskId = #{taskId}
+    </delete>
 
 </mapper>

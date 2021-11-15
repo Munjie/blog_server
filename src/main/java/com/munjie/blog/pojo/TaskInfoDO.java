@@ -13,6 +13,7 @@ public class TaskInfoDO {
     private String taskName;
     private String taskId;
     private String taskDescription;
+    private String originAdd;
     private Date createTime;
 
 }

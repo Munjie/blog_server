@@ -1,0 +1,911 @@
+2021-11-14 08:21:18.926 [http-nio-8088-exec-2] DEBUG c.munjie.blog.dao.ArticleMapper.listArticle_COUNT - ==>  Preparing: SELECT count(0) FROM article WHERE status = '1' 
+2021-11-14 08:21:18.939 [http-nio-8088-exec-2] DEBUG c.munjie.blog.dao.ArticleMapper.listArticle_COUNT - ==> Parameters: 
+2021-11-14 08:21:18.956 [http-nio-8088-exec-2] DEBUG c.munjie.blog.dao.ArticleMapper.listArticle_COUNT - <==      Total: 1
+2021-11-14 08:21:28.874 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,type,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-14 08:21:28.875 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-14 08:21:28.887 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 3
+2021-11-14 08:21:28.888 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-14 08:21:28.888 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-14 08:21:28.898 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 0
+2021-11-14 08:21:32.596 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.UserMapper.getUser - ==>  Preparing: select * from user WHERE userName = ? 
+2021-11-14 08:21:32.597 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.UserMapper.getUser - ==> Parameters: admin(String)
+2021-11-14 08:21:32.608 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.UserMapper.getUser - <==      Total: 1
+2021-11-14 08:21:32.807 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,type,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-14 08:21:32.807 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-14 08:21:32.819 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 3
+2021-11-14 08:21:32.819 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-14 08:21:32.820 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-14 08:21:32.830 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 0
+2021-11-14 08:22:31.370 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==>  Preparing: SELECT count(0) FROM task_info 
+2021-11-14 08:22:31.370 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==> Parameters: 
+2021-11-14 08:22:31.379 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - <==      Total: 1
+2021-11-14 08:22:31.379 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==>  Preparing: select * from task_info order by createTime desc LIMIT ? 
+2021-11-14 08:22:31.380 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==> Parameters: 15(Integer)
+2021-11-14 08:22:31.389 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - <==      Total: 2
+2021-11-14 08:29:50.769 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==>  Preparing: SELECT count(0) FROM task_info 
+2021-11-14 08:29:50.769 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==> Parameters: 
+2021-11-14 08:29:50.780 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - <==      Total: 1
+2021-11-14 08:29:50.780 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==>  Preparing: select * from task_info order by createTime desc LIMIT ? 
+2021-11-14 08:29:50.780 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==> Parameters: 15(Integer)
+2021-11-14 08:29:50.791 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - <==      Total: 2
+2021-11-14 09:10:09.165 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,type,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-14 09:10:09.166 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-14 09:10:09.176 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 3
+2021-11-14 09:10:09.177 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-14 09:10:09.177 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-14 09:10:09.186 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 0
+2021-11-14 09:10:09.197 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==>  Preparing: SELECT count(0) FROM task_info 
+2021-11-14 09:10:09.197 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==> Parameters: 
+2021-11-14 09:10:09.205 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - <==      Total: 1
+2021-11-14 09:10:09.206 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==>  Preparing: select * from task_info order by createTime desc LIMIT ? 
+2021-11-14 09:10:09.206 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==> Parameters: 15(Integer)
+2021-11-14 09:10:09.214 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - <==      Total: 2
+2021-11-14 09:17:03.471 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==>  Preparing: SELECT count(0) FROM task_info 
+2021-11-14 09:17:03.471 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==> Parameters: 
+2021-11-14 09:17:03.484 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - <==      Total: 1
+2021-11-14 09:17:03.485 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==>  Preparing: select * from task_info order by createTime desc LIMIT ? 
+2021-11-14 09:17:03.485 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==> Parameters: 15(Integer)
+2021-11-14 09:17:03.500 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - <==      Total: 2
+2021-11-14 09:19:14.479 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==>  Preparing: SELECT count(0) FROM task_info 
+2021-11-14 09:19:14.479 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==> Parameters: 
+2021-11-14 09:19:14.487 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - <==      Total: 1
+2021-11-14 09:19:14.488 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==>  Preparing: select * from task_info order by createTime desc LIMIT ? 
+2021-11-14 09:19:14.488 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==> Parameters: 15(Integer)
+2021-11-14 09:19:14.497 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - <==      Total: 2
+2021-11-14 09:19:16.339 [http-nio-8088-exec-2] DEBUG c.munjie.blog.dao.ArticleMapper.listArticle_COUNT - ==>  Preparing: SELECT count(0) FROM article WHERE status = '1' 
+2021-11-14 09:19:16.339 [http-nio-8088-exec-2] DEBUG c.munjie.blog.dao.ArticleMapper.listArticle_COUNT - ==> Parameters: 
+2021-11-14 09:19:16.347 [http-nio-8088-exec-2] DEBUG c.munjie.blog.dao.ArticleMapper.listArticle_COUNT - <==      Total: 1
+2021-11-14 09:19:21.340 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,type,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-14 09:19:21.341 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-14 09:19:21.351 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 3
+2021-11-14 09:19:21.352 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-14 09:19:21.352 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-14 09:19:21.362 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 0
+2021-11-14 09:19:23.192 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.UserMapper.getUser - ==>  Preparing: select * from user WHERE userName = ? 
+2021-11-14 09:19:23.193 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.UserMapper.getUser - ==> Parameters: admin(String)
+2021-11-14 09:19:23.203 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.UserMapper.getUser - <==      Total: 1
+2021-11-14 09:19:23.513 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,type,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-14 09:19:23.513 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-14 09:19:23.524 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 3
+2021-11-14 09:19:23.524 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-14 09:19:23.524 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-14 09:19:23.534 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 0
+2021-11-14 09:19:25.739 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==>  Preparing: SELECT count(0) FROM task_info 
+2021-11-14 09:19:25.739 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==> Parameters: 
+2021-11-14 09:19:25.749 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - <==      Total: 1
+2021-11-14 09:19:25.749 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==>  Preparing: select * from task_info order by createTime desc LIMIT ? 
+2021-11-14 09:19:25.749 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==> Parameters: 15(Integer)
+2021-11-14 09:19:25.759 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - <==      Total: 2
+2021-11-14 09:20:32.047 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,type,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-14 09:20:32.048 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-14 09:20:32.059 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 3
+2021-11-14 09:20:32.061 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-14 09:20:32.061 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-14 09:20:32.070 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 0
+2021-11-14 09:20:32.150 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==>  Preparing: SELECT count(0) FROM task_info 
+2021-11-14 09:20:32.150 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==> Parameters: 
+2021-11-14 09:20:32.159 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - <==      Total: 1
+2021-11-14 09:20:32.160 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==>  Preparing: select * from task_info order by createTime desc LIMIT ? 
+2021-11-14 09:20:32.160 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==> Parameters: 15(Integer)
+2021-11-14 09:20:32.169 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - <==      Total: 2
+2021-11-14 09:20:35.042 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? 
+2021-11-14 09:20:35.042 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String)
+2021-11-14 09:20:35.067 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 164
+2021-11-14 09:20:35.325 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? 
+2021-11-14 09:20:35.325 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String)
+2021-11-14 09:20:35.339 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 164
+2021-11-14 09:21:08.265 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==>  Preparing: SELECT count(0) FROM task_info 
+2021-11-14 09:21:08.265 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==> Parameters: 
+2021-11-14 09:21:08.272 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - <==      Total: 1
+2021-11-14 09:21:08.273 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==>  Preparing: select * from task_info order by createTime desc LIMIT ? 
+2021-11-14 09:21:08.273 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==> Parameters: 15(Integer)
+2021-11-14 09:21:08.282 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - <==      Total: 2
+2021-11-14 09:38:32.322 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,type,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-14 09:38:32.323 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-14 09:38:32.334 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 3
+2021-11-14 09:38:32.334 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-14 09:38:32.334 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-14 09:38:32.345 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 0
+2021-11-14 09:38:32.355 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==>  Preparing: SELECT count(0) FROM task_info 
+2021-11-14 09:38:32.355 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==> Parameters: 
+2021-11-14 09:38:32.367 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - <==      Total: 1
+2021-11-14 09:38:32.367 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==>  Preparing: select * from task_info order by createTime desc LIMIT ? 
+2021-11-14 09:38:32.367 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==> Parameters: 15(Integer)
+2021-11-14 09:38:32.379 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - <==      Total: 2
+2021-11-14 09:38:48.431 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,type,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-14 09:38:48.431 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-14 09:38:48.441 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 3
+2021-11-14 09:38:48.441 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-14 09:38:48.442 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-14 09:38:48.450 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 0
+2021-11-14 09:38:54.679 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==>  Preparing: SELECT count(0) FROM task_info 
+2021-11-14 09:38:54.679 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==> Parameters: 
+2021-11-14 09:38:54.687 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - <==      Total: 1
+2021-11-14 09:38:54.688 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==>  Preparing: select * from task_info order by createTime desc LIMIT ? 
+2021-11-14 09:38:54.688 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==> Parameters: 15(Integer)
+2021-11-14 09:38:54.698 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - <==      Total: 2
+2021-11-14 09:39:23.453 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,type,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-14 09:39:23.453 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-14 09:39:23.462 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 3
+2021-11-14 09:39:23.462 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-14 09:39:23.462 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-14 09:39:23.470 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 0
+2021-11-14 09:41:25.768 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,type,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-14 09:41:25.769 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-14 09:41:25.778 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 3
+2021-11-14 09:41:25.779 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-14 09:41:25.779 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-14 09:41:25.788 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 0
+2021-11-14 09:52:02.311 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,type,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-14 09:52:02.311 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-14 09:52:02.320 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 3
+2021-11-14 09:52:02.320 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-14 09:52:02.321 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-14 09:52:02.329 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 0
+2021-11-14 09:52:02.362 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,type,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-14 09:52:02.363 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-14 09:52:02.372 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 3
+2021-11-14 09:52:02.372 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-14 09:52:02.372 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-14 09:52:02.381 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 0
+2021-11-14 09:52:02.394 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==>  Preparing: SELECT count(0) FROM task_info 
+2021-11-14 09:52:02.394 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==> Parameters: 
+2021-11-14 09:52:02.403 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - <==      Total: 1
+2021-11-14 09:52:02.404 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==>  Preparing: select * from task_info order by createTime desc LIMIT ? 
+2021-11-14 09:52:02.404 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==> Parameters: 15(Integer)
+2021-11-14 09:52:02.412 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - <==      Total: 2
+2021-11-14 09:55:08.151 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,type,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-14 09:55:08.164 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-14 09:55:08.186 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 3
+2021-11-14 09:55:08.224 [http-nio-8088-exec-2] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 09:55:08.224 [http-nio-8088-exec-2] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 09:55:08.235 [http-nio-8088-exec-2] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 09:55:08.237 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? LIMIT ? 
+2021-11-14 09:55:08.237 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer)
+2021-11-14 09:55:08.239 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-14 09:55:08.240 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-14 09:55:08.249 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 0
+2021-11-14 09:55:08.251 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 09:59:44.225 [http-nio-8088-exec-5] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 09:59:44.225 [http-nio-8088-exec-5] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 09:59:44.236 [http-nio-8088-exec-5] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 09:59:44.237 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? LIMIT ? 
+2021-11-14 09:59:44.237 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer)
+2021-11-14 09:59:44.251 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:00:49.055 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,type,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-14 10:00:49.056 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-14 10:00:49.065 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 3
+2021-11-14 10:00:49.066 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-14 10:00:49.066 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-14 10:00:49.074 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 0
+2021-11-14 10:00:49.133 [http-nio-8088-exec-8] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:00:49.134 [http-nio-8088-exec-8] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:00:49.142 [http-nio-8088-exec-8] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:00:49.143 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? LIMIT ? 
+2021-11-14 10:00:49.143 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer)
+2021-11-14 10:00:49.153 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:00:57.185 [http-nio-8088-exec-9] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:00:57.185 [http-nio-8088-exec-9] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:00:57.194 [http-nio-8088-exec-9] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:00:57.194 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? LIMIT ? 
+2021-11-14 10:00:57.195 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer)
+2021-11-14 10:00:57.204 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:01:04.523 [http-nio-8088-exec-10] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:01:04.524 [http-nio-8088-exec-10] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:01:04.538 [http-nio-8088-exec-10] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:01:04.539 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? LIMIT ?, ? 
+2021-11-14 10:01:04.539 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer), 15(Integer)
+2021-11-14 10:01:04.554 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:01:06.847 [http-nio-8088-exec-1] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:01:06.848 [http-nio-8088-exec-1] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:01:06.857 [http-nio-8088-exec-1] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:01:06.858 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? LIMIT ?, ? 
+2021-11-14 10:01:06.858 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 30(Integer), 15(Integer)
+2021-11-14 10:01:06.869 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:01:08.198 [http-nio-8088-exec-2] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:01:08.198 [http-nio-8088-exec-2] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:01:08.208 [http-nio-8088-exec-2] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:01:08.209 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? LIMIT ?, ? 
+2021-11-14 10:01:08.209 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 45(Integer), 15(Integer)
+2021-11-14 10:01:08.220 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:01:09.014 [http-nio-8088-exec-3] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:01:09.014 [http-nio-8088-exec-3] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:01:09.024 [http-nio-8088-exec-3] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:01:09.025 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? LIMIT ?, ? 
+2021-11-14 10:01:09.025 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 75(Integer), 15(Integer)
+2021-11-14 10:01:09.036 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:01:09.949 [http-nio-8088-exec-4] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:01:09.949 [http-nio-8088-exec-4] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:01:09.959 [http-nio-8088-exec-4] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:01:09.959 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? LIMIT ?, ? 
+2021-11-14 10:01:09.960 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 135(Integer), 15(Integer)
+2021-11-14 10:01:09.970 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:01:17.562 [http-nio-8088-exec-5] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:01:17.562 [http-nio-8088-exec-5] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:01:17.572 [http-nio-8088-exec-5] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:01:17.572 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? LIMIT ? 
+2021-11-14 10:01:17.572 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer)
+2021-11-14 10:01:17.582 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:01:42.016 [http-nio-8088-exec-6] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:01:42.016 [http-nio-8088-exec-6] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:01:42.025 [http-nio-8088-exec-6] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:01:42.026 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? LIMIT ? 
+2021-11-14 10:01:42.027 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer)
+2021-11-14 10:01:42.036 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:01:53.296 [http-nio-8088-exec-7] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:01:53.297 [http-nio-8088-exec-7] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:01:53.306 [http-nio-8088-exec-7] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:01:53.306 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? LIMIT ?, ? 
+2021-11-14 10:01:53.306 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 45(Integer), 15(Integer)
+2021-11-14 10:01:53.316 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:02:06.443 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,type,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-14 10:02:06.443 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-14 10:02:06.453 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 3
+2021-11-14 10:02:06.453 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-14 10:02:06.454 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-14 10:02:06.462 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 0
+2021-11-14 10:02:18.519 [http-nio-8088-exec-9] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:02:18.519 [http-nio-8088-exec-9] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:02:18.528 [http-nio-8088-exec-9] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:02:18.529 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? LIMIT ? 
+2021-11-14 10:02:18.529 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer)
+2021-11-14 10:02:18.540 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:02:18.568 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==>  Preparing: SELECT count(0) FROM task_info 
+2021-11-14 10:02:18.569 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==> Parameters: 
+2021-11-14 10:02:18.578 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - <==      Total: 1
+2021-11-14 10:02:18.579 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==>  Preparing: select * from task_info order by createTime desc LIMIT ? 
+2021-11-14 10:02:18.579 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==> Parameters: 15(Integer)
+2021-11-14 10:02:18.589 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - <==      Total: 2
+2021-11-14 10:02:23.488 [http-nio-8088-exec-1] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:02:23.488 [http-nio-8088-exec-1] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:02:23.498 [http-nio-8088-exec-1] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:02:23.498 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? LIMIT ? 
+2021-11-14 10:02:23.498 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer)
+2021-11-14 10:02:23.508 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:02:25.797 [http-nio-8088-exec-2] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:02:25.798 [http-nio-8088-exec-2] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:02:25.808 [http-nio-8088-exec-2] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:02:25.809 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? LIMIT ? 
+2021-11-14 10:02:25.809 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer)
+2021-11-14 10:02:25.820 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:02:27.699 [http-nio-8088-exec-3] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:02:27.699 [http-nio-8088-exec-3] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:02:27.709 [http-nio-8088-exec-3] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:02:27.710 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? LIMIT ?, ? 
+2021-11-14 10:02:27.710 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer), 15(Integer)
+2021-11-14 10:02:27.720 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:04:10.000 [http-nio-8088-exec-6] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:04:10.000 [http-nio-8088-exec-6] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:04:10.008 [http-nio-8088-exec-6] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:04:10.009 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? LIMIT ? 
+2021-11-14 10:04:10.009 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer)
+2021-11-14 10:04:10.018 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:04:15.240 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==>  Preparing: SELECT count(0) FROM task_info 
+2021-11-14 10:04:15.240 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==> Parameters: 
+2021-11-14 10:04:15.248 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - <==      Total: 1
+2021-11-14 10:04:15.249 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==>  Preparing: select * from task_info order by createTime desc LIMIT ? 
+2021-11-14 10:04:15.249 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==> Parameters: 15(Integer)
+2021-11-14 10:04:15.258 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - <==      Total: 2
+2021-11-14 10:04:17.569 [http-nio-8088-exec-8] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:04:17.569 [http-nio-8088-exec-8] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:04:17.579 [http-nio-8088-exec-8] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:04:17.579 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? LIMIT ? 
+2021-11-14 10:04:17.580 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer)
+2021-11-14 10:04:17.590 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:04:45.324 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==>  Preparing: SELECT count(0) FROM task_info 
+2021-11-14 10:04:45.324 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==> Parameters: 
+2021-11-14 10:04:45.335 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - <==      Total: 1
+2021-11-14 10:04:45.335 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==>  Preparing: select * from task_info order by createTime desc LIMIT ? 
+2021-11-14 10:04:45.335 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==> Parameters: 15(Integer)
+2021-11-14 10:04:45.347 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - <==      Total: 2
+2021-11-14 10:04:50.873 [http-nio-8088-exec-1] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:04:50.874 [http-nio-8088-exec-1] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:04:50.884 [http-nio-8088-exec-1] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:04:50.884 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? LIMIT ? 
+2021-11-14 10:04:50.884 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer)
+2021-11-14 10:04:50.895 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:05:15.779 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,type,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-14 10:05:15.779 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-14 10:05:15.789 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 3
+2021-11-14 10:05:15.789 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-14 10:05:15.790 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-14 10:05:15.800 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 0
+2021-11-14 10:05:15.852 [http-nio-8088-exec-3] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:05:15.852 [http-nio-8088-exec-3] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:05:15.863 [http-nio-8088-exec-3] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:05:15.863 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? LIMIT ? 
+2021-11-14 10:05:15.863 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer)
+2021-11-14 10:05:15.874 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:06:59.305 [http-nio-8088-exec-5] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:06:59.305 [http-nio-8088-exec-5] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:06:59.318 [http-nio-8088-exec-5] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:06:59.319 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? LIMIT ? 
+2021-11-14 10:06:59.319 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer)
+2021-11-14 10:06:59.333 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:07:06.132 [http-nio-8088-exec-6] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:07:06.133 [http-nio-8088-exec-6] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:07:06.145 [http-nio-8088-exec-6] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:07:06.146 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? LIMIT ? 
+2021-11-14 10:07:06.146 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer)
+2021-11-14 10:07:06.160 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:07:08.114 [http-nio-8088-exec-7] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:07:08.115 [http-nio-8088-exec-7] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:07:08.128 [http-nio-8088-exec-7] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:07:08.128 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? LIMIT ?, ? 
+2021-11-14 10:07:08.128 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer), 15(Integer)
+2021-11-14 10:07:08.142 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:07:10.132 [http-nio-8088-exec-8] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:07:10.132 [http-nio-8088-exec-8] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:07:10.146 [http-nio-8088-exec-8] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:07:10.147 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? LIMIT ? 
+2021-11-14 10:07:10.147 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer)
+2021-11-14 10:07:10.161 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:07:11.832 [http-nio-8088-exec-9] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:07:11.833 [http-nio-8088-exec-9] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:07:11.845 [http-nio-8088-exec-9] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:07:11.846 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? LIMIT ? 
+2021-11-14 10:07:11.846 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer)
+2021-11-14 10:07:11.860 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:07:14.552 [http-nio-8088-exec-10] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:07:14.552 [http-nio-8088-exec-10] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:07:14.564 [http-nio-8088-exec-10] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:07:14.565 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? LIMIT ?, ? 
+2021-11-14 10:07:14.565 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer), 15(Integer)
+2021-11-14 10:07:14.579 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:07:16.976 [http-nio-8088-exec-1] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:07:16.977 [http-nio-8088-exec-1] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:07:16.985 [http-nio-8088-exec-1] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:07:16.987 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? LIMIT ?, ? 
+2021-11-14 10:07:16.987 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 30(Integer), 15(Integer)
+2021-11-14 10:07:16.996 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:07:18.179 [http-nio-8088-exec-2] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:07:18.179 [http-nio-8088-exec-2] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:07:18.188 [http-nio-8088-exec-2] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:07:18.188 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? LIMIT ?, ? 
+2021-11-14 10:07:18.188 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 45(Integer), 15(Integer)
+2021-11-14 10:07:18.197 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:07:24.064 [http-nio-8088-exec-3] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:07:24.064 [http-nio-8088-exec-3] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:07:24.073 [http-nio-8088-exec-3] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:07:24.073 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? LIMIT ? 
+2021-11-14 10:07:24.073 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer)
+2021-11-14 10:07:24.082 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:07:26.599 [http-nio-8088-exec-4] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:07:26.599 [http-nio-8088-exec-4] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:07:26.608 [http-nio-8088-exec-4] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:07:26.608 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? LIMIT ? 
+2021-11-14 10:07:26.608 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer)
+2021-11-14 10:07:26.617 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:07:28.766 [http-nio-8088-exec-5] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:07:28.766 [http-nio-8088-exec-5] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:07:28.775 [http-nio-8088-exec-5] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:07:28.775 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? LIMIT ?, ? 
+2021-11-14 10:07:28.775 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer), 15(Integer)
+2021-11-14 10:07:28.785 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:07:58.939 [http-nio-8088-exec-6] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:07:58.939 [http-nio-8088-exec-6] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:07:58.948 [http-nio-8088-exec-6] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:07:58.949 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? LIMIT ? 
+2021-11-14 10:07:58.949 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer)
+2021-11-14 10:07:58.957 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:08:03.096 [http-nio-8088-exec-7] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:08:03.096 [http-nio-8088-exec-7] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:08:03.105 [http-nio-8088-exec-7] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:08:03.105 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? LIMIT ? 
+2021-11-14 10:08:03.105 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer)
+2021-11-14 10:08:03.113 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:08:04.696 [http-nio-8088-exec-8] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:08:04.696 [http-nio-8088-exec-8] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:08:04.704 [http-nio-8088-exec-8] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:08:04.705 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? LIMIT ?, ? 
+2021-11-14 10:08:04.705 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer), 15(Integer)
+2021-11-14 10:08:04.713 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:08:05.947 [http-nio-8088-exec-9] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:08:05.947 [http-nio-8088-exec-9] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:08:05.955 [http-nio-8088-exec-9] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:08:05.956 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? LIMIT ? 
+2021-11-14 10:08:05.956 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer)
+2021-11-14 10:08:05.964 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:08:06.982 [http-nio-8088-exec-10] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:08:06.982 [http-nio-8088-exec-10] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:08:06.990 [http-nio-8088-exec-10] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:08:06.990 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? LIMIT ? 
+2021-11-14 10:08:06.990 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer)
+2021-11-14 10:08:06.999 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:08:15.827 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,type,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-14 10:08:15.828 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-14 10:08:15.837 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 3
+2021-11-14 10:08:15.838 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-14 10:08:15.838 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-14 10:08:15.848 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 0
+2021-11-14 10:08:15.907 [http-nio-8088-exec-2] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:08:15.907 [http-nio-8088-exec-2] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:08:15.917 [http-nio-8088-exec-2] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:08:15.917 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? LIMIT ? 
+2021-11-14 10:08:15.917 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer)
+2021-11-14 10:08:15.927 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:08:33.562 [http-nio-8088-exec-3] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:08:33.562 [http-nio-8088-exec-3] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:08:33.571 [http-nio-8088-exec-3] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:08:33.571 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? LIMIT ? 
+2021-11-14 10:08:33.571 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer)
+2021-11-14 10:08:33.580 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:08:44.250 [http-nio-8088-exec-4] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:08:44.250 [http-nio-8088-exec-4] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:08:44.258 [http-nio-8088-exec-4] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:08:44.259 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? LIMIT ? 
+2021-11-14 10:08:44.259 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer)
+2021-11-14 10:08:44.268 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:08:45.967 [http-nio-8088-exec-5] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:08:45.967 [http-nio-8088-exec-5] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:08:45.976 [http-nio-8088-exec-5] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:08:45.976 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? LIMIT ?, ? 
+2021-11-14 10:08:45.977 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer), 15(Integer)
+2021-11-14 10:08:45.986 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:08:48.655 [http-nio-8088-exec-6] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:08:48.655 [http-nio-8088-exec-6] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:08:48.665 [http-nio-8088-exec-6] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:08:48.665 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? LIMIT ?, ? 
+2021-11-14 10:08:48.666 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 30(Integer), 15(Integer)
+2021-11-14 10:08:48.675 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:08:49.472 [http-nio-8088-exec-7] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:08:49.472 [http-nio-8088-exec-7] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:08:49.482 [http-nio-8088-exec-7] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:08:49.482 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? LIMIT ?, ? 
+2021-11-14 10:08:49.482 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 45(Integer), 15(Integer)
+2021-11-14 10:08:49.492 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:08:50.606 [http-nio-8088-exec-8] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:08:50.606 [http-nio-8088-exec-8] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:08:50.616 [http-nio-8088-exec-8] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:08:50.617 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? LIMIT ?, ? 
+2021-11-14 10:08:50.617 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 60(Integer), 15(Integer)
+2021-11-14 10:08:50.630 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:08:52.338 [http-nio-8088-exec-9] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:08:52.338 [http-nio-8088-exec-9] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:08:52.347 [http-nio-8088-exec-9] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:08:52.348 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? LIMIT ?, ? 
+2021-11-14 10:08:52.348 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 75(Integer), 15(Integer)
+2021-11-14 10:08:52.358 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:08:53.140 [http-nio-8088-exec-10] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:08:53.140 [http-nio-8088-exec-10] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:08:53.150 [http-nio-8088-exec-10] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:08:53.151 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? LIMIT ?, ? 
+2021-11-14 10:08:53.151 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 105(Integer), 15(Integer)
+2021-11-14 10:08:53.161 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:08:54.722 [http-nio-8088-exec-1] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:08:54.723 [http-nio-8088-exec-1] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:08:54.732 [http-nio-8088-exec-1] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:08:54.733 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? LIMIT ?, ? 
+2021-11-14 10:08:54.733 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 120(Integer), 15(Integer)
+2021-11-14 10:08:54.743 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:08:56.857 [http-nio-8088-exec-2] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:08:56.857 [http-nio-8088-exec-2] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:08:56.866 [http-nio-8088-exec-2] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:08:56.867 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? LIMIT ?, ? 
+2021-11-14 10:08:56.867 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 135(Integer), 15(Integer)
+2021-11-14 10:08:56.877 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:09:10.617 [http-nio-8088-exec-3] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:09:10.618 [http-nio-8088-exec-3] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:09:10.627 [http-nio-8088-exec-3] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:09:10.628 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? LIMIT ? 
+2021-11-14 10:09:10.628 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer)
+2021-11-14 10:09:10.639 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:10:32.314 [http-nio-8088-exec-2] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:10:32.329 [http-nio-8088-exec-2] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:10:32.346 [http-nio-8088-exec-2] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:10:32.350 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? order by province,distance desc LIMIT ? 
+2021-11-14 10:10:32.350 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer)
+2021-11-14 10:10:32.364 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:10:32.384 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,type,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-14 10:10:32.384 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-14 10:10:32.396 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 3
+2021-11-14 10:10:32.397 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-14 10:10:32.397 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-14 10:10:32.407 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 0
+2021-11-14 10:10:36.336 [http-nio-8088-exec-3] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:10:36.336 [http-nio-8088-exec-3] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:10:36.346 [http-nio-8088-exec-3] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:10:36.347 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? order by province,distance desc LIMIT ? 
+2021-11-14 10:10:36.347 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer)
+2021-11-14 10:10:36.359 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:10:39.872 [http-nio-8088-exec-4] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:10:39.872 [http-nio-8088-exec-4] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:10:39.881 [http-nio-8088-exec-4] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:10:39.882 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? order by province,distance desc LIMIT ?, ? 
+2021-11-14 10:10:39.882 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer), 15(Integer)
+2021-11-14 10:10:39.894 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:10:43.007 [http-nio-8088-exec-5] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:10:43.007 [http-nio-8088-exec-5] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:10:43.017 [http-nio-8088-exec-5] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:10:43.018 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? order by province,distance desc LIMIT ? 
+2021-11-14 10:10:43.018 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer)
+2021-11-14 10:10:43.029 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:10:54.727 [http-nio-8088-exec-6] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:10:54.728 [http-nio-8088-exec-6] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:10:54.737 [http-nio-8088-exec-6] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:10:54.738 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? order by province,distance desc LIMIT ? 
+2021-11-14 10:10:54.738 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer)
+2021-11-14 10:10:54.749 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:10:56.927 [http-nio-8088-exec-7] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:10:56.928 [http-nio-8088-exec-7] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:10:56.937 [http-nio-8088-exec-7] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:10:56.938 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? order by province,distance desc LIMIT ?, ? 
+2021-11-14 10:10:56.938 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer), 15(Integer)
+2021-11-14 10:10:56.949 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:10:58.696 [http-nio-8088-exec-8] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:10:58.696 [http-nio-8088-exec-8] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:10:58.705 [http-nio-8088-exec-8] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:10:58.706 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? order by province,distance desc LIMIT ?, ? 
+2021-11-14 10:10:58.706 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 30(Integer), 15(Integer)
+2021-11-14 10:10:58.718 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:11:00.748 [http-nio-8088-exec-9] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:11:00.749 [http-nio-8088-exec-9] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:11:00.759 [http-nio-8088-exec-9] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:11:00.760 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? order by province,distance desc LIMIT ?, ? 
+2021-11-14 10:11:00.760 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 45(Integer), 15(Integer)
+2021-11-14 10:11:00.771 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:11:01.748 [http-nio-8088-exec-10] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:11:01.748 [http-nio-8088-exec-10] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:11:01.759 [http-nio-8088-exec-10] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:11:01.759 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? order by province,distance desc LIMIT ?, ? 
+2021-11-14 10:11:01.759 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 60(Integer), 15(Integer)
+2021-11-14 10:11:01.770 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:11:02.785 [http-nio-8088-exec-1] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:11:02.786 [http-nio-8088-exec-1] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:11:02.797 [http-nio-8088-exec-1] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:11:02.798 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? order by province,distance desc LIMIT ?, ? 
+2021-11-14 10:11:02.798 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 75(Integer), 15(Integer)
+2021-11-14 10:11:02.811 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:11:05.369 [http-nio-8088-exec-2] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:11:05.369 [http-nio-8088-exec-2] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:11:05.380 [http-nio-8088-exec-2] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:11:05.381 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? order by province,distance desc LIMIT ?, ? 
+2021-11-14 10:11:05.381 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 90(Integer), 15(Integer)
+2021-11-14 10:11:05.394 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:11:09.888 [http-nio-8088-exec-3] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:11:09.888 [http-nio-8088-exec-3] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:11:09.900 [http-nio-8088-exec-3] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:11:09.900 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? order by province,distance desc LIMIT ? 
+2021-11-14 10:11:09.901 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer)
+2021-11-14 10:11:09.913 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:11:51.469 [http-nio-8088-exec-5] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:11:51.469 [http-nio-8088-exec-5] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:11:51.479 [http-nio-8088-exec-5] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:11:51.479 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? order by province,distance desc LIMIT ? 
+2021-11-14 10:11:51.479 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer)
+2021-11-14 10:11:51.489 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:12:01.022 [http-nio-8088-exec-6] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:12:01.022 [http-nio-8088-exec-6] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:12:01.032 [http-nio-8088-exec-6] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:12:01.032 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? order by province,distance desc LIMIT ?, ? 
+2021-11-14 10:12:01.032 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer), 15(Integer)
+2021-11-14 10:12:01.043 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:12:58.300 [http-nio-8088-exec-7] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:12:58.301 [http-nio-8088-exec-7] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:12:58.311 [http-nio-8088-exec-7] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:12:58.311 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? order by province,distance desc LIMIT ? 
+2021-11-14 10:12:58.312 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer)
+2021-11-14 10:12:58.321 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:13:08.300 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,type,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-14 10:13:08.300 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-14 10:13:08.312 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 3
+2021-11-14 10:13:08.312 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-14 10:13:08.313 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-14 10:13:08.323 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 0
+2021-11-14 10:13:08.384 [http-nio-8088-exec-9] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:13:08.384 [http-nio-8088-exec-9] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:13:08.394 [http-nio-8088-exec-9] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:13:08.395 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? order by province,distance desc LIMIT ? 
+2021-11-14 10:13:08.395 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer)
+2021-11-14 10:13:08.406 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:13:10.422 [http-nio-8088-exec-10] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:13:10.423 [http-nio-8088-exec-10] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:13:10.433 [http-nio-8088-exec-10] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:13:10.434 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? order by province,distance desc LIMIT ?, ? 
+2021-11-14 10:13:10.434 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer), 15(Integer)
+2021-11-14 10:13:10.445 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:13:11.791 [http-nio-8088-exec-1] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:13:11.791 [http-nio-8088-exec-1] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:13:11.801 [http-nio-8088-exec-1] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:13:11.802 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? order by province,distance desc LIMIT ?, ? 
+2021-11-14 10:13:11.802 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 30(Integer), 15(Integer)
+2021-11-14 10:13:11.813 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:13:13.475 [http-nio-8088-exec-2] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:13:13.475 [http-nio-8088-exec-2] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:13:13.485 [http-nio-8088-exec-2] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:13:13.486 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? order by province,distance desc LIMIT ?, ? 
+2021-11-14 10:13:13.486 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 45(Integer), 15(Integer)
+2021-11-14 10:13:13.497 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:13:14.726 [http-nio-8088-exec-3] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:13:14.726 [http-nio-8088-exec-3] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:13:14.736 [http-nio-8088-exec-3] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:13:14.737 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? order by province,distance desc LIMIT ?, ? 
+2021-11-14 10:13:14.737 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 60(Integer), 15(Integer)
+2021-11-14 10:13:14.748 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:13:16.042 [http-nio-8088-exec-4] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:13:16.042 [http-nio-8088-exec-4] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:13:16.053 [http-nio-8088-exec-4] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:13:16.053 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? order by province,distance desc LIMIT ?, ? 
+2021-11-14 10:13:16.054 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 75(Integer), 15(Integer)
+2021-11-14 10:13:16.065 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:13:17.461 [http-nio-8088-exec-5] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:13:17.461 [http-nio-8088-exec-5] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:13:17.472 [http-nio-8088-exec-5] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:13:17.472 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? order by province,distance desc LIMIT ?, ? 
+2021-11-14 10:13:17.472 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 90(Integer), 15(Integer)
+2021-11-14 10:13:17.483 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:13:20.511 [http-nio-8088-exec-6] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:13:20.511 [http-nio-8088-exec-6] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:13:20.522 [http-nio-8088-exec-6] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:13:20.523 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? order by province,distance desc LIMIT ?, ? 
+2021-11-14 10:13:20.523 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 105(Integer), 15(Integer)
+2021-11-14 10:13:20.534 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:13:21.595 [http-nio-8088-exec-7] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:13:21.595 [http-nio-8088-exec-7] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:13:21.605 [http-nio-8088-exec-7] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:13:21.605 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? order by province,distance desc LIMIT ?, ? 
+2021-11-14 10:13:21.606 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 120(Integer), 15(Integer)
+2021-11-14 10:13:21.617 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:13:23.045 [http-nio-8088-exec-8] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:13:23.046 [http-nio-8088-exec-8] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:13:23.056 [http-nio-8088-exec-8] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:13:23.058 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? order by province,distance desc LIMIT ?, ? 
+2021-11-14 10:13:23.058 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 135(Integer), 15(Integer)
+2021-11-14 10:13:23.069 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:13:24.178 [http-nio-8088-exec-9] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:13:24.178 [http-nio-8088-exec-9] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:13:24.188 [http-nio-8088-exec-9] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:13:24.189 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? order by province,distance desc LIMIT ?, ? 
+2021-11-14 10:13:24.189 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 150(Integer), 15(Integer)
+2021-11-14 10:13:24.200 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 14
+2021-11-14 10:13:26.146 [http-nio-8088-exec-10] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:13:26.146 [http-nio-8088-exec-10] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:13:26.156 [http-nio-8088-exec-10] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:13:26.156 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? order by province,distance desc LIMIT ? 
+2021-11-14 10:13:26.156 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer)
+2021-11-14 10:13:26.168 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:14:46.588 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==>  Preparing: SELECT count(0) FROM task_info 
+2021-11-14 10:14:46.588 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==> Parameters: 
+2021-11-14 10:14:46.598 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - <==      Total: 1
+2021-11-14 10:14:46.599 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==>  Preparing: select * from task_info order by createTime desc LIMIT ? 
+2021-11-14 10:14:46.599 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==> Parameters: 15(Integer)
+2021-11-14 10:14:46.609 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - <==      Total: 2
+2021-11-14 10:14:48.522 [http-nio-8088-exec-3] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:14:48.522 [http-nio-8088-exec-3] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636727406935(String)
+2021-11-14 10:14:48.532 [http-nio-8088-exec-3] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:14:51.175 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==>  Preparing: SELECT count(0) FROM task_info 
+2021-11-14 10:14:51.175 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==> Parameters: 
+2021-11-14 10:14:51.185 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - <==      Total: 1
+2021-11-14 10:14:51.185 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==>  Preparing: select * from task_info order by createTime desc LIMIT ? 
+2021-11-14 10:14:51.185 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==> Parameters: 15(Integer)
+2021-11-14 10:14:51.195 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - <==      Total: 2
+2021-11-14 10:15:16.177 [http-nio-8088-exec-5] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:15:16.177 [http-nio-8088-exec-5] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:15:16.189 [http-nio-8088-exec-5] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:15:16.190 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? order by province,distance desc LIMIT ? 
+2021-11-14 10:15:16.190 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer)
+2021-11-14 10:15:16.203 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:18:58.809 [http-nio-8088-exec-7] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:18:58.810 [http-nio-8088-exec-7] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:18:58.817 [http-nio-8088-exec-7] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:18:58.818 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? order by province,distance desc LIMIT ?, ? 
+2021-11-14 10:18:58.818 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer), 15(Integer)
+2021-11-14 10:18:58.827 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:18:59.478 [http-nio-8088-exec-8] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:18:59.478 [http-nio-8088-exec-8] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:18:59.487 [http-nio-8088-exec-8] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:18:59.488 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? order by province,distance desc LIMIT ?, ? 
+2021-11-14 10:18:59.488 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 30(Integer), 15(Integer)
+2021-11-14 10:18:59.498 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:19:00.928 [http-nio-8088-exec-9] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:19:00.928 [http-nio-8088-exec-9] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:19:00.937 [http-nio-8088-exec-9] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:19:00.937 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? order by province,distance desc LIMIT ?, ? 
+2021-11-14 10:19:00.938 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 60(Integer), 15(Integer)
+2021-11-14 10:19:00.948 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:19:01.832 [http-nio-8088-exec-10] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:19:01.832 [http-nio-8088-exec-10] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:19:01.841 [http-nio-8088-exec-10] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:19:01.842 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? order by province,distance desc LIMIT ?, ? 
+2021-11-14 10:19:01.842 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 75(Integer), 15(Integer)
+2021-11-14 10:19:01.852 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:19:02.762 [http-nio-8088-exec-1] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:19:02.762 [http-nio-8088-exec-1] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:19:02.772 [http-nio-8088-exec-1] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:19:02.772 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? order by province,distance desc LIMIT ?, ? 
+2021-11-14 10:19:02.772 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 105(Integer), 15(Integer)
+2021-11-14 10:19:02.782 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:19:03.696 [http-nio-8088-exec-2] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:19:03.696 [http-nio-8088-exec-2] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:19:03.706 [http-nio-8088-exec-2] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:19:03.707 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? order by province,distance desc LIMIT ?, ? 
+2021-11-14 10:19:03.707 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 150(Integer), 15(Integer)
+2021-11-14 10:19:03.716 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 14
+2021-11-14 10:53:14.172 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==>  Preparing: SELECT count(0) FROM task_info 
+2021-11-14 10:53:14.172 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==> Parameters: 
+2021-11-14 10:53:14.180 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - <==      Total: 1
+2021-11-14 10:53:14.181 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==>  Preparing: select * from task_info order by createTime desc LIMIT ? 
+2021-11-14 10:53:14.181 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==> Parameters: 15(Integer)
+2021-11-14 10:53:14.189 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - <==      Total: 2
+2021-11-14 10:54:15.108 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==>  Preparing: SELECT count(0) FROM task_info 
+2021-11-14 10:54:15.108 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==> Parameters: 
+2021-11-14 10:54:15.117 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - <==      Total: 1
+2021-11-14 10:54:15.117 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==>  Preparing: select * from task_info order by createTime desc LIMIT ? 
+2021-11-14 10:54:15.118 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==> Parameters: 15(Integer)
+2021-11-14 10:54:15.127 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - <==      Total: 2
+2021-11-14 10:54:38.656 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==>  Preparing: SELECT count(0) FROM task_info 
+2021-11-14 10:54:38.656 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==> Parameters: 
+2021-11-14 10:54:38.669 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - <==      Total: 1
+2021-11-14 10:54:38.669 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==>  Preparing: select * from task_info order by createTime desc LIMIT ? 
+2021-11-14 10:54:38.669 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==> Parameters: 15(Integer)
+2021-11-14 10:54:38.682 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - <==      Total: 2
+2021-11-14 10:56:48.593 [http-nio-8088-exec-9] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:56:48.594 [http-nio-8088-exec-9] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:56:48.604 [http-nio-8088-exec-9] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:56:48.604 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? order by province,distance desc LIMIT ? 
+2021-11-14 10:56:48.604 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer)
+2021-11-14 10:56:48.615 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:56:50.159 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.UserMapper.getUser - ==>  Preparing: select * from user WHERE userName = ? 
+2021-11-14 10:56:50.159 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.UserMapper.getUser - ==> Parameters: admin(String)
+2021-11-14 10:56:50.169 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.UserMapper.getUser - <==      Total: 1
+2021-11-14 10:56:50.832 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,type,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-14 10:56:50.832 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-14 10:56:50.843 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 3
+2021-11-14 10:56:50.843 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-14 10:56:50.843 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-14 10:56:50.853 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 0
+2021-11-14 10:56:50.913 [http-nio-8088-exec-2] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 10:56:50.914 [http-nio-8088-exec-2] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 10:56:50.924 [http-nio-8088-exec-2] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 10:56:50.925 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? order by province,distance desc LIMIT ? 
+2021-11-14 10:56:50.925 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer)
+2021-11-14 10:56:50.936 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 10:56:55.096 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==>  Preparing: SELECT count(0) FROM task_info 
+2021-11-14 10:56:55.096 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==> Parameters: 
+2021-11-14 10:56:55.105 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - <==      Total: 1
+2021-11-14 10:56:55.106 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==>  Preparing: select * from task_info order by createTime desc LIMIT ? 
+2021-11-14 10:56:55.106 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==> Parameters: 15(Integer)
+2021-11-14 10:56:55.117 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - <==      Total: 2
+2021-11-14 11:02:08.598 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,type,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-14 11:02:08.598 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-14 11:02:08.608 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 3
+2021-11-14 11:02:08.608 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-14 11:02:08.608 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-14 11:02:08.616 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 0
+2021-11-14 11:02:08.629 [http-nio-8088-exec-6] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 11:02:08.630 [http-nio-8088-exec-6] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 11:02:08.637 [http-nio-8088-exec-6] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 11:02:08.638 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? order by province,distance desc LIMIT ? 
+2021-11-14 11:02:08.638 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer)
+2021-11-14 11:02:08.647 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 11:02:08.731 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,type,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-14 11:02:08.732 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-14 11:02:08.741 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 3
+2021-11-14 11:02:08.741 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-14 11:02:08.742 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-14 11:02:08.750 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 0
+2021-11-14 11:02:08.776 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==>  Preparing: SELECT count(0) FROM task_info 
+2021-11-14 11:02:08.776 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==> Parameters: 
+2021-11-14 11:02:08.785 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - <==      Total: 1
+2021-11-14 11:02:08.785 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==>  Preparing: select * from task_info order by createTime desc LIMIT ? 
+2021-11-14 11:02:08.785 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==> Parameters: 15(Integer)
+2021-11-14 11:02:08.794 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - <==      Total: 2
+2021-11-14 11:03:42.030 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,type,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-14 11:03:42.030 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-14 11:03:42.044 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 3
+2021-11-14 11:03:42.054 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-14 11:03:42.055 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-14 11:03:42.057 [http-nio-8088-exec-2] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 11:03:42.057 [http-nio-8088-exec-2] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 11:03:42.063 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 0
+2021-11-14 11:03:42.069 [http-nio-8088-exec-2] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 11:03:42.069 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? order by province,distance desc LIMIT ? 
+2021-11-14 11:03:42.070 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer)
+2021-11-14 11:03:42.082 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 11:03:42.147 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,type,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-14 11:03:42.147 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-14 11:03:42.160 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 3
+2021-11-14 11:03:42.160 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-14 11:03:42.160 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-14 11:03:42.172 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 0
+2021-11-14 11:03:42.184 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==>  Preparing: SELECT count(0) FROM task_info 
+2021-11-14 11:03:42.184 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==> Parameters: 
+2021-11-14 11:03:42.196 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - <==      Total: 1
+2021-11-14 11:03:42.196 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==>  Preparing: select * from task_info order by createTime desc LIMIT ? 
+2021-11-14 11:03:42.196 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==> Parameters: 15(Integer)
+2021-11-14 11:03:42.209 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - <==      Total: 2
+2021-11-14 11:03:57.367 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,type,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-14 11:03:57.367 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-14 11:03:57.380 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 3
+2021-11-14 11:03:57.381 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-14 11:03:57.381 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-14 11:03:57.392 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 0
+2021-11-14 11:03:57.400 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==>  Preparing: SELECT count(0) FROM task_info 
+2021-11-14 11:03:57.400 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==> Parameters: 
+2021-11-14 11:03:57.404 [http-nio-8088-exec-7] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==>  Preparing: SELECT count(0) FROM address WHERE taskId = ? 
+2021-11-14 11:03:57.404 [http-nio-8088-exec-7] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - ==> Parameters: AK1636731268408(String)
+2021-11-14 11:03:57.406 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,type,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-14 11:03:57.406 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-14 11:03:57.408 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - <==      Total: 1
+2021-11-14 11:03:57.408 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==>  Preparing: select * from task_info order by createTime desc LIMIT ? 
+2021-11-14 11:03:57.408 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==> Parameters: 15(Integer)
+2021-11-14 11:03:57.416 [http-nio-8088-exec-7] DEBUG c.munjie.blog.dao.AddressMapper.listAddress_COUNT - <==      Total: 1
+2021-11-14 11:03:57.417 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==>  Preparing: select * from address where taskId = ? order by province,distance desc LIMIT ? 
+2021-11-14 11:03:57.417 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - ==> Parameters: AK1636731268408(String), 15(Integer)
+2021-11-14 11:03:57.417 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - <==      Total: 2
+2021-11-14 11:03:57.418 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 3
+2021-11-14 11:03:57.418 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-14 11:03:57.418 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-14 11:03:57.428 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 0
+2021-11-14 11:03:57.429 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.AddressMapper.listAddress - <==      Total: 15
+2021-11-14 11:14:42.703 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==>  Preparing: SELECT count(0) FROM task_info 
+2021-11-14 11:14:42.711 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==> Parameters: 
+2021-11-14 11:14:42.727 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - <==      Total: 1
+2021-11-14 11:14:42.732 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==>  Preparing: select * from task_info order by createTime desc LIMIT ? 
+2021-11-14 11:14:42.733 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==> Parameters: 15(Integer)
+2021-11-14 11:14:42.743 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - <==      Total: 2
+2021-11-14 11:16:32.368 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==>  Preparing: SELECT count(0) FROM task_info 
+2021-11-14 11:16:32.369 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==> Parameters: 
+2021-11-14 11:16:32.377 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - <==      Total: 1
+2021-11-14 11:16:32.377 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==>  Preparing: select * from task_info order by createTime desc LIMIT ? 
+2021-11-14 11:16:32.377 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==> Parameters: 15(Integer)
+2021-11-14 11:16:32.386 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - <==      Total: 2
+2021-11-14 11:16:51.944 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,type,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-14 11:16:51.945 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-14 11:16:51.955 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 3
+2021-11-14 11:16:51.956 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-14 11:16:51.956 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-14 11:16:51.965 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 0
+2021-11-14 11:16:52.020 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==>  Preparing: SELECT count(0) FROM task_info 
+2021-11-14 11:16:52.021 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==> Parameters: 
+2021-11-14 11:16:52.029 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - <==      Total: 1
+2021-11-14 11:16:52.029 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==>  Preparing: select * from task_info order by createTime desc LIMIT ? 
+2021-11-14 11:16:52.030 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==> Parameters: 15(Integer)
+2021-11-14 11:16:52.038 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - <==      Total: 2
+2021-11-14 11:16:56.595 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.TaskInfoMapper.deleteTask - ==>  Preparing: delete from task_info where taskId = ? 
+2021-11-14 11:16:56.595 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.TaskInfoMapper.deleteTask - ==> Parameters: AK1636727406935(String)
+2021-11-14 11:16:56.611 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.TaskInfoMapper.deleteTask - <==    Updates: 1
+2021-11-14 11:16:56.612 [http-nio-8088-exec-6] DEBUG c.m.blog.dao.AddressMapper.deleteAddressByTaskId - ==>  Preparing: delete from address from where taskId = ? 
+2021-11-14 11:16:56.612 [http-nio-8088-exec-6] DEBUG c.m.blog.dao.AddressMapper.deleteAddressByTaskId - ==> Parameters: AK1636727406935(String)
+2021-11-14 11:19:27.966 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.UserMapper.getUser - ==>  Preparing: select * from user WHERE userName = ? 
+2021-11-14 11:19:27.977 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.UserMapper.getUser - ==> Parameters: admin(String)
+2021-11-14 11:19:27.997 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.UserMapper.getUser - <==      Total: 1
+2021-11-14 11:19:28.737 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,type,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-14 11:19:28.738 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-14 11:19:28.751 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 3
+2021-11-14 11:19:28.752 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-14 11:19:28.752 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-14 11:19:28.765 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 0
+2021-11-14 11:19:28.914 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==>  Preparing: SELECT count(0) FROM task_info 
+2021-11-14 11:19:28.914 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==> Parameters: 
+2021-11-14 11:19:28.927 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - <==      Total: 1
+2021-11-14 11:19:28.928 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==>  Preparing: select * from task_info order by createTime desc LIMIT ? 
+2021-11-14 11:19:28.929 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==> Parameters: 15(Integer)
+2021-11-14 11:19:28.941 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - <==      Total: 2
+2021-11-14 11:19:34.005 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.TaskInfoMapper.deleteTask - ==>  Preparing: delete from task_info where taskId = ? 
+2021-11-14 11:19:34.006 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.TaskInfoMapper.deleteTask - ==> Parameters: AK1636727406935(String)
+2021-11-14 11:19:34.028 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.TaskInfoMapper.deleteTask - <==    Updates: 1
+2021-11-14 11:19:34.029 [http-nio-8088-exec-4] DEBUG c.m.blog.dao.AddressMapper.deleteAddressByTaskId - ==>  Preparing: delete from address where taskId = ? 
+2021-11-14 11:19:34.029 [http-nio-8088-exec-4] DEBUG c.m.blog.dao.AddressMapper.deleteAddressByTaskId - ==> Parameters: AK1636727406935(String)
+2021-11-14 11:19:34.053 [http-nio-8088-exec-4] DEBUG c.m.blog.dao.AddressMapper.deleteAddressByTaskId - <==    Updates: 0
+2021-11-14 11:19:34.106 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==>  Preparing: SELECT count(0) FROM task_info 
+2021-11-14 11:19:34.106 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==> Parameters: 
+2021-11-14 11:19:34.118 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - <==      Total: 1
+2021-11-14 11:19:34.119 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==>  Preparing: select * from task_info order by createTime desc LIMIT ? 
+2021-11-14 11:19:34.119 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==> Parameters: 15(Integer)
+2021-11-14 11:19:34.131 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - <==      Total: 1
+2021-11-14 11:19:40.238 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.TaskInfoMapper.deleteTask - ==>  Preparing: delete from task_info where taskId = ? 
+2021-11-14 11:19:40.239 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.TaskInfoMapper.deleteTask - ==> Parameters: AK1636731268408(String)
+2021-11-14 11:19:40.261 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.TaskInfoMapper.deleteTask - <==    Updates: 1
+2021-11-14 11:19:40.262 [http-nio-8088-exec-6] DEBUG c.m.blog.dao.AddressMapper.deleteAddressByTaskId - ==>  Preparing: delete from address where taskId = ? 
+2021-11-14 11:19:40.262 [http-nio-8088-exec-6] DEBUG c.m.blog.dao.AddressMapper.deleteAddressByTaskId - ==> Parameters: AK1636731268408(String)
+2021-11-14 11:19:40.285 [http-nio-8088-exec-6] DEBUG c.m.blog.dao.AddressMapper.deleteAddressByTaskId - <==    Updates: 164
+2021-11-14 11:19:40.342 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==>  Preparing: SELECT count(0) FROM task_info 
+2021-11-14 11:19:40.342 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==> Parameters: 
+2021-11-14 11:19:40.353 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - <==      Total: 1
+2021-11-14 12:19:56.561 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,type,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-14 12:19:56.562 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-14 12:19:56.572 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 3
+2021-11-14 12:19:56.573 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-14 12:19:56.573 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-14 12:19:56.580 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 0

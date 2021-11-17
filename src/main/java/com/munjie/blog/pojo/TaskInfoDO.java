@@ -15,5 +15,6 @@ public class TaskInfoDO {
     private String taskDescription;
     private String originAdd;
     private Date createTime;
+    private String createDate;
 
 }

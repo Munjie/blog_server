@@ -36,7 +36,7 @@ public class ArticleController {
     @GetMapping("/listArticles")
     public Response listArticles(@ApiParam(value = "分页每页展示数量", required = true) @RequestParam("pageSize") Integer pageSize,
                                  @ApiParam(value = "分页页码", required = true) @RequestParam("pageNo") Integer pageNo) {
-        return Response.ok(articleService.listArticles(pageSize, pageNo));
+        return Response.ok(articleService.listArticles());
     }
 
 

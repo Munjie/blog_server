@@ -15,7 +15,6 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
 /**
@@ -58,14 +57,6 @@ public class BackController {
         return Response.ok("");
     }
 
-
-
-    @ApiOperation("登录")
-    @PostMapping("/login")
-    public Response login(String username, String password) {
-        return userService.login(username,password);
-
-    }
 
     @ApiOperation("编辑")
     @PostMapping("/editArticle")
@@ -133,9 +124,4 @@ public class BackController {
         return Response.ok("success");
     }
 
-    @ApiOperation("获取菜单")
-    @GetMapping("/getMenus")
-    public Response getMenus(HttpServletRequest request) {
-        return userService.getMenus(request);
-    }
 }

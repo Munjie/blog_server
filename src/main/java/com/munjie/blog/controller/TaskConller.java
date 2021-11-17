@@ -2,11 +2,9 @@ package com.munjie.blog.controller;
 
 
 import com.munjie.blog.dao.AddressMapper;
-import com.munjie.blog.pojo.AddressDO;
 import com.munjie.blog.pojo.Response;
 import com.munjie.blog.pojo.TaskInfoDO;
 import com.munjie.blog.service.TaskService;
-import com.munjie.blog.utils.ExportExcelUtils;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -17,8 +15,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.util.LinkedHashMap;
-import java.util.List;
 
 @Validated
 @Api(tags = "处理excel任务接口")
@@ -48,32 +44,11 @@ public class TaskConller {
 
 
     @ApiOperation("导出excel")
-    @PostMapping("/exportExcel")
-    public void exportExcel(String taskId,HttpServletResponse response)throws Exception{
-        taskService.exportExcel(taskId,response);
-    }
-
-    //@RequestMapping(value = "/downloadExcel",method = RequestMethod.GET)
-    @ApiOperation("下载excel")
     @GetMapping("/downloadExcel")
     @CrossOrigin
     public void downloadExcel(HttpServletResponse response, String taskId){
-        //得到所有要导出的数据
-        List<AddressDO> addressDOList =addressMapper.listAddress(taskId);
-        //定义导出的excel名字
-        String excelName = "路程";
+        taskService.downloadExcel(response,taskId);
 
-        //获取需要转出的excel表头的map字段
-        LinkedHashMap<String, String> fieldMap = new LinkedHashMap<>();
-        fieldMap.put("province","省份");
-        fieldMap.put("city","地级市");
-        fieldMap.put("country","县城（区县）");
-        fieldMap.put("address","城市（具体地址）");
-        fieldMap.put("distance","公里数");
-        fieldMap.put("duration","送货时间 （天）");
-
-        //导出用户相关信息
-        ExportExcelUtils.export(excelName,addressDOList,fieldMap,response);
     }
 
     @ApiOperation("删除任务")

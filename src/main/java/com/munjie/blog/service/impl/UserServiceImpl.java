@@ -17,8 +17,6 @@ import org.springframework.stereotype.Service;
 import redis.clients.jedis.Jedis;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -85,11 +83,8 @@ public class UserServiceImpl implements UserService {
         }
         String token = setRedisData(userName, password);
         // String token = getToken(userName, password);
-        UserDO userDO = new UserDO();
-        userDO.setUserName(user.getUserName());
-        userDO.setPassword(user.getPassword());
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("user",userDO);
+        jsonObject.put("user",user);
         jsonObject.put("token",token);
         jsonObject.put("expTime",5000);
         return Response.ok(jsonObject);
@@ -97,17 +92,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Response getMenus(HttpServletRequest request) {
-        UserDO user = null;
-        String id = "1";
-        HttpSession session = request.getSession();
-        if (session != null) {
-            user = (UserDO) session.getAttribute("user");
-        }
-        List<ModuleDTO> moduleEntities = new ArrayList<>();
-        if (id != null) {
-            moduleEntities = roleMapper.listModuleById(id);
-        }
+    public Response getMenus(HttpServletRequest request,String userNo) {
+        List<ModuleDTO> moduleEntities = roleMapper.listModuleById(userNo);
         List<String> list = roleMapper.listParent();
         for (ModuleDTO mo:moduleEntities) {
             if (mo != null && CollectionUtils.isNotEmpty(list)) {

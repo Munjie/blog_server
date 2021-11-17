@@ -4,6 +4,10 @@ import org.apache.commons.lang3.StringUtils;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * @Auther: munjie
@@ -147,5 +151,31 @@ public class CommonUtil {
             }
         }
         return false;
+    }
+
+    /**
+     * 提取中文
+     * @param str
+     * @return
+     */
+    public static String getChinese(String str){
+        String regex = "([\u4e00-\u9fa5]+)";
+        Matcher matcher = Pattern.compile(regex).matcher(str);
+        String result = null;
+        if(matcher.find()){
+            result = matcher.group(1);
+        }
+        return result;
+    }
+
+    public static String formatDate (Date date)  {
+        if (date == null) {
+            return "";
+        }
+        //创建SimpleDateFormat对象，指定样式    2019-05-13 22:39:30
+        SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        //要格式化的Date对象
+        return sdf.format(date);
+
     }
 }

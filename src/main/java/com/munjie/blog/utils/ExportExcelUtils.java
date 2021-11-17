@@ -1,6 +1,7 @@
 package com.munjie.blog.utils;
 
 import org.apache.poi.hssf.usermodel.*;
+import org.apache.poi.ss.usermodel.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -8,8 +9,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.OutputStream;
 import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Field;
-import java.util.Date;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -54,6 +55,25 @@ public class ExportExcelUtils {
             //创建单元格，并设置值表头 设置表头居中
             HSSFCellStyle style = wb.createCellStyle();
             //创建一个居中格式
+            style.setBorderBottom(BorderStyle.THIN);//下边框
+            style.setBorderLeft(BorderStyle.THIN);//左边框
+            style.setBorderRight(BorderStyle.THIN);//右边框
+            style.setBorderTop(BorderStyle.THIN); //上边框
+            style.setAlignment(HorizontalAlignment.CENTER);//水平居中 、居左Left、居右RIGHT
+            style.setVerticalAlignment(VerticalAlignment.CENTER);//垂直居中、居上TOP、居下button
+            style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+            style.setFillForegroundColor(IndexedColors.ROYAL_BLUE.index);
+            HSSFFont font = wb.createFont();
+            font.setFontName("微软雅黑");//设置字体名称
+            font.setFontHeightInPoints((short) 11);//设置字号
+            font.setItalic(false);//设置是否为斜体
+            font.setBold(true);//设置是否加粗
+            font.setColor(IndexedColors.WHITE.index);//设置字体颜色
+            style.setFont(font);
+//设置列宽
+            sheet.setColumnWidth(0, 20 * 256);
+            sheet.setColumnWidth(1, 20 * 256);
+            sheet.setColumnWidth(2, 20 * 256);
             // 填充工作表
             fillSheet(sheet, list, fieldMap, style);
 

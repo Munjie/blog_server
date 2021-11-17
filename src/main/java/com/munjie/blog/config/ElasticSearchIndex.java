@@ -1,16 +1,6 @@
 package com.munjie.blog.config;
 
-import org.elasticsearch.action.index.IndexResponse;
-import org.elasticsearch.action.search.SearchResponse;
-import org.elasticsearch.client.Client;
-import org.elasticsearch.client.transport.TransportClient;
-import org.elasticsearch.common.settings.Settings;
-import org.elasticsearch.common.transport.TransportAddress;
-import org.elasticsearch.transport.client.PreBuiltTransportClient;
 import org.springframework.beans.factory.annotation.Value;
-
-import java.net.InetAddress;
-import java.net.UnknownHostException;
 
 /**
  * @Auther: munjie
@@ -28,7 +18,7 @@ public class ElasticSearchIndex {
     @Value("${elasticsearch.clustername}")
     private String esClusterName;
 
-    //获得client 连接
+    /*//获得client 连接
     public TransportClient client() {
         // 9300是es的tcp服务端口
         TransportAddress node = null;
@@ -71,5 +61,5 @@ public class ElasticSearchIndex {
     public SearchResponse doSerch(Client client, String indexName, String type){
         SearchResponse response = client.prepareSearch(indexName).setTypes(type).execute().actionGet();
         return response;
-    }
+    }*/
 }

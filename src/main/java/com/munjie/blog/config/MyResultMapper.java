@@ -1,39 +1,6 @@
 package com.munjie.blog.config;
 
-import com.fasterxml.jackson.core.JsonEncoding;
-import com.fasterxml.jackson.core.JsonFactory;
-import com.fasterxml.jackson.core.JsonGenerator;
-import org.apache.commons.beanutils.PropertyUtils;
-import org.elasticsearch.action.get.GetResponse;
-import org.elasticsearch.action.get.MultiGetItemResponse;
-import org.elasticsearch.action.get.MultiGetResponse;
-import org.elasticsearch.action.search.SearchResponse;
-import org.elasticsearch.common.document.DocumentField;
-import org.elasticsearch.common.text.Text;
-import org.elasticsearch.search.SearchHit;
-import org.elasticsearch.search.fetch.subphase.highlight.HighlightField;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.elasticsearch.ElasticsearchException;
-import org.springframework.data.elasticsearch.annotations.Document;
-import org.springframework.data.elasticsearch.annotations.ScriptedField;
-import org.springframework.data.elasticsearch.core.AbstractResultMapper;
-import org.springframework.data.elasticsearch.core.DefaultEntityMapper;
-import org.springframework.data.elasticsearch.core.EntityMapper;
-import org.springframework.data.elasticsearch.core.aggregation.AggregatedPage;
-import org.springframework.data.elasticsearch.core.aggregation.impl.AggregatedPageImpl;
-import org.springframework.data.elasticsearch.core.mapping.ElasticsearchPersistentEntity;
-import org.springframework.data.elasticsearch.core.mapping.ElasticsearchPersistentProperty;
-import org.springframework.data.elasticsearch.core.mapping.SimpleElasticsearchMappingContext;
-import org.springframework.data.mapping.context.MappingContext;
 import org.springframework.stereotype.Component;
-import org.springframework.util.Assert;
-import org.springframework.util.StringUtils;
-
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
-import java.nio.charset.Charset;
-import java.util.*;
 
 /**
  * @Auther: munjie
@@ -41,8 +8,8 @@ import java.util.*;
  * @Description:
  */
 @Component
-public class MyResultMapper extends AbstractResultMapper{
-    private final MappingContext<? extends ElasticsearchPersistentEntity<?>, ElasticsearchPersistentProperty> mappingContext;
+public class MyResultMapper /*extends AbstractResultMapper*/{
+   /* private final MappingContext<? extends ElasticsearchPersistentEntity<?>, ElasticsearchPersistentProperty> mappingContext;
 
     public MyResultMapper() {
         this(new SimpleElasticsearchMappingContext());
@@ -240,5 +207,5 @@ public class MyResultMapper extends AbstractResultMapper{
             entity.getPropertyAccessor(result) //
                     .setProperty(entity.getScoreProperty(), score);
         }
-    }
+    }*/
 }

@@ -9,7 +9,9 @@ import com.munjie.blog.pojo.ArticleDTO;
  * @Description:
  */
 public interface ArticleService {
-    ArticleDTO listArticles(Integer pageSize, Integer pageNo);
+
+
+    ArticleDTO listArticles();
 
     int saveArticle(ArticleDO articleDO);
 

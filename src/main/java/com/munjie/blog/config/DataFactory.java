@@ -1,7 +1,5 @@
 package com.munjie.blog.config;
 
-import org.elasticsearch.action.index.IndexResponse;
-import org.elasticsearch.client.transport.TransportClient;
 import org.springframework.boot.configurationprocessor.json.JSONException;
 import org.springframework.boot.configurationprocessor.json.JSONObject;
 
@@ -42,9 +40,9 @@ public class DataFactory {
                 //创建索引
                 ElasticSearchIndex esi = new ElasticSearchIndex();
                 //得到ES连接 client
-                TransportClient client = esi.client();
+               // TransportClient client = esi.client();
                 //创建索引
-                IndexResponse indexResponse = esi.doCreateIndexResponse( client,indexName ,type ,JsonString);
+               // IndexResponse indexResponse = esi.doCreateIndexResponse( client,indexName ,type ,JsonString);
                 //System.out.println(indexResponse.getIndex());
 
                 //查询索引
@@ -52,7 +50,7 @@ public class DataFactory {
                 //System.out.println(getResponse.getIndex());
 
                 //关闭ES连接
-                client.close();
+               // client.close();
             }
             //关闭 BufferedReader
             br.close();

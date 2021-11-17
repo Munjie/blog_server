@@ -18,7 +18,9 @@ public enum ExceptionEnum {
     IOEXCEPTION(1025, "IO输入输出异常"),
     CONSTRAINTVIOLATION(1026, "校验不通过"),
     MYBATISSYSTEMEXCEPTION(1027, "mybatis参数绑定异常"),
-    JSONPARSEERROR(1028, "json转换异常");
+    JSONPARSEERROR(1028, "json转换异常"),
+    IK_ERROR(1029, "IK分词异常"),
+    EXCEL_ERROR(1030, "Excel处理异常");
 
 
     private Integer code;

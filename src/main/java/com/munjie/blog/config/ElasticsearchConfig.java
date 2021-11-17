@@ -1,22 +1,8 @@
 package com.munjie.blog.config;
 
 import lombok.extern.slf4j.Slf4j;
-import org.apache.http.HttpHost;
-import org.elasticsearch.client.RestClient;
-import org.elasticsearch.client.RestHighLevelClient;
-import org.elasticsearch.client.transport.TransportClient;
-import org.elasticsearch.common.settings.Settings;
-import org.elasticsearch.common.transport.TransportAddress;
-import org.elasticsearch.transport.client.PreBuiltTransportClient;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.data.elasticsearch.core.ElasticsearchOperations;
-import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
-import org.springframework.data.elasticsearch.repository.config.EnableElasticsearchRepositories;
-
-import java.net.InetAddress;
-import java.net.UnknownHostException;
 
 /**
  * @Auther: munjie
@@ -25,7 +11,7 @@ import java.net.UnknownHostException;
  */
 @Slf4j
 @Configuration
-@EnableElasticsearchRepositories(basePackages = "com.munjie.blog.dao")
+//@EnableElasticsearchRepositories(basePackages = "com.munjie.blog.dao")
 public class ElasticsearchConfig {
     @Value("${elasticsearch.host}")
     private String esHost;
@@ -40,7 +26,7 @@ public class ElasticsearchConfig {
     private Integer threadPoolSearchSize;
 
 
-    @Bean
+   /* @Bean
     public TransportClient client() {
         // 9300是es的tcp服务端口
         TransportAddress node = null;
@@ -85,6 +71,6 @@ public class ElasticsearchConfig {
                 RestClient.builder(
                         new HttpHost(esHost, 9200, "http")));
         return client;
-    }
+    }*/
 
 }

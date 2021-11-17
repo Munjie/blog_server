@@ -4,7 +4,6 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.munjie.blog.config.MyResultMapper;
 import com.munjie.blog.dao.ArticleMapper;
-import com.munjie.blog.dao.ArticleRepository;
 import com.munjie.blog.dao.TagMapper;
 import com.munjie.blog.pojo.ArticleDO;
 import com.munjie.blog.pojo.ArticleDTO;
@@ -12,28 +11,13 @@ import com.munjie.blog.pojo.TagDO;
 import com.munjie.blog.service.ArticleService;
 import com.munjie.blog.utils.DateUtil;
 import org.apache.commons.lang3.StringUtils;
-import org.elasticsearch.client.transport.TransportClient;
-import org.elasticsearch.index.query.MatchQueryBuilder;
-import org.elasticsearch.index.query.QueryBuilders;
-import org.elasticsearch.index.reindex.BulkByScrollResponse;
-import org.elasticsearch.index.reindex.DeleteByQueryAction;
-import org.elasticsearch.index.reindex.DeleteByQueryRequestBuilder;
-import org.elasticsearch.search.fetch.subphase.highlight.HighlightBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
-import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
-import org.springframework.data.elasticsearch.core.query.NativeSearchQueryBuilder;
-import org.springframework.data.elasticsearch.core.query.SearchQuery;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -46,11 +30,11 @@ public class ArticleServiceImpl implements ArticleService {
 
     protected static final Logger LOGGER = LoggerFactory.getLogger(ArticleServiceImpl.class);
 
-    @Autowired
+   /* @Autowired
     private ArticleRepository articleRepository;
 
     @Autowired
-    private ElasticsearchTemplate elasticsearchTemplate;
+    private ElasticsearchTemplate elasticsearchTemplate;*/
 
 
     @Autowired
@@ -65,12 +49,12 @@ public class ArticleServiceImpl implements ArticleService {
     private TagMapper tagMapper;
 
     @Autowired
-    private TransportClient client;
+    //private TransportClient client;
 
     @Override
-    public ArticleDTO listArticles(Integer pageSize, Integer pageNo) {
+    public ArticleDTO listArticles() {
         LOGGER.info("");
-        PageHelper.startPage(pageNo, pageSize);
+        //PageHelper.startPage(pageNo, pageSize);
         List<ArticleDO> list = articleMapper.listArticle();
         list.forEach(article ->
                 article.setTags(tagMapper.listTagByArticleId(article.getArticleId()))
@@ -99,14 +83,14 @@ public class ArticleServiceImpl implements ArticleService {
 
     @Override
     public int deleteArticle(String articleId) {
-        articleRepository.deleteById(articleId);
-            articleRepository.deleteById(articleId);
-            DeleteByQueryRequestBuilder builder = DeleteByQueryAction.INSTANCE
+      //  articleRepository.deleteById(articleId);
+          //  articleRepository.deleteById(articleId);
+           /* DeleteByQueryRequestBuilder builder = DeleteByQueryAction.INSTANCE
                     .newRequestBuilder(client)
                     .filter(QueryBuilders.termQuery("articleId", articleId)).source("blog");
             BulkByScrollResponse response = builder.get();
             long deleted = response.getDeleted();
-            LOGGER.info("删除的条数为：{}",deleted);
+            LOGGER.info("删除的条数为：{}",deleted);*/
         return articleMapper.deleteArticle(articleId);
     }
 
@@ -114,9 +98,9 @@ public class ArticleServiceImpl implements ArticleService {
     @Override
     public ArticleDTO listSearch(Integer pageSize, Integer pageNo, String content) {
 
-        Sort createTime = Sort.by("articleCreateTime").descending();
-        Pageable pageable = PageRequest.of(pageNo, pageSize,createTime);
-        MatchQueryBuilder matchQueryBuilder = QueryBuilders.matchQuery("articleContent", content);
+      //  Sort createTime = Sort.by("articleCreateTime").descending();
+        //Pageable pageable = PageRequest.of(pageNo, pageSize,createTime);
+/*        MatchQueryBuilder matchQueryBuilder = QueryBuilders.matchQuery("articleContent", content);
         QueryBuilders.commonTermsQuery("articleContent",content);
         List<ArticleDO> list = new ArrayList<>();
         HighlightBuilder.Field allHighLight = new HighlightBuilder.Field("articleContent").
@@ -137,7 +121,8 @@ public class ArticleServiceImpl implements ArticleService {
             list.add(next);
         }
         PageInfo<ArticleDO> articleDOPageInfo = new PageInfo<>(list);
-        return (new ArticleDTO(articleDOPageInfo.getList(),totalElements));
+        return (new ArticleDTO(articleDOPageInfo.getList(),totalElements));*/
+        return null;
     }
 
     @Override
@@ -168,7 +153,7 @@ public class ArticleServiceImpl implements ArticleService {
             i = tagMapper.insertForeachTags(tagDOList);
             i = articleMapper.saveArticle(articleDO);
         }
-        ArticleDO save = articleRepository.save(articleDO);
+     //   ArticleDO save = articleRepository.save(articleDO);
         return i;
     }
 

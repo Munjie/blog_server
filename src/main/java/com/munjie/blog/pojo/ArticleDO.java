@@ -2,9 +2,6 @@ package com.munjie.blog.pojo;
 
 import lombok.Data;
 import lombok.ToString;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.elasticsearch.annotations.Document;
-import org.springframework.data.elasticsearch.annotations.Mapping;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -17,12 +14,12 @@ import java.util.List;
  */
 @Data
 @ToString
-@Document(indexName = "blog",type = "article")
-@Mapping(mappingPath = "ArticleIndex.json")
+//@Document(indexName = "blog",type = "article")
+//@Mapping(mappingPath = "ArticleIndex.json")
 public class ArticleDO implements Serializable {
 
     private static final long serialVersionUID = 1L;
-    @Id
+    //@Id
     private Integer id;
 
     private String articleId;

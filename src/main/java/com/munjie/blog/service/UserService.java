@@ -14,5 +14,5 @@ public interface UserService {
 
     Response login(String userName, String password);
 
-    Response getMenus(HttpServletRequest request);
+    Response getMenus(HttpServletRequest request,String userNo);
 }

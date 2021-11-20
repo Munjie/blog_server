@@ -3,7 +3,7 @@
 <mapper namespace="com.munjie.blog.dao.RoleMapper">
     <select id="listModuleById"  resultType="com.munjie.blog.pojo.ModuleDTO">
         SELECT
-            id,url,name,type,imgUrl,sort,moduleId
+            id,url,name,imgUrl,sort,moduleId
         FROM
             module m
         WHERE

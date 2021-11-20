@@ -3,17 +3,14 @@ package com.munjie.blog.pojo;
 import lombok.Data;
 import lombok.ToString;
 
-import java.io.Serializable;
-import java.util.List;
+import java.util.Date;
 
 /**
  * @author 86158
  */
 @Data
 @ToString
-public class ModuleDTO implements Serializable {
-
-    private static final long serialVersionUID = 1L;
+public class ModuleDO  {
 
     private Integer id;
 
@@ -28,14 +25,11 @@ public class ModuleDTO implements Serializable {
     private String name;
 
     /**
-     * 类型
-     */
-    private String type;
-
-    /**
      * 图片壁纸
      */
     private String imgUrl;
+
+    private String parent;
 
     /**
      * 排序
@@ -45,7 +39,8 @@ public class ModuleDTO implements Serializable {
      * 模块id
      */
     private String moduleId;
-
-    private List<ModuleDTO> children;
+    private String createDate;
+    private Date createTime;
+    private Date updateTime;
 
 }

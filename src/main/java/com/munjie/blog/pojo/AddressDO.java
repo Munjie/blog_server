@@ -22,6 +22,8 @@ public class AddressDO {
     private String duration;
     private Date createTime;
     private Date updateTime;
+    private Double useDistance;
+    private Double distanceValue;
 
 
 }

@@ -2,10 +2,10 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.munjie.blog.dao.AddressMapper">
     <insert id="addAddress" parameterType="com.munjie.blog.pojo.AddressDO">
-        insert into address (id, province, city,country,address,distance,createTime,taskId,duration)
+        insert into address (id, province, city,country,address,distance,createTime,taskId,duration,useDistance,distanceValue)
         values (#{id,jdbcType=INTEGER}, #{province,jdbcType=VARCHAR}, #{city,jdbcType=VARCHAR},
                 #{country,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR},#{distance,jdbcType=VARCHAR},#{createTime,jdbcType=TIMESTAMP},
-                #{taskId,jdbcType=VARCHAR},#{duration,jdbcType=VARCHAR})
+                #{taskId,jdbcType=VARCHAR},#{duration,jdbcType=VARCHAR},#{useDistance},#{distanceValue})
     </insert>
     <select id="listAddress" resultType="com.munjie.blog.pojo.AddressDO">
         select * from address where taskId = #{taskId} order by province,distance desc

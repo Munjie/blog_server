@@ -2,6 +2,7 @@ package com.munjie.blog.utils;
 
 import org.apache.commons.lang3.StringUtils;
 
+import java.math.BigDecimal;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.text.SimpleDateFormat;
@@ -177,5 +178,13 @@ public class CommonUtil {
         //要格式化的Date对象
         return sdf.format(date);
 
+    }
+
+    public static Double dealDouble (Double value)  {
+        if (value == null) {
+            return value;
+        }
+        BigDecimal b = new BigDecimal(value/1000);
+        return b.setScale(0, BigDecimal.ROUND_HALF_UP).doubleValue();
     }
 }

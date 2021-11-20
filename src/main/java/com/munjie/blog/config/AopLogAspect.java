@@ -1,13 +1,9 @@
 package com.munjie.blog.config;
 
-import com.munjie.blog.utils.AddressUtil;
-import com.munjie.blog.utils.AopLogAspectUtil;
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.Signature;
-import org.aspectj.lang.annotation.AfterReturning;
-import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
-import org.aspectj.lang.annotation.Pointcut;
+import org.aspectj.lang.annotation.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -15,62 +11,94 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Arrays;
 
-/**
- * @Auther: munjie
- * @Date: 2/19/2021 21:35
- * @Description:
- */
 @Aspect
 @Component
 public class AopLogAspect {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(AopLogAspect.class);
 
-
     /**
-     * 定义切入点，切入点为com.example.aop下的所有函数
+     * 切入点
+     * 匹配top.alanlee.template.controller包及其子包下的所有类的所有方法
      */
     @Pointcut("execution(* com.munjie.blog.controller.*.*(..))")
-    public void aopLog() {
+    public void pointCut(){
+
     }
 
     /**
-     * 前置通知：在连接点之前执行的通知
-     *
-     * @param joinPoint
-     * @throws Throwable
+     * 前置通知，目标方法调用前被调用
      */
-    @Before("aopLog()")
-    public void doBefore(JoinPoint joinPoint) throws Throwable {
-        LOGGER.info("请求前置通知开始...");
-        // 接收到请求，记录请求日志
-        ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
-        HttpServletRequest request = attributes.getRequest();
-        LOGGER.info("请求URL =", request.getRequestURL().toString());
-        LOGGER.info("请求方式 =", request.getMethod());
-        LOGGER.info("请求IP =", request.getRemoteAddr());
-        LOGGER.info("请求来源地区 =", AddressUtil.getAddress(request));
-        LOGGER.info("请求类名=", joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature().getName());
+    @Before("pointCut()")
+    public void beforeAdvice(JoinPoint joinPoint){
+        ServletRequestAttributes requestAttributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
+        HttpServletRequest request = requestAttributes.getRequest();
+        LOGGER.info("----------- 前置通知 -----------");
         Signature signature = joinPoint.getSignature();
-        LOGGER.info("方法名=", signature.getName());
+        LOGGER.info("请求IP：" + request.getRemoteAddr());
+        LOGGER.info("方法签名：" + signature);
+        LOGGER.info("方法名：" + signature.getName());
         Object[] args = joinPoint.getArgs();
-        String classType = joinPoint.getTarget().getClass().getName();
-        Class<?> clazz = Class.forName(classType);
-        String clazzName = clazz.getName();
-        String methodName = joinPoint.getSignature().getName(); // 获取方法名称
-        // 获取参数名称和值
-        StringBuffer sb = AopLogAspectUtil.getNameAndArgs(this.getClass(), clazzName, methodName, args);
-        LOGGER.info("请求报文=", sb);
+        LOGGER.info("请求参数：" + Arrays.asList(args));
+
     }
 
+    /**
+     * 最终通知，目标方法执行完之后执行
+     */
+    @After("pointCut()")
+    public void afterAdvice(JoinPoint jp){
+        LOGGER.info("----------- 最终通知 -----------"+ jp);
 
+    }
 
-    @AfterReturning(returning = "ret", pointcut = "aopLog()")
-    public void doAfterReturning(Object ret) throws Throwable {
-        // 处理完请求，返回内容
-        if (ret != null) {
-            LOGGER.info("返回响应结果=", ret);
+    /**
+     * 后置返回通知
+     * 如果参数中的第一个参数为JoinPoint，则第二个参数为返回值的信息
+     * 如果参数中的第一个参数不为JoinPoint，则第一个参数为returning中对应的参数
+     * returning 只有目标方法返回值与通知方法相应参数类型时才能执行后置返回通知，否则不执行
+     * @param object
+     */
+    @AfterReturning(value = "execution(* com.munjie.blog.controller..*.*(..))", returning = "object")
+    public void afterReturningAdvice(Object object){
+        LOGGER.info("----------- 后置返回通知 -----------");
+        LOGGER.info("后置返回通知的返回值：" + object);
+    }
+
+    /**
+     * 后置异常通知
+     * 定义一个名字，该名字用于匹配通知实现方法的一个参数名，当目标方法抛出异常返回后，将把目标方法抛出的异常传给通知方法；
+     * throwing 只有目标方法抛出的异常与通知方法相应参数异常类型时才能执行后置异常通知，否则不执行，
+     * @param joinPoint
+     * @param e
+     */
+    @AfterThrowing(value = "pointCut()", throwing = "e")
+    public void afterThrowingAdvice(JoinPoint joinPoint, Exception e){
+        LOGGER.info("----------- 后置异常通知 -----------");
+    }
+
+    /**
+     * 环绕通知
+     * 环绕通知非常强大，可以决定目标方法是否执行，什么时候执行，执行时是否需要替换方法参数，执行完毕是否需要替换返回值。
+     * 环绕通知第一个参数必须是org.aspectj.lang.ProceedingJoinPoint类型
+     * @param proceedingJoinPoint
+     */
+    @Around("execution(* com.munjie.blog.controller.ArticleController.listArticles(..))")
+    public Object aroundAdvice(ProceedingJoinPoint proceedingJoinPoint){
+        LOGGER.info("----------- 环绕通知 -----------");
+        LOGGER.info("环绕通知的目标方法名：" + proceedingJoinPoint.getSignature().getName());
+
+        try {
+            Object proceed = proceedingJoinPoint.proceed();
+            return proceed;
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }finally {
+            LOGGER.info("---------- 环绕通知结束 -------------");
         }
+        return null;
     }
+
 }

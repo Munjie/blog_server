@@ -140,6 +140,19 @@ public class TaskServiceImpl implements TaskService {
                                                 if (stringStringMap.get("mZlc") != null) {
                                                     address.setDistance(stringStringMap.get("mZlc"));
                                                 }
+                                                if (stringStringMap.get("valueLc") != null) {
+                                                   Double  distanceValue = Double.valueOf(stringStringMap.get("valueLc"));
+                                                   address.setDistanceValue(CommonUtil.dealDouble(distanceValue));
+                                                   Double useDistance = 0.0;
+                                                    if (distanceValue <= 100000) {
+                                                        useDistance = distanceValue + 10000;
+                                                    } else if (distanceValue > 100000 && distanceValue <= 200000) {
+                                                        useDistance = distanceValue + 20000;
+                                                    } else {
+                                                        useDistance = distanceValue + 30000;
+                                                    }
+                                                    address.setUseDistance(CommonUtil.dealDouble(useDistance));
+                                                }
                                                 if (stringStringMap.get("mTime") != null) {
                                                     address.setDuration(stringStringMap.get("mTime"));
                                                 }
@@ -246,8 +259,8 @@ public class TaskServiceImpl implements TaskService {
                     // origins 起点 destinations 目的地
                     String originsLaLn = "?origins=" + oriLat + "," + oriLng;
                     String destinationsLaLn = "&destinations=" + oriLat + "," + oriLng;
-                    params.put("origins", oriLat + "," + oriLng + "|" + oriLat + "," + oriLng);
-                    params.put("destinations", desLat + "," + desLng + "|" + desLat + "," + desLng);
+                    params.put("origins", oriLat + "," + oriLng);
+                    params.put("destinations", desLat + "," + desLng);
                 }
 
             }
@@ -269,7 +282,7 @@ public class TaskServiceImpl implements TaskService {
                     map = new HashMap<String, String>();
                     map.put("mTime", jsonArray.getJSONObject(i).getJSONObject("duration").getString("text"));
                     map.put("mZlc", jsonArray.getJSONObject(i).getJSONObject("distance").getString("text"));
-                    map.put("mZzlc", jsonArray.getJSONObject(i).getJSONObject("distance").getString("value"));
+                    map.put("valueLc", jsonArray.getJSONObject(i).getJSONObject("distance").getString("value"));
                 }
             }
         }
@@ -306,10 +319,11 @@ public class TaskServiceImpl implements TaskService {
         LinkedHashMap<String, String> fieldMap = new LinkedHashMap<>();
         fieldMap.put("province","省份");
         fieldMap.put("city","地级市");
-        fieldMap.put("country","县城（区县）");
-        fieldMap.put("address","城市（具体地址）");
-        fieldMap.put("distance","公里数");
-        fieldMap.put("duration","送货时间 （天）");
+        fieldMap.put("country","县城(区县)");
+        fieldMap.put("address","城市(具体地址)");
+        fieldMap.put("distanceValue","系统距离(公里)");
+        fieldMap.put("useDistance","使用距离(公里)");
+        fieldMap.put("duration","送货时间(小时)");
         ExportExcelUtils.export(excelName,addressDOList,fieldMap,response);
     }
 

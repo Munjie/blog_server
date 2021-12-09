@@ -1,0 +1,3 @@
+2021-12-07 00:20:57.291 [main] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - ==>  Preparing: select * from article where status = '1' order by article_create_time desc 
+2021-12-07 00:20:57.303 [main] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - ==> Parameters: 
+2021-12-07 00:20:57.323 [main] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - <==      Total: 0

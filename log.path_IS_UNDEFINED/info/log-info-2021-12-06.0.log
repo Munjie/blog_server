@@ -1,0 +1,205 @@
+2021-12-06 22:00:37.160 [main] INFO  com.munjie.blog.BlogApplication - Starting BlogApplication on DESKTOP-AB71LST with PID 31424 (G:\web_project\blog_server\target\classes started by 86158 in G:\web_project\blog_server)
+2021-12-06 22:00:37.165 [main] INFO  com.munjie.blog.BlogApplication - The following profiles are active: dev
+2021-12-06 22:00:37.865 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor - Post-processing PropertySource instances
+2021-12-06 22:00:37.905 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-12-06 22:00:37.906 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-12-06 22:00:37.906 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-12-06 22:00:37.907 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-12-06 22:00:37.907 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2021-12-06 22:00:37.907 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-12-06 22:00:37.907 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource applicationConfig: [classpath:/application-dev.yml] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-12-06 22:00:37.907 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource applicationConfig: [classpath:/application.yml] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-12-06 22:00:37.954 [main] INFO  c.u.j.filter.DefaultLazyPropertyFilter - Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-12-06 22:00:38.110 [main] INFO  c.u.j.resolver.DefaultLazyPropertyResolver - Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-12-06 22:00:38.111 [main] INFO  c.u.j.detector.DefaultLazyPropertyDetector - Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-12-06 22:00:38.285 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http)
+2021-12-06 22:00:38.321 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+2021-12-06 22:00:38.322 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-12-06 22:00:38.322 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+2021-12-06 22:00:38.407 [main] INFO  o.a.c.c.ContainerBase.[Tomcat].[localhost].[/blog] - Initializing Spring embedded WebApplicationContext
+2021-12-06 22:00:38.408 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1204 ms
+2021-12-06 22:00:38.528 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientInboundChannelExecutor'
+2021-12-06 22:00:38.538 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientOutboundChannelExecutor'
+2021-12-06 22:00:39.179 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - Autowired annotation should only be used on methods with parameters: public com.munjie.blog.pojo.ArticleDTO com.munjie.blog.service.impl.ArticleServiceImpl.listArticles()
+2021-12-06 22:00:39.185 [main] INFO  com.munjie.blog.service.impl.ArticleServiceImpl - 
+2021-12-06 22:00:39.197 [main] INFO  com.zaxxer.hikari.HikariDataSource - DatebookHikariCP - Starting...
+2021-12-06 22:00:39.780 [main] INFO  com.zaxxer.hikari.HikariDataSource - DatebookHikariCP - Start completed.
+2021-12-06 22:00:40.130 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-12-06 22:00:40.148 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'messageBrokerTaskScheduler'
+2021-12-06 22:00:40.183 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'brokerChannelExecutor'
+2021-12-06 22:00:40.511 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2021-12-06 22:00:40.524 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-12-06 22:00:40.545 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2021-12-06 22:00:40.639 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listArticlesUsingGET_1
+2021-12-06 22:00:40.658 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: saveUsingPOST_1
+2021-12-06 22:00:40.673 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteArticleUsingGET_1
+2021-12-06 22:00:40.680 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteArticleUsingGET_2
+2021-12-06 22:00:40.681 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listTaskUsingGET_1
+2021-12-06 22:00:40.689 [main] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Starting...
+2021-12-06 22:00:40.689 [main] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2021-12-06 22:00:40.690 [main] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Started.
+2021-12-06 22:00:40.698 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+2021-12-06 22:00:40.722 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (http) with context path '/blog'
+2021-12-06 22:00:40.724 [main] INFO  com.munjie.blog.BlogApplication - Started BlogApplication in 3.991 seconds (JVM running for 5.079)
+2021-12-06 22:00:40.726 [main] INFO  com.munjie.blog.BlogApplication - Server has been started successfully...
+2021-12-06 22:00:59.229 [http-nio-8088-exec-1] INFO  o.a.c.c.ContainerBase.[Tomcat].[localhost].[/blog] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-06 22:00:59.229 [http-nio-8088-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-12-06 22:00:59.236 [http-nio-8088-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+2021-12-06 22:00:59.261 [http-nio-8088-exec-1] INFO  com.munjie.blog.config.AopLogAspect - ----------- 前置通知 -----------
+2021-12-06 22:00:59.262 [http-nio-8088-exec-1] INFO  com.munjie.blog.config.AopLogAspect - 请求IP：0:0:0:0:0:0:0:1
+2021-12-06 22:00:59.262 [http-nio-8088-exec-1] INFO  com.munjie.blog.config.AopLogAspect - 方法签名：R com.munjie.blog.controller.BlogInfoController.getAbout()
+2021-12-06 22:00:59.262 [http-nio-8088-exec-1] INFO  com.munjie.blog.config.AopLogAspect - 方法名：getAbout
+2021-12-06 22:00:59.263 [http-nio-8088-exec-1] INFO  com.munjie.blog.config.AopLogAspect - 请求参数：[]
+2021-12-06 22:00:59.280 [http-nio-8088-exec-1] INFO  com.munjie.blog.config.AopLogAspect - ----------- 最终通知 -----------execution(R com.munjie.blog.controller.BlogInfoController.getAbout())
+2021-12-06 22:00:59.280 [http-nio-8088-exec-1] INFO  com.munjie.blog.config.AopLogAspect - ----------- 后置返回通知 -----------
+2021-12-06 22:00:59.280 [http-nio-8088-exec-1] INFO  com.munjie.blog.config.AopLogAspect - 后置返回通知的返回值：R(code=0, data=BlogInfoDTO(blogName=Munjie, articleCount=12, avatar=, categoryCount=20, github=wwww, sign=kkk), msg=执行成功)
+2021-12-06 22:00:59.290 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - ----------- 环绕通知 -----------
+2021-12-06 22:00:59.290 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - 环绕通知的目标方法名：listArticles
+2021-12-06 22:00:59.290 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - ----------- 前置通知 -----------
+2021-12-06 22:00:59.290 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - 请求IP：0:0:0:0:0:0:0:1
+2021-12-06 22:00:59.290 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - 方法签名：Response com.munjie.blog.controller.ArticleController.listArticles(Integer,Integer)
+2021-12-06 22:00:59.291 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - 方法名：listArticles
+2021-12-06 22:00:59.291 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - 请求参数：[5, 1]
+2021-12-06 22:00:59.295 [http-nio-8088-exec-2] INFO  com.munjie.blog.service.impl.ArticleServiceImpl - 
+2021-12-06 22:00:59.326 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - ---------- 环绕通知结束 -------------
+2021-12-06 22:00:59.326 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - ----------- 最终通知 -----------execution(Response com.munjie.blog.controller.ArticleController.listArticles(Integer,Integer))
+2021-12-06 22:00:59.326 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - ----------- 后置返回通知 -----------
+2021-12-06 22:00:59.326 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - 后置返回通知的返回值：{reason=SUCCESS, code=200, data=ArticleDTO(rows=[], total=0), message=null}
+2021-12-06 22:01:14.304 [http-nio-8088-exec-3] INFO  com.munjie.blog.config.AopLogAspect - ----------- 前置通知 -----------
+2021-12-06 22:01:14.304 [http-nio-8088-exec-3] INFO  com.munjie.blog.config.AopLogAspect - 请求IP：0:0:0:0:0:0:0:1
+2021-12-06 22:01:14.304 [http-nio-8088-exec-3] INFO  com.munjie.blog.config.AopLogAspect - 方法签名：R com.munjie.blog.controller.BlogInfoController.getAbout()
+2021-12-06 22:01:14.304 [http-nio-8088-exec-3] INFO  com.munjie.blog.config.AopLogAspect - 方法名：getAbout
+2021-12-06 22:01:14.304 [http-nio-8088-exec-3] INFO  com.munjie.blog.config.AopLogAspect - 请求参数：[]
+2021-12-06 22:01:14.304 [http-nio-8088-exec-3] INFO  com.munjie.blog.config.AopLogAspect - ----------- 最终通知 -----------execution(R com.munjie.blog.controller.BlogInfoController.getAbout())
+2021-12-06 22:01:14.305 [http-nio-8088-exec-3] INFO  com.munjie.blog.config.AopLogAspect - ----------- 后置返回通知 -----------
+2021-12-06 22:01:14.305 [http-nio-8088-exec-3] INFO  com.munjie.blog.config.AopLogAspect - 后置返回通知的返回值：R(code=0, data=BlogInfoDTO(blogName=Munjie, articleCount=12, avatar=, categoryCount=20, github=wwww, sign=kkk), msg=执行成功)
+2021-12-06 22:01:14.354 [http-nio-8088-exec-4] INFO  com.munjie.blog.config.AopLogAspect - ----------- 环绕通知 -----------
+2021-12-06 22:01:14.354 [http-nio-8088-exec-4] INFO  com.munjie.blog.config.AopLogAspect - 环绕通知的目标方法名：listArticles
+2021-12-06 22:01:14.354 [http-nio-8088-exec-4] INFO  com.munjie.blog.config.AopLogAspect - ----------- 前置通知 -----------
+2021-12-06 22:01:14.354 [http-nio-8088-exec-4] INFO  com.munjie.blog.config.AopLogAspect - 请求IP：0:0:0:0:0:0:0:1
+2021-12-06 22:01:14.354 [http-nio-8088-exec-4] INFO  com.munjie.blog.config.AopLogAspect - 方法签名：Response com.munjie.blog.controller.ArticleController.listArticles(Integer,Integer)
+2021-12-06 22:01:14.354 [http-nio-8088-exec-4] INFO  com.munjie.blog.config.AopLogAspect - 方法名：listArticles
+2021-12-06 22:01:14.354 [http-nio-8088-exec-4] INFO  com.munjie.blog.config.AopLogAspect - 请求参数：[5, 1]
+2021-12-06 22:01:14.355 [http-nio-8088-exec-4] INFO  com.munjie.blog.service.impl.ArticleServiceImpl - 
+2021-12-06 22:01:14.375 [http-nio-8088-exec-4] INFO  com.munjie.blog.config.AopLogAspect - ---------- 环绕通知结束 -------------
+2021-12-06 22:01:14.375 [http-nio-8088-exec-4] INFO  com.munjie.blog.config.AopLogAspect - ----------- 最终通知 -----------execution(Response com.munjie.blog.controller.ArticleController.listArticles(Integer,Integer))
+2021-12-06 22:01:14.375 [http-nio-8088-exec-4] INFO  com.munjie.blog.config.AopLogAspect - ----------- 后置返回通知 -----------
+2021-12-06 22:01:14.375 [http-nio-8088-exec-4] INFO  com.munjie.blog.config.AopLogAspect - 后置返回通知的返回值：{reason=SUCCESS, code=200, data=ArticleDTO(rows=[], total=0), message=null}
+2021-12-06 22:01:40.190 [MessageBroker-1] INFO  o.s.web.socket.config.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2021-12-06 22:31:40.199 [MessageBroker-1] INFO  o.s.web.socket.config.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 2, active threads = 1, queued tasks = 0, completed tasks = 1]
+2021-12-06 23:01:40.211 [MessageBroker-2] INFO  o.s.web.socket.config.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 3, active threads = 1, queued tasks = 0, completed tasks = 2]
+2021-12-06 23:13:16.924 [http-nio-8088-exec-7] INFO  com.munjie.blog.config.AopLogAspect - ----------- 前置通知 -----------
+2021-12-06 23:13:16.924 [http-nio-8088-exec-7] INFO  com.munjie.blog.config.AopLogAspect - 请求IP：0:0:0:0:0:0:0:1
+2021-12-06 23:13:16.925 [http-nio-8088-exec-7] INFO  com.munjie.blog.config.AopLogAspect - 方法签名：R com.munjie.blog.controller.BlogInfoController.getAbout()
+2021-12-06 23:13:16.925 [http-nio-8088-exec-7] INFO  com.munjie.blog.config.AopLogAspect - 方法名：getAbout
+2021-12-06 23:13:16.925 [http-nio-8088-exec-7] INFO  com.munjie.blog.config.AopLogAspect - 请求参数：[]
+2021-12-06 23:13:16.925 [http-nio-8088-exec-7] INFO  com.munjie.blog.config.AopLogAspect - ----------- 最终通知 -----------execution(R com.munjie.blog.controller.BlogInfoController.getAbout())
+2021-12-06 23:13:16.925 [http-nio-8088-exec-7] INFO  com.munjie.blog.config.AopLogAspect - ----------- 后置返回通知 -----------
+2021-12-06 23:13:16.925 [http-nio-8088-exec-7] INFO  com.munjie.blog.config.AopLogAspect - 后置返回通知的返回值：R(code=0, data=BlogInfoDTO(blogName=Munjie, articleCount=12, avatar=, categoryCount=20, github=wwww, sign=kkk), msg=执行成功)
+2021-12-06 23:13:16.960 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - ----------- 环绕通知 -----------
+2021-12-06 23:13:16.960 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - 环绕通知的目标方法名：listArticles
+2021-12-06 23:13:16.960 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - ----------- 前置通知 -----------
+2021-12-06 23:13:16.960 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - 请求IP：0:0:0:0:0:0:0:1
+2021-12-06 23:13:16.960 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - 方法签名：Response com.munjie.blog.controller.ArticleController.listArticles(Integer,Integer)
+2021-12-06 23:13:16.960 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - 方法名：listArticles
+2021-12-06 23:13:16.960 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - 请求参数：[5, 1]
+2021-12-06 23:13:16.961 [http-nio-8088-exec-8] INFO  com.munjie.blog.service.impl.ArticleServiceImpl - 
+2021-12-06 23:13:16.988 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - ---------- 环绕通知结束 -------------
+2021-12-06 23:13:16.989 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - ----------- 最终通知 -----------execution(Response com.munjie.blog.controller.ArticleController.listArticles(Integer,Integer))
+2021-12-06 23:13:16.989 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - ----------- 后置返回通知 -----------
+2021-12-06 23:13:16.989 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - 后置返回通知的返回值：{reason=SUCCESS, code=200, data=ArticleDTO(rows=[], total=0), message=null}
+2021-12-06 23:14:07.886 [http-nio-8088-exec-9] INFO  com.munjie.blog.config.AopLogAspect - ----------- 前置通知 -----------
+2021-12-06 23:14:07.887 [http-nio-8088-exec-9] INFO  com.munjie.blog.config.AopLogAspect - 请求IP：0:0:0:0:0:0:0:1
+2021-12-06 23:14:07.887 [http-nio-8088-exec-9] INFO  com.munjie.blog.config.AopLogAspect - 方法签名：R com.munjie.blog.controller.BlogInfoController.getAbout()
+2021-12-06 23:14:07.887 [http-nio-8088-exec-9] INFO  com.munjie.blog.config.AopLogAspect - 方法名：getAbout
+2021-12-06 23:14:07.887 [http-nio-8088-exec-9] INFO  com.munjie.blog.config.AopLogAspect - 请求参数：[]
+2021-12-06 23:14:07.887 [http-nio-8088-exec-9] INFO  com.munjie.blog.config.AopLogAspect - ----------- 最终通知 -----------execution(R com.munjie.blog.controller.BlogInfoController.getAbout())
+2021-12-06 23:14:07.887 [http-nio-8088-exec-9] INFO  com.munjie.blog.config.AopLogAspect - ----------- 后置返回通知 -----------
+2021-12-06 23:14:07.887 [http-nio-8088-exec-9] INFO  com.munjie.blog.config.AopLogAspect - 后置返回通知的返回值：R(code=0, data=BlogInfoDTO(blogName=Munjie, articleCount=12, avatar=, categoryCount=20, github=wwww, sign=kkk), msg=执行成功)
+2021-12-06 23:14:07.931 [http-nio-8088-exec-10] INFO  com.munjie.blog.config.AopLogAspect - ----------- 环绕通知 -----------
+2021-12-06 23:14:07.932 [http-nio-8088-exec-10] INFO  com.munjie.blog.config.AopLogAspect - 环绕通知的目标方法名：listArticles
+2021-12-06 23:14:07.932 [http-nio-8088-exec-10] INFO  com.munjie.blog.config.AopLogAspect - ----------- 前置通知 -----------
+2021-12-06 23:14:07.932 [http-nio-8088-exec-10] INFO  com.munjie.blog.config.AopLogAspect - 请求IP：0:0:0:0:0:0:0:1
+2021-12-06 23:14:07.932 [http-nio-8088-exec-10] INFO  com.munjie.blog.config.AopLogAspect - 方法签名：Response com.munjie.blog.controller.ArticleController.listArticles(Integer,Integer)
+2021-12-06 23:14:07.932 [http-nio-8088-exec-10] INFO  com.munjie.blog.config.AopLogAspect - 方法名：listArticles
+2021-12-06 23:14:07.932 [http-nio-8088-exec-10] INFO  com.munjie.blog.config.AopLogAspect - 请求参数：[5, 1]
+2021-12-06 23:14:07.932 [http-nio-8088-exec-10] INFO  com.munjie.blog.service.impl.ArticleServiceImpl - 
+2021-12-06 23:14:07.950 [http-nio-8088-exec-10] INFO  com.munjie.blog.config.AopLogAspect - ---------- 环绕通知结束 -------------
+2021-12-06 23:14:07.950 [http-nio-8088-exec-10] INFO  com.munjie.blog.config.AopLogAspect - ----------- 最终通知 -----------execution(Response com.munjie.blog.controller.ArticleController.listArticles(Integer,Integer))
+2021-12-06 23:14:07.950 [http-nio-8088-exec-10] INFO  com.munjie.blog.config.AopLogAspect - ----------- 后置返回通知 -----------
+2021-12-06 23:14:07.950 [http-nio-8088-exec-10] INFO  com.munjie.blog.config.AopLogAspect - 后置返回通知的返回值：{reason=SUCCESS, code=200, data=ArticleDTO(rows=[], total=0), message=null}
+2021-12-06 23:14:52.152 [http-nio-8088-exec-1] INFO  com.munjie.blog.config.AopLogAspect - ----------- 前置通知 -----------
+2021-12-06 23:14:52.152 [http-nio-8088-exec-1] INFO  com.munjie.blog.config.AopLogAspect - 请求IP：0:0:0:0:0:0:0:1
+2021-12-06 23:14:52.152 [http-nio-8088-exec-1] INFO  com.munjie.blog.config.AopLogAspect - 方法签名：R com.munjie.blog.controller.BlogInfoController.getAbout()
+2021-12-06 23:14:52.152 [http-nio-8088-exec-1] INFO  com.munjie.blog.config.AopLogAspect - 方法名：getAbout
+2021-12-06 23:14:52.152 [http-nio-8088-exec-1] INFO  com.munjie.blog.config.AopLogAspect - 请求参数：[]
+2021-12-06 23:14:52.152 [http-nio-8088-exec-1] INFO  com.munjie.blog.config.AopLogAspect - ----------- 最终通知 -----------execution(R com.munjie.blog.controller.BlogInfoController.getAbout())
+2021-12-06 23:14:52.152 [http-nio-8088-exec-1] INFO  com.munjie.blog.config.AopLogAspect - ----------- 后置返回通知 -----------
+2021-12-06 23:14:52.152 [http-nio-8088-exec-1] INFO  com.munjie.blog.config.AopLogAspect - 后置返回通知的返回值：R(code=0, data=BlogInfoDTO(blogName=Munjie, articleCount=12, avatar=, categoryCount=20, github=wwww, sign=kkk), msg=执行成功)
+2021-12-06 23:14:52.254 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - ----------- 环绕通知 -----------
+2021-12-06 23:14:52.254 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - 环绕通知的目标方法名：listArticles
+2021-12-06 23:14:52.254 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - ----------- 前置通知 -----------
+2021-12-06 23:14:52.254 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - 请求IP：0:0:0:0:0:0:0:1
+2021-12-06 23:14:52.254 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - 方法签名：Response com.munjie.blog.controller.ArticleController.listArticles(Integer,Integer)
+2021-12-06 23:14:52.254 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - 方法名：listArticles
+2021-12-06 23:14:52.254 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - 请求参数：[5, 1]
+2021-12-06 23:14:52.254 [http-nio-8088-exec-2] INFO  com.munjie.blog.service.impl.ArticleServiceImpl - 
+2021-12-06 23:14:52.281 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - ---------- 环绕通知结束 -------------
+2021-12-06 23:14:52.281 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - ----------- 最终通知 -----------execution(Response com.munjie.blog.controller.ArticleController.listArticles(Integer,Integer))
+2021-12-06 23:14:52.281 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - ----------- 后置返回通知 -----------
+2021-12-06 23:14:52.281 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - 后置返回通知的返回值：{reason=SUCCESS, code=200, data=ArticleDTO(rows=[], total=0), message=null}
+2021-12-06 23:31:40.224 [MessageBroker-1] INFO  o.s.web.socket.config.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 0, completed tasks = 3]
+2021-12-06 23:59:50.681 [SpringContextShutdownHook] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Stopping...
+2021-12-06 23:59:50.681 [SpringContextShutdownHook] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2021-12-06 23:59:50.681 [SpringContextShutdownHook] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Stopped.
+2021-12-06 23:59:50.682 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'brokerChannelExecutor'
+2021-12-06 23:59:50.683 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'messageBrokerTaskScheduler'
+2021-12-06 23:59:50.684 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - DatebookHikariCP - Shutdown initiated...
+2021-12-06 23:59:50.687 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - DatebookHikariCP - Shutdown completed.
+2021-12-06 23:59:50.687 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientOutboundChannelExecutor'
+2021-12-06 23:59:50.687 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientInboundChannelExecutor'
+2021-12-06 23:59:55.058 [main] INFO  com.munjie.blog.BlogApplication - Starting BlogApplication on DESKTOP-AB71LST with PID 18620 (G:\web_project\blog_server\target\classes started by 86158 in G:\web_project\blog_server)
+2021-12-06 23:59:55.060 [main] INFO  com.munjie.blog.BlogApplication - The following profiles are active: dev
+2021-12-06 23:59:55.655 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor - Post-processing PropertySource instances
+2021-12-06 23:59:55.689 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-12-06 23:59:55.690 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-12-06 23:59:55.690 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-12-06 23:59:55.691 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-12-06 23:59:55.691 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2021-12-06 23:59:55.691 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-12-06 23:59:55.691 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource applicationConfig: [classpath:/application-dev.yml] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-12-06 23:59:55.691 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource applicationConfig: [classpath:/application.yml] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-12-06 23:59:55.734 [main] INFO  c.u.j.filter.DefaultLazyPropertyFilter - Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-12-06 23:59:55.866 [main] INFO  c.u.j.resolver.DefaultLazyPropertyResolver - Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-12-06 23:59:55.867 [main] INFO  c.u.j.detector.DefaultLazyPropertyDetector - Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-12-06 23:59:56.021 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http)
+2021-12-06 23:59:56.056 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+2021-12-06 23:59:56.056 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-12-06 23:59:56.056 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+2021-12-06 23:59:56.126 [main] INFO  o.a.c.c.ContainerBase.[Tomcat].[localhost].[/blog] - Initializing Spring embedded WebApplicationContext
+2021-12-06 23:59:56.126 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1036 ms
+2021-12-06 23:59:56.232 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientInboundChannelExecutor'
+2021-12-06 23:59:56.242 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientOutboundChannelExecutor'
+2021-12-06 23:59:56.831 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - Autowired annotation should only be used on methods with parameters: public com.munjie.blog.pojo.ArticleDTO com.munjie.blog.service.impl.ArticleServiceImpl.listArticles()
+2021-12-06 23:59:56.837 [main] INFO  com.munjie.blog.service.impl.ArticleServiceImpl - 
+2021-12-06 23:59:56.847 [main] INFO  com.zaxxer.hikari.HikariDataSource - DatebookHikariCP - Starting...
+2021-12-06 23:59:57.315 [main] INFO  com.zaxxer.hikari.HikariDataSource - DatebookHikariCP - Start completed.
+2021-12-06 23:59:57.633 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-12-06 23:59:57.650 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'messageBrokerTaskScheduler'
+2021-12-06 23:59:57.678 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'brokerChannelExecutor'
+2021-12-06 23:59:57.972 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2021-12-06 23:59:57.982 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-12-06 23:59:58.000 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2021-12-06 23:59:58.086 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listArticlesUsingGET_1
+2021-12-06 23:59:58.102 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: saveUsingPOST_1
+2021-12-06 23:59:58.124 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listTaskUsingGET_1
+2021-12-06 23:59:58.127 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteArticleUsingGET_1
+2021-12-06 23:59:58.133 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteArticleUsingGET_2
+2021-12-06 23:59:58.134 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listTaskUsingGET_2
+2021-12-06 23:59:58.142 [main] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Starting...
+2021-12-06 23:59:58.142 [main] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2021-12-06 23:59:58.142 [main] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Started.
+2021-12-06 23:59:58.148 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+2021-12-06 23:59:58.163 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (http) with context path '/blog'
+2021-12-06 23:59:58.165 [main] INFO  com.munjie.blog.BlogApplication - Started BlogApplication in 3.435 seconds (JVM running for 4.192)
+2021-12-06 23:59:58.166 [main] INFO  com.munjie.blog.BlogApplication - Server has been started successfully...

@@ -1,0 +1,21 @@
+2021-12-06 22:00:39.786 [main] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - ==>  Preparing: select * from article where status = '1' order by article_create_time desc 
+2021-12-06 22:00:39.797 [main] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - ==> Parameters: 
+2021-12-06 22:00:39.817 [main] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - <==      Total: 0
+2021-12-06 22:00:59.311 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - ==>  Preparing: select * from article where status = '1' order by article_create_time desc 
+2021-12-06 22:00:59.312 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - ==> Parameters: 
+2021-12-06 22:00:59.325 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - <==      Total: 0
+2021-12-06 22:01:14.365 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - ==>  Preparing: select * from article where status = '1' order by article_create_time desc 
+2021-12-06 22:01:14.365 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - ==> Parameters: 
+2021-12-06 22:01:14.375 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - <==      Total: 0
+2021-12-06 23:13:16.974 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - ==>  Preparing: select * from article where status = '1' order by article_create_time desc 
+2021-12-06 23:13:16.975 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - ==> Parameters: 
+2021-12-06 23:13:16.988 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - <==      Total: 0
+2021-12-06 23:14:07.941 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - ==>  Preparing: select * from article where status = '1' order by article_create_time desc 
+2021-12-06 23:14:07.941 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - ==> Parameters: 
+2021-12-06 23:14:07.949 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - <==      Total: 0
+2021-12-06 23:14:52.267 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - ==>  Preparing: select * from article where status = '1' order by article_create_time desc 
+2021-12-06 23:14:52.268 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - ==> Parameters: 
+2021-12-06 23:14:52.280 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - <==      Total: 0
+2021-12-06 23:59:57.320 [main] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - ==>  Preparing: select * from article where status = '1' order by article_create_time desc 
+2021-12-06 23:59:57.330 [main] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - ==> Parameters: 
+2021-12-06 23:59:57.345 [main] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - <==      Total: 0

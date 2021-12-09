@@ -10,11 +10,10 @@ import com.munjie.blog.pojo.Response;
 import com.munjie.blog.pojo.UserDO;
 import com.munjie.blog.service.UserService;
 import com.munjie.blog.utils.CommonUtil;
+import com.munjie.blog.utils.RedisUtil;
 import org.apache.commons.collections4.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
-import redis.clients.jedis.Jedis;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
@@ -28,14 +27,6 @@ import java.util.List;
 @Service
 public class UserServiceImpl implements UserService {
 
-    @Value("${spring.redis.host}")
-    private String host;
-
-    @Value("${spring.redis.port}")
-    private int port;
-
-    @Value("${spring.redis.password}")
-    private String pwd;
 
     @Autowired
     private  Md5TokenGenerator tokenGenerator;
@@ -45,6 +36,9 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private RoleMapper roleMapper;
+
+    @Autowired
+    private RedisUtil redisUtil;
 
     public static String getToken(String userName, String password) {
         Date start = new Date();
@@ -57,19 +51,15 @@ public class UserServiceImpl implements UserService {
     @Override
     public String setRedisData(String userName, String password) {
         //此处主要设置你的redis的ip和端口号，我的redis是在本地
-        Jedis jedis = new Jedis(host, port);
-        jedis.auth(pwd);
         String token = tokenGenerator.generate(userName, password);
-        jedis.set(userName, token);
+        redisUtil.set(userName, token);
         //设置key过期时间，到期会自动删除
-        jedis.expire(userName, CommonUtil.TOKEN_EXPIRE_TIME);
+        redisUtil.expire(userName, CommonUtil.TOKEN_EXPIRE_TIME);
         //将token和username以键值对的形式存入到redis中进行双向绑定
-        jedis.set(token, userName);
-        jedis.expire(token, CommonUtil.TOKEN_EXPIRE_TIME);
+        redisUtil.set(token, userName);
+        redisUtil.expire(token, CommonUtil.TOKEN_EXPIRE_TIME);
         Long currentTime = System.currentTimeMillis();
-        jedis.set(token + userName, currentTime.toString());
-        //用完关闭
-        jedis.close();
+        redisUtil.set(token + userName, currentTime.toString());
         return token;
     }
 

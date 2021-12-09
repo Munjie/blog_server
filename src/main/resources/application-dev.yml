@@ -12,7 +12,7 @@ jasypt:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://121.41.25.51:3306/blog?usessl = false&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://47.119.123.56:3306/blog?usessl = false&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=Asia/Shanghai
     username: root
     password: 1qaz@WSX3edc
     type: com.zaxxer.hikari.HikariDataSource
@@ -35,9 +35,18 @@ spring:
       repositories:
         enabled: true
   redis:
-    host: 47.103.65.208
+    host: r-uf66vjadwn625cc6y3pd.redis.rds.aliyuncs.com
     port: 6379
-    password: 1qaz@WSX3edc
+    password: 1qaz@WSX
+    timeout: 3000
+    database: 0
+    lettuce:
+      pool:
+        max-wait: 30000
+        max-active: 100
+        max-idle: 20
+        min-idle: 0
+
 
 #日志配置
 logging:

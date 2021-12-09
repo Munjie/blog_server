@@ -1,0 +1,391 @@
+2021-11-25 21:31:00.422 [main] INFO  com.munjie.blog.BlogApplication - Starting BlogApplication on DESKTOP-AB71LST with PID 30176 (G:\web_project\blog_server\target\classes started by 86158 in G:\web_project\blog_server)
+2021-11-25 21:31:00.427 [main] INFO  com.munjie.blog.BlogApplication - The following profiles are active: dev
+2021-11-25 21:31:01.129 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor - Post-processing PropertySource instances
+2021-11-25 21:31:01.168 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-11-25 21:31:01.169 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-11-25 21:31:01.169 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-11-25 21:31:01.170 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-11-25 21:31:01.170 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2021-11-25 21:31:01.170 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-11-25 21:31:01.170 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource applicationConfig: [classpath:/application-dev.yml] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-11-25 21:31:01.170 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource applicationConfig: [classpath:/application.yml] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-11-25 21:31:01.217 [main] INFO  c.u.j.filter.DefaultLazyPropertyFilter - Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-11-25 21:31:01.371 [main] INFO  c.u.j.resolver.DefaultLazyPropertyResolver - Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-11-25 21:31:01.372 [main] INFO  c.u.j.detector.DefaultLazyPropertyDetector - Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-11-25 21:31:01.544 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http)
+2021-11-25 21:31:01.550 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+2021-11-25 21:31:01.551 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-11-25 21:31:01.551 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+2021-11-25 21:31:01.665 [main] INFO  o.a.c.c.ContainerBase.[Tomcat].[localhost].[/blog] - Initializing Spring embedded WebApplicationContext
+2021-11-25 21:31:01.666 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1201 ms
+2021-11-25 21:31:01.786 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientInboundChannelExecutor'
+2021-11-25 21:31:01.796 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientOutboundChannelExecutor'
+2021-11-25 21:31:02.416 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - Autowired annotation should only be used on methods with parameters: public com.munjie.blog.pojo.ArticleDTO com.munjie.blog.service.impl.ArticleServiceImpl.listArticles()
+2021-11-25 21:31:02.423 [main] INFO  com.munjie.blog.service.impl.ArticleServiceImpl - 
+2021-11-25 21:31:02.435 [main] INFO  com.zaxxer.hikari.HikariDataSource - DatebookHikariCP - Starting...
+2021-11-25 21:31:02.960 [main] INFO  com.zaxxer.hikari.HikariDataSource - DatebookHikariCP - Start completed.
+2021-11-25 21:31:03.307 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-11-25 21:31:03.325 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'messageBrokerTaskScheduler'
+2021-11-25 21:31:03.358 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'brokerChannelExecutor'
+2021-11-25 21:31:03.678 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2021-11-25 21:31:03.690 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-11-25 21:31:03.711 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2021-11-25 21:31:03.803 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listArticlesUsingGET_1
+2021-11-25 21:31:03.820 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: saveUsingPOST_1
+2021-11-25 21:31:03.833 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteArticleUsingGET_1
+2021-11-25 21:31:03.839 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteArticleUsingGET_2
+2021-11-25 21:31:03.840 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listTaskUsingGET_1
+2021-11-25 21:31:03.848 [main] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Starting...
+2021-11-25 21:31:03.848 [main] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2021-11-25 21:31:03.849 [main] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Started.
+2021-11-25 21:31:03.856 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+2021-11-25 21:31:03.873 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (http) with context path '/blog'
+2021-11-25 21:31:03.875 [main] INFO  com.munjie.blog.BlogApplication - Started BlogApplication in 3.879 seconds (JVM running for 5.065)
+2021-11-25 21:31:03.876 [main] INFO  com.munjie.blog.BlogApplication - Server has been started successfully...
+2021-11-25 21:31:32.046 [http-nio-8088-exec-1] INFO  o.a.c.c.ContainerBase.[Tomcat].[localhost].[/blog] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-25 21:31:32.046 [http-nio-8088-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-11-25 21:31:32.052 [http-nio-8088-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+2021-11-25 21:31:32.075 [http-nio-8088-exec-1] INFO  com.munjie.blog.config.AopLogAspect - ----------- 前置通知 -----------
+2021-11-25 21:31:32.077 [http-nio-8088-exec-1] INFO  com.munjie.blog.config.AopLogAspect - 请求IP：0:0:0:0:0:0:0:1
+2021-11-25 21:31:32.077 [http-nio-8088-exec-1] INFO  com.munjie.blog.config.AopLogAspect - 方法签名：R com.munjie.blog.controller.BlogInfoController.getAbout()
+2021-11-25 21:31:32.077 [http-nio-8088-exec-1] INFO  com.munjie.blog.config.AopLogAspect - 方法名：getAbout
+2021-11-25 21:31:32.077 [http-nio-8088-exec-1] INFO  com.munjie.blog.config.AopLogAspect - 请求参数：[]
+2021-11-25 21:31:32.094 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - ----------- 环绕通知 -----------
+2021-11-25 21:31:32.095 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - 环绕通知的目标方法名：listArticles
+2021-11-25 21:31:32.095 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - ----------- 前置通知 -----------
+2021-11-25 21:31:32.095 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - 请求IP：0:0:0:0:0:0:0:1
+2021-11-25 21:31:32.095 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - 方法签名：Response com.munjie.blog.controller.ArticleController.listArticles(Integer,Integer)
+2021-11-25 21:31:32.095 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - 方法名：listArticles
+2021-11-25 21:31:32.095 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - 请求参数：[5, 1]
+2021-11-25 21:31:32.096 [http-nio-8088-exec-1] INFO  com.munjie.blog.config.AopLogAspect - ----------- 最终通知 -----------execution(R com.munjie.blog.controller.BlogInfoController.getAbout())
+2021-11-25 21:31:32.096 [http-nio-8088-exec-1] INFO  com.munjie.blog.config.AopLogAspect - ----------- 后置返回通知 -----------
+2021-11-25 21:31:32.096 [http-nio-8088-exec-1] INFO  com.munjie.blog.config.AopLogAspect - 后置返回通知的返回值：R(code=0, data=BlogInfoDTO(blogName=Munjie, articleCount=12, avatar=, categoryCount=20, github=wwww, sign=kkk), msg=执行成功)
+2021-11-25 21:31:32.100 [http-nio-8088-exec-2] INFO  com.munjie.blog.service.impl.ArticleServiceImpl - 
+2021-11-25 21:31:32.121 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - ---------- 环绕通知结束 -------------
+2021-11-25 21:31:32.121 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - ----------- 最终通知 -----------execution(Response com.munjie.blog.controller.ArticleController.listArticles(Integer,Integer))
+2021-11-25 21:31:32.122 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - ----------- 后置返回通知 -----------
+2021-11-25 21:31:32.122 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - 后置返回通知的返回值：{reason=SUCCESS, code=200, data=ArticleDTO(rows=[], total=0), message=null}
+2021-11-25 21:32:03.362 [MessageBroker-1] INFO  o.s.web.socket.config.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2021-11-25 21:53:15.047 [http-nio-8088-exec-5] INFO  com.munjie.blog.config.AopLogAspect - ----------- 前置通知 -----------
+2021-11-25 21:53:15.047 [http-nio-8088-exec-5] INFO  com.munjie.blog.config.AopLogAspect - 请求IP：0:0:0:0:0:0:0:1
+2021-11-25 21:53:15.047 [http-nio-8088-exec-5] INFO  com.munjie.blog.config.AopLogAspect - 方法签名：R com.munjie.blog.controller.BlogInfoController.getAbout()
+2021-11-25 21:53:15.047 [http-nio-8088-exec-5] INFO  com.munjie.blog.config.AopLogAspect - 方法名：getAbout
+2021-11-25 21:53:15.048 [http-nio-8088-exec-5] INFO  com.munjie.blog.config.AopLogAspect - 请求参数：[]
+2021-11-25 21:53:15.048 [http-nio-8088-exec-5] INFO  com.munjie.blog.config.AopLogAspect - ----------- 最终通知 -----------execution(R com.munjie.blog.controller.BlogInfoController.getAbout())
+2021-11-25 21:53:15.048 [http-nio-8088-exec-5] INFO  com.munjie.blog.config.AopLogAspect - ----------- 后置返回通知 -----------
+2021-11-25 21:53:15.048 [http-nio-8088-exec-5] INFO  com.munjie.blog.config.AopLogAspect - 后置返回通知的返回值：R(code=0, data=BlogInfoDTO(blogName=Munjie, articleCount=12, avatar=, categoryCount=20, github=wwww, sign=kkk), msg=执行成功)
+2021-11-25 21:53:15.111 [http-nio-8088-exec-6] INFO  com.munjie.blog.config.AopLogAspect - ----------- 环绕通知 -----------
+2021-11-25 21:53:15.111 [http-nio-8088-exec-6] INFO  com.munjie.blog.config.AopLogAspect - 环绕通知的目标方法名：listArticles
+2021-11-25 21:53:15.111 [http-nio-8088-exec-6] INFO  com.munjie.blog.config.AopLogAspect - ----------- 前置通知 -----------
+2021-11-25 21:53:15.111 [http-nio-8088-exec-6] INFO  com.munjie.blog.config.AopLogAspect - 请求IP：0:0:0:0:0:0:0:1
+2021-11-25 21:53:15.111 [http-nio-8088-exec-6] INFO  com.munjie.blog.config.AopLogAspect - 方法签名：Response com.munjie.blog.controller.ArticleController.listArticles(Integer,Integer)
+2021-11-25 21:53:15.111 [http-nio-8088-exec-6] INFO  com.munjie.blog.config.AopLogAspect - 方法名：listArticles
+2021-11-25 21:53:15.111 [http-nio-8088-exec-6] INFO  com.munjie.blog.config.AopLogAspect - 请求参数：[5, 1]
+2021-11-25 21:53:15.112 [http-nio-8088-exec-6] INFO  com.munjie.blog.service.impl.ArticleServiceImpl - 
+2021-11-25 21:53:15.131 [http-nio-8088-exec-6] INFO  com.munjie.blog.config.AopLogAspect - ---------- 环绕通知结束 -------------
+2021-11-25 21:53:15.131 [http-nio-8088-exec-6] INFO  com.munjie.blog.config.AopLogAspect - ----------- 最终通知 -----------execution(Response com.munjie.blog.controller.ArticleController.listArticles(Integer,Integer))
+2021-11-25 21:53:15.131 [http-nio-8088-exec-6] INFO  com.munjie.blog.config.AopLogAspect - ----------- 后置返回通知 -----------
+2021-11-25 21:53:15.131 [http-nio-8088-exec-6] INFO  com.munjie.blog.config.AopLogAspect - 后置返回通知的返回值：{reason=SUCCESS, code=200, data=ArticleDTO(rows=[], total=0), message=null}
+2021-11-25 21:53:23.907 [http-nio-8088-exec-7] INFO  com.munjie.blog.config.AopLogAspect - ----------- 前置通知 -----------
+2021-11-25 21:53:23.908 [http-nio-8088-exec-7] INFO  com.munjie.blog.config.AopLogAspect - 请求IP：0:0:0:0:0:0:0:1
+2021-11-25 21:53:23.908 [http-nio-8088-exec-7] INFO  com.munjie.blog.config.AopLogAspect - 方法签名：R com.munjie.blog.controller.BlogInfoController.getAbout()
+2021-11-25 21:53:23.908 [http-nio-8088-exec-7] INFO  com.munjie.blog.config.AopLogAspect - 方法名：getAbout
+2021-11-25 21:53:23.908 [http-nio-8088-exec-7] INFO  com.munjie.blog.config.AopLogAspect - 请求参数：[]
+2021-11-25 21:53:23.908 [http-nio-8088-exec-7] INFO  com.munjie.blog.config.AopLogAspect - ----------- 最终通知 -----------execution(R com.munjie.blog.controller.BlogInfoController.getAbout())
+2021-11-25 21:53:23.908 [http-nio-8088-exec-7] INFO  com.munjie.blog.config.AopLogAspect - ----------- 后置返回通知 -----------
+2021-11-25 21:53:23.908 [http-nio-8088-exec-7] INFO  com.munjie.blog.config.AopLogAspect - 后置返回通知的返回值：R(code=0, data=BlogInfoDTO(blogName=Munjie, articleCount=12, avatar=, categoryCount=20, github=wwww, sign=kkk), msg=执行成功)
+2021-11-25 21:53:24.014 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - ----------- 环绕通知 -----------
+2021-11-25 21:53:24.014 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - 环绕通知的目标方法名：listArticles
+2021-11-25 21:53:24.014 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - ----------- 前置通知 -----------
+2021-11-25 21:53:24.014 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - 请求IP：0:0:0:0:0:0:0:1
+2021-11-25 21:53:24.014 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - 方法签名：Response com.munjie.blog.controller.ArticleController.listArticles(Integer,Integer)
+2021-11-25 21:53:24.014 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - 方法名：listArticles
+2021-11-25 21:53:24.014 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - 请求参数：[5, 1]
+2021-11-25 21:53:24.014 [http-nio-8088-exec-8] INFO  com.munjie.blog.service.impl.ArticleServiceImpl - 
+2021-11-25 21:53:24.032 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - ---------- 环绕通知结束 -------------
+2021-11-25 21:53:24.032 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - ----------- 最终通知 -----------execution(Response com.munjie.blog.controller.ArticleController.listArticles(Integer,Integer))
+2021-11-25 21:53:24.032 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - ----------- 后置返回通知 -----------
+2021-11-25 21:53:24.032 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - 后置返回通知的返回值：{reason=SUCCESS, code=200, data=ArticleDTO(rows=[], total=0), message=null}
+2021-11-25 21:53:46.242 [http-nio-8088-exec-9] INFO  com.munjie.blog.config.AopLogAspect - ----------- 前置通知 -----------
+2021-11-25 21:53:46.242 [http-nio-8088-exec-9] INFO  com.munjie.blog.config.AopLogAspect - 请求IP：0:0:0:0:0:0:0:1
+2021-11-25 21:53:46.242 [http-nio-8088-exec-9] INFO  com.munjie.blog.config.AopLogAspect - 方法签名：R com.munjie.blog.controller.BlogInfoController.getAbout()
+2021-11-25 21:53:46.242 [http-nio-8088-exec-9] INFO  com.munjie.blog.config.AopLogAspect - 方法名：getAbout
+2021-11-25 21:53:46.242 [http-nio-8088-exec-9] INFO  com.munjie.blog.config.AopLogAspect - 请求参数：[]
+2021-11-25 21:53:46.243 [http-nio-8088-exec-9] INFO  com.munjie.blog.config.AopLogAspect - ----------- 最终通知 -----------execution(R com.munjie.blog.controller.BlogInfoController.getAbout())
+2021-11-25 21:53:46.243 [http-nio-8088-exec-9] INFO  com.munjie.blog.config.AopLogAspect - ----------- 后置返回通知 -----------
+2021-11-25 21:53:46.243 [http-nio-8088-exec-9] INFO  com.munjie.blog.config.AopLogAspect - 后置返回通知的返回值：R(code=0, data=BlogInfoDTO(blogName=Munjie, articleCount=12, avatar=, categoryCount=20, github=wwww, sign=kkk), msg=执行成功)
+2021-11-25 21:53:46.281 [http-nio-8088-exec-10] INFO  com.munjie.blog.config.AopLogAspect - ----------- 环绕通知 -----------
+2021-11-25 21:53:46.282 [http-nio-8088-exec-10] INFO  com.munjie.blog.config.AopLogAspect - 环绕通知的目标方法名：listArticles
+2021-11-25 21:53:46.282 [http-nio-8088-exec-10] INFO  com.munjie.blog.config.AopLogAspect - ----------- 前置通知 -----------
+2021-11-25 21:53:46.282 [http-nio-8088-exec-10] INFO  com.munjie.blog.config.AopLogAspect - 请求IP：0:0:0:0:0:0:0:1
+2021-11-25 21:53:46.282 [http-nio-8088-exec-10] INFO  com.munjie.blog.config.AopLogAspect - 方法签名：Response com.munjie.blog.controller.ArticleController.listArticles(Integer,Integer)
+2021-11-25 21:53:46.282 [http-nio-8088-exec-10] INFO  com.munjie.blog.config.AopLogAspect - 方法名：listArticles
+2021-11-25 21:53:46.282 [http-nio-8088-exec-10] INFO  com.munjie.blog.config.AopLogAspect - 请求参数：[5, 1]
+2021-11-25 21:53:46.282 [http-nio-8088-exec-10] INFO  com.munjie.blog.service.impl.ArticleServiceImpl - 
+2021-11-25 21:53:46.297 [http-nio-8088-exec-10] INFO  com.munjie.blog.config.AopLogAspect - ---------- 环绕通知结束 -------------
+2021-11-25 21:53:46.297 [http-nio-8088-exec-10] INFO  com.munjie.blog.config.AopLogAspect - ----------- 最终通知 -----------execution(Response com.munjie.blog.controller.ArticleController.listArticles(Integer,Integer))
+2021-11-25 21:53:46.297 [http-nio-8088-exec-10] INFO  com.munjie.blog.config.AopLogAspect - ----------- 后置返回通知 -----------
+2021-11-25 21:53:46.297 [http-nio-8088-exec-10] INFO  com.munjie.blog.config.AopLogAspect - 后置返回通知的返回值：{reason=SUCCESS, code=200, data=ArticleDTO(rows=[], total=0), message=null}
+2021-11-25 21:57:06.825 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - ----------- 前置通知 -----------
+2021-11-25 21:57:06.826 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - 请求IP：0:0:0:0:0:0:0:1
+2021-11-25 21:57:06.826 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - 方法签名：R com.munjie.blog.controller.BlogInfoController.getAbout()
+2021-11-25 21:57:06.826 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - 方法名：getAbout
+2021-11-25 21:57:06.826 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - 请求参数：[]
+2021-11-25 21:57:06.826 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - ----------- 最终通知 -----------execution(R com.munjie.blog.controller.BlogInfoController.getAbout())
+2021-11-25 21:57:06.826 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - ----------- 后置返回通知 -----------
+2021-11-25 21:57:06.826 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - 后置返回通知的返回值：R(code=0, data=BlogInfoDTO(blogName=Munjie, articleCount=12, avatar=, categoryCount=20, github=wwww, sign=kkk), msg=执行成功)
+2021-11-25 21:57:06.851 [http-nio-8088-exec-3] INFO  com.munjie.blog.config.AopLogAspect - ----------- 环绕通知 -----------
+2021-11-25 21:57:06.851 [http-nio-8088-exec-3] INFO  com.munjie.blog.config.AopLogAspect - 环绕通知的目标方法名：listArticles
+2021-11-25 21:57:06.851 [http-nio-8088-exec-3] INFO  com.munjie.blog.config.AopLogAspect - ----------- 前置通知 -----------
+2021-11-25 21:57:06.851 [http-nio-8088-exec-3] INFO  com.munjie.blog.config.AopLogAspect - 请求IP：0:0:0:0:0:0:0:1
+2021-11-25 21:57:06.851 [http-nio-8088-exec-3] INFO  com.munjie.blog.config.AopLogAspect - 方法签名：Response com.munjie.blog.controller.ArticleController.listArticles(Integer,Integer)
+2021-11-25 21:57:06.851 [http-nio-8088-exec-3] INFO  com.munjie.blog.config.AopLogAspect - 方法名：listArticles
+2021-11-25 21:57:06.851 [http-nio-8088-exec-3] INFO  com.munjie.blog.config.AopLogAspect - 请求参数：[5, 1]
+2021-11-25 21:57:06.851 [http-nio-8088-exec-3] INFO  com.munjie.blog.service.impl.ArticleServiceImpl - 
+2021-11-25 21:57:06.878 [http-nio-8088-exec-3] INFO  com.munjie.blog.config.AopLogAspect - ---------- 环绕通知结束 -------------
+2021-11-25 21:57:06.879 [http-nio-8088-exec-3] INFO  com.munjie.blog.config.AopLogAspect - ----------- 最终通知 -----------execution(Response com.munjie.blog.controller.ArticleController.listArticles(Integer,Integer))
+2021-11-25 21:57:06.879 [http-nio-8088-exec-3] INFO  com.munjie.blog.config.AopLogAspect - ----------- 后置返回通知 -----------
+2021-11-25 21:57:06.879 [http-nio-8088-exec-3] INFO  com.munjie.blog.config.AopLogAspect - 后置返回通知的返回值：{reason=SUCCESS, code=200, data=ArticleDTO(rows=[], total=0), message=null}
+2021-11-25 21:57:16.111 [http-nio-8088-exec-4] INFO  com.munjie.blog.config.AopLogAspect - ----------- 前置通知 -----------
+2021-11-25 21:57:16.111 [http-nio-8088-exec-4] INFO  com.munjie.blog.config.AopLogAspect - 请求IP：0:0:0:0:0:0:0:1
+2021-11-25 21:57:16.111 [http-nio-8088-exec-4] INFO  com.munjie.blog.config.AopLogAspect - 方法签名：R com.munjie.blog.controller.BlogInfoController.getAbout()
+2021-11-25 21:57:16.111 [http-nio-8088-exec-4] INFO  com.munjie.blog.config.AopLogAspect - 方法名：getAbout
+2021-11-25 21:57:16.111 [http-nio-8088-exec-4] INFO  com.munjie.blog.config.AopLogAspect - 请求参数：[]
+2021-11-25 21:57:16.112 [http-nio-8088-exec-4] INFO  com.munjie.blog.config.AopLogAspect - ----------- 最终通知 -----------execution(R com.munjie.blog.controller.BlogInfoController.getAbout())
+2021-11-25 21:57:16.112 [http-nio-8088-exec-4] INFO  com.munjie.blog.config.AopLogAspect - ----------- 后置返回通知 -----------
+2021-11-25 21:57:16.112 [http-nio-8088-exec-4] INFO  com.munjie.blog.config.AopLogAspect - 后置返回通知的返回值：R(code=0, data=BlogInfoDTO(blogName=Munjie, articleCount=12, avatar=, categoryCount=20, github=wwww, sign=kkk), msg=执行成功)
+2021-11-25 21:57:16.222 [http-nio-8088-exec-5] INFO  com.munjie.blog.config.AopLogAspect - ----------- 环绕通知 -----------
+2021-11-25 21:57:16.222 [http-nio-8088-exec-5] INFO  com.munjie.blog.config.AopLogAspect - 环绕通知的目标方法名：listArticles
+2021-11-25 21:57:16.222 [http-nio-8088-exec-5] INFO  com.munjie.blog.config.AopLogAspect - ----------- 前置通知 -----------
+2021-11-25 21:57:16.222 [http-nio-8088-exec-5] INFO  com.munjie.blog.config.AopLogAspect - 请求IP：0:0:0:0:0:0:0:1
+2021-11-25 21:57:16.222 [http-nio-8088-exec-5] INFO  com.munjie.blog.config.AopLogAspect - 方法签名：Response com.munjie.blog.controller.ArticleController.listArticles(Integer,Integer)
+2021-11-25 21:57:16.222 [http-nio-8088-exec-5] INFO  com.munjie.blog.config.AopLogAspect - 方法名：listArticles
+2021-11-25 21:57:16.222 [http-nio-8088-exec-5] INFO  com.munjie.blog.config.AopLogAspect - 请求参数：[5, 1]
+2021-11-25 21:57:16.223 [http-nio-8088-exec-5] INFO  com.munjie.blog.service.impl.ArticleServiceImpl - 
+2021-11-25 21:57:16.248 [http-nio-8088-exec-5] INFO  com.munjie.blog.config.AopLogAspect - ---------- 环绕通知结束 -------------
+2021-11-25 21:57:16.248 [http-nio-8088-exec-5] INFO  com.munjie.blog.config.AopLogAspect - ----------- 最终通知 -----------execution(Response com.munjie.blog.controller.ArticleController.listArticles(Integer,Integer))
+2021-11-25 21:57:16.248 [http-nio-8088-exec-5] INFO  com.munjie.blog.config.AopLogAspect - ----------- 后置返回通知 -----------
+2021-11-25 21:57:16.248 [http-nio-8088-exec-5] INFO  com.munjie.blog.config.AopLogAspect - 后置返回通知的返回值：{reason=SUCCESS, code=200, data=ArticleDTO(rows=[], total=0), message=null}
+2021-11-25 21:57:39.495 [http-nio-8088-exec-6] INFO  com.munjie.blog.config.AopLogAspect - ----------- 前置通知 -----------
+2021-11-25 21:57:39.495 [http-nio-8088-exec-6] INFO  com.munjie.blog.config.AopLogAspect - 请求IP：0:0:0:0:0:0:0:1
+2021-11-25 21:57:39.496 [http-nio-8088-exec-6] INFO  com.munjie.blog.config.AopLogAspect - 方法签名：R com.munjie.blog.controller.BlogInfoController.getAbout()
+2021-11-25 21:57:39.496 [http-nio-8088-exec-6] INFO  com.munjie.blog.config.AopLogAspect - 方法名：getAbout
+2021-11-25 21:57:39.496 [http-nio-8088-exec-6] INFO  com.munjie.blog.config.AopLogAspect - 请求参数：[]
+2021-11-25 21:57:39.496 [http-nio-8088-exec-6] INFO  com.munjie.blog.config.AopLogAspect - ----------- 最终通知 -----------execution(R com.munjie.blog.controller.BlogInfoController.getAbout())
+2021-11-25 21:57:39.496 [http-nio-8088-exec-6] INFO  com.munjie.blog.config.AopLogAspect - ----------- 后置返回通知 -----------
+2021-11-25 21:57:39.496 [http-nio-8088-exec-6] INFO  com.munjie.blog.config.AopLogAspect - 后置返回通知的返回值：R(code=0, data=BlogInfoDTO(blogName=Munjie, articleCount=12, avatar=, categoryCount=20, github=wwww, sign=kkk), msg=执行成功)
+2021-11-25 21:57:39.533 [http-nio-8088-exec-7] INFO  com.munjie.blog.config.AopLogAspect - ----------- 环绕通知 -----------
+2021-11-25 21:57:39.534 [http-nio-8088-exec-7] INFO  com.munjie.blog.config.AopLogAspect - 环绕通知的目标方法名：listArticles
+2021-11-25 21:57:39.534 [http-nio-8088-exec-7] INFO  com.munjie.blog.config.AopLogAspect - ----------- 前置通知 -----------
+2021-11-25 21:57:39.534 [http-nio-8088-exec-7] INFO  com.munjie.blog.config.AopLogAspect - 请求IP：0:0:0:0:0:0:0:1
+2021-11-25 21:57:39.534 [http-nio-8088-exec-7] INFO  com.munjie.blog.config.AopLogAspect - 方法签名：Response com.munjie.blog.controller.ArticleController.listArticles(Integer,Integer)
+2021-11-25 21:57:39.534 [http-nio-8088-exec-7] INFO  com.munjie.blog.config.AopLogAspect - 方法名：listArticles
+2021-11-25 21:57:39.534 [http-nio-8088-exec-7] INFO  com.munjie.blog.config.AopLogAspect - 请求参数：[5, 1]
+2021-11-25 21:57:39.534 [http-nio-8088-exec-7] INFO  com.munjie.blog.service.impl.ArticleServiceImpl - 
+2021-11-25 21:57:39.553 [http-nio-8088-exec-7] INFO  com.munjie.blog.config.AopLogAspect - ---------- 环绕通知结束 -------------
+2021-11-25 21:57:39.553 [http-nio-8088-exec-7] INFO  com.munjie.blog.config.AopLogAspect - ----------- 最终通知 -----------execution(Response com.munjie.blog.controller.ArticleController.listArticles(Integer,Integer))
+2021-11-25 21:57:39.553 [http-nio-8088-exec-7] INFO  com.munjie.blog.config.AopLogAspect - ----------- 后置返回通知 -----------
+2021-11-25 21:57:39.553 [http-nio-8088-exec-7] INFO  com.munjie.blog.config.AopLogAspect - 后置返回通知的返回值：{reason=SUCCESS, code=200, data=ArticleDTO(rows=[], total=0), message=null}
+2021-11-25 22:01:53.712 [http-nio-8088-exec-9] INFO  com.munjie.blog.config.AopLogAspect - ----------- 前置通知 -----------
+2021-11-25 22:01:53.712 [http-nio-8088-exec-9] INFO  com.munjie.blog.config.AopLogAspect - 请求IP：0:0:0:0:0:0:0:1
+2021-11-25 22:01:53.712 [http-nio-8088-exec-9] INFO  com.munjie.blog.config.AopLogAspect - 方法签名：Response com.munjie.blog.controller.UserController.getMenus(HttpServletRequest,String)
+2021-11-25 22:01:53.712 [http-nio-8088-exec-9] INFO  com.munjie.blog.config.AopLogAspect - 方法名：getMenus
+2021-11-25 22:01:53.712 [http-nio-8088-exec-9] INFO  com.munjie.blog.config.AopLogAspect - 请求参数：[org.apache.catalina.connector.RequestFacade@b3e8417, undefined]
+2021-11-25 22:01:53.748 [http-nio-8088-exec-9] INFO  com.munjie.blog.config.AopLogAspect - ----------- 最终通知 -----------execution(Response com.munjie.blog.controller.UserController.getMenus(HttpServletRequest,String))
+2021-11-25 22:01:53.748 [http-nio-8088-exec-9] INFO  com.munjie.blog.config.AopLogAspect - ----------- 后置返回通知 -----------
+2021-11-25 22:01:53.749 [http-nio-8088-exec-9] INFO  com.munjie.blog.config.AopLogAspect - 后置返回通知的返回值：{reason=SUCCESS, code=200, data=[], message=null}
+2021-11-25 22:02:02.478 [http-nio-8088-exec-10] INFO  com.munjie.blog.config.AopLogAspect - ----------- 前置通知 -----------
+2021-11-25 22:02:02.478 [http-nio-8088-exec-10] INFO  com.munjie.blog.config.AopLogAspect - 请求IP：0:0:0:0:0:0:0:1
+2021-11-25 22:02:02.478 [http-nio-8088-exec-10] INFO  com.munjie.blog.config.AopLogAspect - 方法签名：Response com.munjie.blog.controller.UserController.login(String,String)
+2021-11-25 22:02:02.478 [http-nio-8088-exec-10] INFO  com.munjie.blog.config.AopLogAspect - 方法名：login
+2021-11-25 22:02:02.478 [http-nio-8088-exec-10] INFO  com.munjie.blog.config.AopLogAspect - 请求参数：[admin, 123456]
+2021-11-25 22:02:02.568 [http-nio-8088-exec-10] INFO  com.munjie.blog.config.AopLogAspect - ----------- 最终通知 -----------execution(Response com.munjie.blog.controller.UserController.login(String,String))
+2021-11-25 22:02:02.568 [http-nio-8088-exec-10] INFO  com.munjie.blog.config.AopLogAspect - ----------- 后置返回通知 -----------
+2021-11-25 22:02:02.614 [http-nio-8088-exec-10] INFO  com.munjie.blog.config.AopLogAspect - 后置返回通知的返回值：{reason=SUCCESS, code=200, data={"expTime":5000,"user":{"email":"6","id":1,"password":"123456","roleId":1,"userName":"admin","userNo":"1"},"token":"31eac9761cf51d7ce769ce0248440d76"}, message=null}
+2021-11-25 22:02:03.316 [http-nio-8088-exec-1] INFO  com.munjie.blog.config.AopLogAspect - ----------- 前置通知 -----------
+2021-11-25 22:02:03.316 [http-nio-8088-exec-1] INFO  com.munjie.blog.config.AopLogAspect - 请求IP：0:0:0:0:0:0:0:1
+2021-11-25 22:02:03.317 [http-nio-8088-exec-1] INFO  com.munjie.blog.config.AopLogAspect - 方法签名：Response com.munjie.blog.controller.UserController.getMenus(HttpServletRequest,String)
+2021-11-25 22:02:03.317 [http-nio-8088-exec-1] INFO  com.munjie.blog.config.AopLogAspect - 方法名：getMenus
+2021-11-25 22:02:03.317 [http-nio-8088-exec-1] INFO  com.munjie.blog.config.AopLogAspect - 请求参数：[org.apache.catalina.connector.RequestFacade@b3e8417, 1]
+2021-11-25 22:02:03.365 [http-nio-8088-exec-1] INFO  com.munjie.blog.config.AopLogAspect - ----------- 最终通知 -----------execution(Response com.munjie.blog.controller.UserController.getMenus(HttpServletRequest,String))
+2021-11-25 22:02:03.366 [MessageBroker-1] INFO  o.s.web.socket.config.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 2, active threads = 1, queued tasks = 0, completed tasks = 1]
+2021-11-25 22:02:03.366 [http-nio-8088-exec-1] INFO  com.munjie.blog.config.AopLogAspect - ----------- 后置返回通知 -----------
+2021-11-25 22:02:03.366 [http-nio-8088-exec-1] INFO  com.munjie.blog.config.AopLogAspect - 后置返回通知的返回值：{reason=SUCCESS, code=200, data=[ModuleDTO(id=3, url=/0, name=批量算路, type=null, imgUrl=iconfont icon-tag, sort=null, moduleId=3, children=[ModuleDTO(id=1, url=/admin/leftMenu/taskList, name=任务列表, type=null, imgUrl=, sort=1, moduleId=1, children=null), ModuleDTO(id=2, url=/admin/leftMenu/excel, name=上传数据, type=null, imgUrl=, sort=2, moduleId=2, children=null)]), ModuleDTO(id=6, url=/, name=系统配置, type=null, imgUrl=null, sort=null, moduleId=6, children=[ModuleDTO(id=7, url=/admin/system/moduleList, name=模块管理, type=null, imgUrl=null, sort=null, moduleId=7, children=null), ModuleDTO(id=8, url=/admin/categories, name=标签, type=null, imgUrl=null, sort=null, moduleId=8, children=null)])], message=null}
+2021-11-25 22:02:05.573 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - ----------- 前置通知 -----------
+2021-11-25 22:02:05.573 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - 请求IP：0:0:0:0:0:0:0:1
+2021-11-25 22:02:05.573 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - 方法签名：Response com.munjie.blog.controller.ModuleController.listModule(Integer,Integer)
+2021-11-25 22:02:05.573 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - 方法名：listModule
+2021-11-25 22:02:05.573 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - 请求参数：[15, 0]
+2021-11-25 22:02:05.648 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - ----------- 最终通知 -----------execution(Response com.munjie.blog.controller.ModuleController.listModule(Integer,Integer))
+2021-11-25 22:02:05.648 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - ----------- 后置返回通知 -----------
+2021-11-25 22:02:05.648 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - 后置返回通知的返回值：{reason=SUCCESS, code=200, data=ModulesDTO(rows=Page{count=true, pageNum=1, pageSize=15, startRow=0, endRow=15, total=8, pages=1, reasonable=true, pageSizeZero=false}[ModuleDO(id=1, url=/admin/leftMenu/taskList, name=任务列表, imgUrl=, parent=批量算路, sort=1, moduleId=1, createDate=, createTime=null, updateTime=null), ModuleDO(id=2, url=/admin/leftMenu/excel, name=上传数据, imgUrl=, parent=批量算路, sort=2, moduleId=2, createDate=, createTime=null, updateTime=null), ModuleDO(id=3, url=/0, name=批量算路, imgUrl=iconfont icon-tag, parent=null, sort=null, moduleId=3, createDate=, createTime=null, updateTime=null), ModuleDO(id=4, url=/, name=文章, imgUrl=null, parent=null, sort=null, moduleId=4, createDate=, createTime=null, updateTime=null), ModuleDO(id=5, url=/, name=权限管理, imgUrl=null, parent=null, sort=null, moduleId=5, createDate=, createTime=null, updateTime=null), ModuleDO(id=6, url=/, name=系统配置, imgUrl=null, parent=, sort=null, moduleId=6, createDate=, createTime=null, updateTime=null), ModuleDO(id=7, url=/admin/system/moduleList, name=模块管理, imgUrl=null, parent=系统配置, sort=null, moduleId=7, createDate=, createTime=null, updateTime=null), ModuleDO(id=8, url=/admin/categories, name=标签, imgUrl=null, parent=系统配置, sort=null, moduleId=8, createDate=, createTime=null, updateTime=null)], total=8), message=null}
+2021-11-25 22:02:07.195 [http-nio-8088-exec-4] INFO  com.munjie.blog.config.AopLogAspect - ----------- 前置通知 -----------
+2021-11-25 22:02:07.196 [http-nio-8088-exec-4] INFO  com.munjie.blog.config.AopLogAspect - 请求IP：0:0:0:0:0:0:0:1
+2021-11-25 22:02:07.196 [http-nio-8088-exec-4] INFO  com.munjie.blog.config.AopLogAspect - 方法签名：Response com.munjie.blog.controller.ArticleController.listAllTags()
+2021-11-25 22:02:07.196 [http-nio-8088-exec-4] INFO  com.munjie.blog.config.AopLogAspect - 方法名：listAllTags
+2021-11-25 22:02:07.196 [http-nio-8088-exec-4] INFO  com.munjie.blog.config.AopLogAspect - 请求参数：[]
+2021-11-25 22:02:07.213 [http-nio-8088-exec-4] INFO  com.munjie.blog.config.AopLogAspect - ----------- 最终通知 -----------execution(Response com.munjie.blog.controller.ArticleController.listAllTags())
+2021-11-25 22:02:07.213 [http-nio-8088-exec-4] INFO  com.munjie.blog.config.AopLogAspect - ----------- 后置返回通知 -----------
+2021-11-25 22:02:07.213 [http-nio-8088-exec-4] INFO  com.munjie.blog.config.AopLogAspect - 后置返回通知的返回值：{reason=SUCCESS, code=200, data=[], message=null}
+2021-11-25 22:02:08.070 [http-nio-8088-exec-5] INFO  com.munjie.blog.config.AopLogAspect - ----------- 前置通知 -----------
+2021-11-25 22:02:08.070 [http-nio-8088-exec-5] INFO  com.munjie.blog.config.AopLogAspect - 请求IP：0:0:0:0:0:0:0:1
+2021-11-25 22:02:08.070 [http-nio-8088-exec-5] INFO  com.munjie.blog.config.AopLogAspect - 方法签名：Response com.munjie.blog.controller.ModuleController.listModule(Integer,Integer)
+2021-11-25 22:02:08.070 [http-nio-8088-exec-5] INFO  com.munjie.blog.config.AopLogAspect - 方法名：listModule
+2021-11-25 22:02:08.070 [http-nio-8088-exec-5] INFO  com.munjie.blog.config.AopLogAspect - 请求参数：[15, 0]
+2021-11-25 22:02:08.120 [http-nio-8088-exec-5] INFO  com.munjie.blog.config.AopLogAspect - ----------- 最终通知 -----------execution(Response com.munjie.blog.controller.ModuleController.listModule(Integer,Integer))
+2021-11-25 22:02:08.120 [http-nio-8088-exec-5] INFO  com.munjie.blog.config.AopLogAspect - ----------- 后置返回通知 -----------
+2021-11-25 22:02:08.120 [http-nio-8088-exec-5] INFO  com.munjie.blog.config.AopLogAspect - 后置返回通知的返回值：{reason=SUCCESS, code=200, data=ModulesDTO(rows=Page{count=true, pageNum=1, pageSize=15, startRow=0, endRow=15, total=8, pages=1, reasonable=true, pageSizeZero=false}[ModuleDO(id=1, url=/admin/leftMenu/taskList, name=任务列表, imgUrl=, parent=批量算路, sort=1, moduleId=1, createDate=, createTime=null, updateTime=null), ModuleDO(id=2, url=/admin/leftMenu/excel, name=上传数据, imgUrl=, parent=批量算路, sort=2, moduleId=2, createDate=, createTime=null, updateTime=null), ModuleDO(id=3, url=/0, name=批量算路, imgUrl=iconfont icon-tag, parent=null, sort=null, moduleId=3, createDate=, createTime=null, updateTime=null), ModuleDO(id=4, url=/, name=文章, imgUrl=null, parent=null, sort=null, moduleId=4, createDate=, createTime=null, updateTime=null), ModuleDO(id=5, url=/, name=权限管理, imgUrl=null, parent=null, sort=null, moduleId=5, createDate=, createTime=null, updateTime=null), ModuleDO(id=6, url=/, name=系统配置, imgUrl=null, parent=, sort=null, moduleId=6, createDate=, createTime=null, updateTime=null), ModuleDO(id=7, url=/admin/system/moduleList, name=模块管理, imgUrl=null, parent=系统配置, sort=null, moduleId=7, createDate=, createTime=null, updateTime=null), ModuleDO(id=8, url=/admin/categories, name=标签, imgUrl=null, parent=系统配置, sort=null, moduleId=8, createDate=, createTime=null, updateTime=null)], total=8), message=null}
+2021-11-25 22:02:40.938 [http-nio-8088-exec-6] INFO  com.munjie.blog.config.AopLogAspect - ----------- 前置通知 -----------
+2021-11-25 22:02:40.938 [http-nio-8088-exec-6] INFO  com.munjie.blog.config.AopLogAspect - 请求IP：0:0:0:0:0:0:0:1
+2021-11-25 22:02:40.938 [http-nio-8088-exec-6] INFO  com.munjie.blog.config.AopLogAspect - 方法签名：Response com.munjie.blog.controller.TaskConller.listTask(Integer,Integer)
+2021-11-25 22:02:40.938 [http-nio-8088-exec-6] INFO  com.munjie.blog.config.AopLogAspect - 方法名：listTask
+2021-11-25 22:02:40.939 [http-nio-8088-exec-6] INFO  com.munjie.blog.config.AopLogAspect - 请求参数：[15, 0]
+2021-11-25 22:02:41.017 [http-nio-8088-exec-6] INFO  com.munjie.blog.config.AopLogAspect - ----------- 最终通知 -----------execution(Response com.munjie.blog.controller.TaskConller.listTask(Integer,Integer))
+2021-11-25 22:02:41.017 [http-nio-8088-exec-6] INFO  com.munjie.blog.config.AopLogAspect - ----------- 后置返回通知 -----------
+2021-11-25 22:02:41.017 [http-nio-8088-exec-6] INFO  com.munjie.blog.config.AopLogAspect - 后置返回通知的返回值：{reason=SUCCESS, code=200, data=TaskInfoDTO(rows=Page{count=true, pageNum=1, pageSize=15, startRow=0, endRow=15, total=28, pages=2, reasonable=true, pageSizeZero=false}[TaskInfoDO(id=60, taskName=555555555555555555, taskId=AK1637334440878, taskDescription=55555555, originAdd=北京, createTime=Fri Nov 19 23:07:21 CST 2021, createDate=2021-11-19 23:07:21), TaskInfoDO(id=59, taskName=测试333333333, taskId=AK1637331556026, taskDescription=测试333333333, originAdd=北京, createTime=Fri Nov 19 22:19:16 CST 2021, createDate=2021-11-19 22:19:16), TaskInfoDO(id=58, taskName=测试103232326, taskId=AK1637331136739, taskDescription=测试103232326, originAdd=北京, createTime=Fri Nov 19 22:12:17 CST 2021, createDate=2021-11-19 22:12:17), TaskInfoDO(id=57, taskName=测试111119, taskId=AK1637329806123, taskDescription=测试111119, originAdd=北京, createTime=Fri Nov 19 21:50:06 CST 2021, createDate=2021-11-19 21:50:06), TaskInfoDO(id=56, taskName=test one01, taskId=AK1637313249763, taskDescription=22222, originAdd=济南工厂山东省济南市高新区春暄路北段1222号, createTime=Fri Nov 19 17:14:10 CST 2021, createDate=2021-11-19 17:14:10), TaskInfoDO(id=55, taskName=test one, taskId=AK1637313151635, taskDescription=124242, originAdd=济南工厂山东省济南市高新区春暄路北段1222号, createTime=Fri Nov 19 17:12:32 CST 2021, createDate=2021-11-19 17:12:32), TaskInfoDO(id=54, taskName=0002, taskId=AK1637150622384, taskDescription=0002, originAdd=上海, createTime=Wed Nov 17 20:03:43 CST 2021, createDate=2021-11-17 20:03:43), TaskInfoDO(id=53, taskName=test2020001, taskId=AK1637149262472, taskDescription=北京北京北京, originAdd=北京, createTime=Wed Nov 17 19:41:03 CST 2021, createDate=2021-11-17 19:41:03), TaskInfoDO(id=52, taskName=FSSDFSAFAS, taskId=AK1637080787378, taskDescription=呱呱呱呱呱呱呱呱呱, originAdd=上海, createTime=Wed Nov 17 00:39:48 CST 2021, createDate=2021-11-17 00:39:48), TaskInfoDO(id=51, taskName=反倒是传递参数33333, taskId=AK1637079434439, taskDescription=顶顶顶顶顶, originAdd=上海, createTime=Wed Nov 17 00:17:14 CST 2021, createDate=2021-11-17 00:17:14), TaskInfoDO(id=50, taskName=cefwfdqrqr001, taskId=AK1637078442122, taskDescription=哇哇哇哇  嗡嗡嗡, originAdd=上海浦东, createTime=Wed Nov 17 00:00:42 CST 2021, createDate=2021-11-17 00:00:42), TaskInfoDO(id=49, taskName=啊大大大001, taskId=AK1637077490635, taskDescription=我去饿的青蛙恶气, originAdd=大大, createTime=Tue Nov 16 23:44:51 CST 2021, createDate=2021-11-16 23:44:51), TaskInfoDO(id=48, taskName=色阿达, taskId=AK1637077294257, taskDescription=大大, originAdd=大苏打, createTime=Tue Nov 16 23:41:34 CST 2021, createDate=2021-11-16 23:41:34), TaskInfoDO(id=45, taskName=阿哥和寝室网不好, taskId=AK1637032065304, taskDescription=4325, originAdd=上海龙赛物流有限公司, createTime=Tue Nov 16 11:07:45 CST 2021, createDate=2021-11-16 11:07:45), TaskInfoDO(id=44, taskName=50w, taskId=AK1637030573885, taskDescription=111, originAdd=无锡江阴市亚包大道199号GLP仓库, createTime=Tue Nov 16 10:42:54 CST 2021, createDate=2021-11-16 10:42:54)], total=28), message=null}
+2021-11-25 22:02:45.203 [http-nio-8088-exec-7] INFO  com.munjie.blog.config.AopLogAspect - ----------- 前置通知 -----------
+2021-11-25 22:02:45.203 [http-nio-8088-exec-7] INFO  com.munjie.blog.config.AopLogAspect - 请求IP：0:0:0:0:0:0:0:1
+2021-11-25 22:02:45.203 [http-nio-8088-exec-7] INFO  com.munjie.blog.config.AopLogAspect - 方法签名：Response com.munjie.blog.controller.TaskConller.listTask(Integer,Integer)
+2021-11-25 22:02:45.203 [http-nio-8088-exec-7] INFO  com.munjie.blog.config.AopLogAspect - 方法名：listTask
+2021-11-25 22:02:45.203 [http-nio-8088-exec-7] INFO  com.munjie.blog.config.AopLogAspect - 请求参数：[15, 0]
+2021-11-25 22:02:45.277 [http-nio-8088-exec-7] INFO  com.munjie.blog.config.AopLogAspect - ----------- 最终通知 -----------execution(Response com.munjie.blog.controller.TaskConller.listTask(Integer,Integer))
+2021-11-25 22:02:45.277 [http-nio-8088-exec-7] INFO  com.munjie.blog.config.AopLogAspect - ----------- 后置返回通知 -----------
+2021-11-25 22:02:45.278 [http-nio-8088-exec-7] INFO  com.munjie.blog.config.AopLogAspect - 后置返回通知的返回值：{reason=SUCCESS, code=200, data=TaskInfoDTO(rows=Page{count=true, pageNum=1, pageSize=15, startRow=0, endRow=15, total=28, pages=2, reasonable=true, pageSizeZero=false}[TaskInfoDO(id=60, taskName=555555555555555555, taskId=AK1637334440878, taskDescription=55555555, originAdd=北京, createTime=Fri Nov 19 23:07:21 CST 2021, createDate=2021-11-19 23:07:21), TaskInfoDO(id=59, taskName=测试333333333, taskId=AK1637331556026, taskDescription=测试333333333, originAdd=北京, createTime=Fri Nov 19 22:19:16 CST 2021, createDate=2021-11-19 22:19:16), TaskInfoDO(id=58, taskName=测试103232326, taskId=AK1637331136739, taskDescription=测试103232326, originAdd=北京, createTime=Fri Nov 19 22:12:17 CST 2021, createDate=2021-11-19 22:12:17), TaskInfoDO(id=57, taskName=测试111119, taskId=AK1637329806123, taskDescription=测试111119, originAdd=北京, createTime=Fri Nov 19 21:50:06 CST 2021, createDate=2021-11-19 21:50:06), TaskInfoDO(id=56, taskName=test one01, taskId=AK1637313249763, taskDescription=22222, originAdd=济南工厂山东省济南市高新区春暄路北段1222号, createTime=Fri Nov 19 17:14:10 CST 2021, createDate=2021-11-19 17:14:10), TaskInfoDO(id=55, taskName=test one, taskId=AK1637313151635, taskDescription=124242, originAdd=济南工厂山东省济南市高新区春暄路北段1222号, createTime=Fri Nov 19 17:12:32 CST 2021, createDate=2021-11-19 17:12:32), TaskInfoDO(id=54, taskName=0002, taskId=AK1637150622384, taskDescription=0002, originAdd=上海, createTime=Wed Nov 17 20:03:43 CST 2021, createDate=2021-11-17 20:03:43), TaskInfoDO(id=53, taskName=test2020001, taskId=AK1637149262472, taskDescription=北京北京北京, originAdd=北京, createTime=Wed Nov 17 19:41:03 CST 2021, createDate=2021-11-17 19:41:03), TaskInfoDO(id=52, taskName=FSSDFSAFAS, taskId=AK1637080787378, taskDescription=呱呱呱呱呱呱呱呱呱, originAdd=上海, createTime=Wed Nov 17 00:39:48 CST 2021, createDate=2021-11-17 00:39:48), TaskInfoDO(id=51, taskName=反倒是传递参数33333, taskId=AK1637079434439, taskDescription=顶顶顶顶顶, originAdd=上海, createTime=Wed Nov 17 00:17:14 CST 2021, createDate=2021-11-17 00:17:14), TaskInfoDO(id=50, taskName=cefwfdqrqr001, taskId=AK1637078442122, taskDescription=哇哇哇哇  嗡嗡嗡, originAdd=上海浦东, createTime=Wed Nov 17 00:00:42 CST 2021, createDate=2021-11-17 00:00:42), TaskInfoDO(id=49, taskName=啊大大大001, taskId=AK1637077490635, taskDescription=我去饿的青蛙恶气, originAdd=大大, createTime=Tue Nov 16 23:44:51 CST 2021, createDate=2021-11-16 23:44:51), TaskInfoDO(id=48, taskName=色阿达, taskId=AK1637077294257, taskDescription=大大, originAdd=大苏打, createTime=Tue Nov 16 23:41:34 CST 2021, createDate=2021-11-16 23:41:34), TaskInfoDO(id=45, taskName=阿哥和寝室网不好, taskId=AK1637032065304, taskDescription=4325, originAdd=上海龙赛物流有限公司, createTime=Tue Nov 16 11:07:45 CST 2021, createDate=2021-11-16 11:07:45), TaskInfoDO(id=44, taskName=50w, taskId=AK1637030573885, taskDescription=111, originAdd=无锡江阴市亚包大道199号GLP仓库, createTime=Tue Nov 16 10:42:54 CST 2021, createDate=2021-11-16 10:42:54)], total=28), message=null}
+2021-11-25 22:02:50.847 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - ----------- 前置通知 -----------
+2021-11-25 22:02:50.847 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - 请求IP：0:0:0:0:0:0:0:1
+2021-11-25 22:02:50.847 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - 方法签名：Response com.munjie.blog.controller.ModuleController.listModule(Integer,Integer)
+2021-11-25 22:02:50.847 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - 方法名：listModule
+2021-11-25 22:02:50.847 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - 请求参数：[15, 0]
+2021-11-25 22:02:50.898 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - ----------- 最终通知 -----------execution(Response com.munjie.blog.controller.ModuleController.listModule(Integer,Integer))
+2021-11-25 22:02:50.898 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - ----------- 后置返回通知 -----------
+2021-11-25 22:02:50.898 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - 后置返回通知的返回值：{reason=SUCCESS, code=200, data=ModulesDTO(rows=Page{count=true, pageNum=1, pageSize=15, startRow=0, endRow=15, total=8, pages=1, reasonable=true, pageSizeZero=false}[ModuleDO(id=1, url=/admin/leftMenu/taskList, name=任务列表, imgUrl=, parent=批量算路, sort=1, moduleId=1, createDate=, createTime=null, updateTime=null), ModuleDO(id=2, url=/admin/leftMenu/excel, name=上传数据, imgUrl=, parent=批量算路, sort=2, moduleId=2, createDate=, createTime=null, updateTime=null), ModuleDO(id=3, url=/0, name=批量算路, imgUrl=iconfont icon-tag, parent=null, sort=null, moduleId=3, createDate=, createTime=null, updateTime=null), ModuleDO(id=4, url=/, name=文章, imgUrl=null, parent=null, sort=null, moduleId=4, createDate=, createTime=null, updateTime=null), ModuleDO(id=5, url=/, name=权限管理, imgUrl=null, parent=null, sort=null, moduleId=5, createDate=, createTime=null, updateTime=null), ModuleDO(id=6, url=/, name=系统配置, imgUrl=null, parent=, sort=null, moduleId=6, createDate=, createTime=null, updateTime=null), ModuleDO(id=7, url=/admin/system/moduleList, name=模块管理, imgUrl=null, parent=系统配置, sort=null, moduleId=7, createDate=, createTime=null, updateTime=null), ModuleDO(id=8, url=/admin/categories, name=标签, imgUrl=null, parent=系统配置, sort=null, moduleId=8, createDate=, createTime=null, updateTime=null)], total=8), message=null}
+2021-11-25 22:32:03.376 [MessageBroker-2] INFO  o.s.web.socket.config.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 3, active threads = 1, queued tasks = 0, completed tasks = 2]
+2021-11-25 22:36:28.603 [http-nio-8088-exec-1] INFO  com.munjie.blog.config.AopLogAspect - ----------- 前置通知 -----------
+2021-11-25 22:36:28.603 [http-nio-8088-exec-1] INFO  com.munjie.blog.config.AopLogAspect - 请求IP：0:0:0:0:0:0:0:1
+2021-11-25 22:36:28.603 [http-nio-8088-exec-1] INFO  com.munjie.blog.config.AopLogAspect - 方法签名：R com.munjie.blog.controller.BlogInfoController.getAbout()
+2021-11-25 22:36:28.603 [http-nio-8088-exec-1] INFO  com.munjie.blog.config.AopLogAspect - 方法名：getAbout
+2021-11-25 22:36:28.603 [http-nio-8088-exec-1] INFO  com.munjie.blog.config.AopLogAspect - 请求参数：[]
+2021-11-25 22:36:28.603 [http-nio-8088-exec-1] INFO  com.munjie.blog.config.AopLogAspect - ----------- 最终通知 -----------execution(R com.munjie.blog.controller.BlogInfoController.getAbout())
+2021-11-25 22:36:28.603 [http-nio-8088-exec-1] INFO  com.munjie.blog.config.AopLogAspect - ----------- 后置返回通知 -----------
+2021-11-25 22:36:28.603 [http-nio-8088-exec-1] INFO  com.munjie.blog.config.AopLogAspect - 后置返回通知的返回值：R(code=0, data=BlogInfoDTO(blogName=Munjie, articleCount=12, avatar=, categoryCount=20, github=wwww, sign=kkk), msg=执行成功)
+2021-11-25 22:36:28.672 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - ----------- 环绕通知 -----------
+2021-11-25 22:36:28.672 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - 环绕通知的目标方法名：listArticles
+2021-11-25 22:36:28.672 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - ----------- 前置通知 -----------
+2021-11-25 22:36:28.672 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - 请求IP：0:0:0:0:0:0:0:1
+2021-11-25 22:36:28.672 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - 方法签名：Response com.munjie.blog.controller.ArticleController.listArticles(Integer,Integer)
+2021-11-25 22:36:28.672 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - 方法名：listArticles
+2021-11-25 22:36:28.672 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - 请求参数：[5, 1]
+2021-11-25 22:36:28.672 [http-nio-8088-exec-2] INFO  com.munjie.blog.service.impl.ArticleServiceImpl - 
+2021-11-25 22:36:28.690 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - ---------- 环绕通知结束 -------------
+2021-11-25 22:36:28.690 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - ----------- 最终通知 -----------execution(Response com.munjie.blog.controller.ArticleController.listArticles(Integer,Integer))
+2021-11-25 22:36:28.690 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - ----------- 后置返回通知 -----------
+2021-11-25 22:36:28.690 [http-nio-8088-exec-2] INFO  com.munjie.blog.config.AopLogAspect - 后置返回通知的返回值：{reason=SUCCESS, code=200, data=ArticleDTO(rows=[], total=0), message=null}
+2021-11-25 22:38:29.264 [http-nio-8088-exec-4] INFO  com.munjie.blog.config.AopLogAspect - ----------- 前置通知 -----------
+2021-11-25 22:38:29.264 [http-nio-8088-exec-4] INFO  com.munjie.blog.config.AopLogAspect - 请求IP：0:0:0:0:0:0:0:1
+2021-11-25 22:38:29.265 [http-nio-8088-exec-4] INFO  com.munjie.blog.config.AopLogAspect - 方法签名：Response com.munjie.blog.controller.UserController.getMenus(HttpServletRequest,String)
+2021-11-25 22:38:29.265 [http-nio-8088-exec-4] INFO  com.munjie.blog.config.AopLogAspect - 方法名：getMenus
+2021-11-25 22:38:29.265 [http-nio-8088-exec-4] INFO  com.munjie.blog.config.AopLogAspect - 请求参数：[org.apache.catalina.connector.RequestFacade@2b2386b9, undefined]
+2021-11-25 22:38:29.306 [http-nio-8088-exec-4] INFO  com.munjie.blog.config.AopLogAspect - ----------- 最终通知 -----------execution(Response com.munjie.blog.controller.UserController.getMenus(HttpServletRequest,String))
+2021-11-25 22:38:29.306 [http-nio-8088-exec-4] INFO  com.munjie.blog.config.AopLogAspect - ----------- 后置返回通知 -----------
+2021-11-25 22:38:29.306 [http-nio-8088-exec-4] INFO  com.munjie.blog.config.AopLogAspect - 后置返回通知的返回值：{reason=SUCCESS, code=200, data=[], message=null}
+2021-11-25 22:38:29.311 [http-nio-8088-exec-5] INFO  com.munjie.blog.config.AopLogAspect - ----------- 前置通知 -----------
+2021-11-25 22:38:29.311 [http-nio-8088-exec-5] INFO  com.munjie.blog.config.AopLogAspect - 请求IP：0:0:0:0:0:0:0:1
+2021-11-25 22:38:29.311 [http-nio-8088-exec-5] INFO  com.munjie.blog.config.AopLogAspect - 方法签名：Response com.munjie.blog.controller.ModuleController.listModule(Integer,Integer)
+2021-11-25 22:38:29.311 [http-nio-8088-exec-5] INFO  com.munjie.blog.config.AopLogAspect - 方法名：listModule
+2021-11-25 22:38:29.311 [http-nio-8088-exec-5] INFO  com.munjie.blog.config.AopLogAspect - 请求参数：[15, 0]
+2021-11-25 22:38:29.376 [http-nio-8088-exec-5] INFO  com.munjie.blog.config.AopLogAspect - ----------- 最终通知 -----------execution(Response com.munjie.blog.controller.ModuleController.listModule(Integer,Integer))
+2021-11-25 22:38:29.376 [http-nio-8088-exec-5] INFO  com.munjie.blog.config.AopLogAspect - ----------- 后置返回通知 -----------
+2021-11-25 22:38:29.377 [http-nio-8088-exec-5] INFO  com.munjie.blog.config.AopLogAspect - 后置返回通知的返回值：{reason=SUCCESS, code=200, data=ModulesDTO(rows=Page{count=true, pageNum=1, pageSize=15, startRow=0, endRow=15, total=8, pages=1, reasonable=true, pageSizeZero=false}[ModuleDO(id=1, url=/admin/leftMenu/taskList, name=任务列表, imgUrl=, parent=批量算路, sort=1, moduleId=1, createDate=, createTime=null, updateTime=null), ModuleDO(id=2, url=/admin/leftMenu/excel, name=上传数据, imgUrl=, parent=批量算路, sort=2, moduleId=2, createDate=, createTime=null, updateTime=null), ModuleDO(id=3, url=/0, name=批量算路, imgUrl=iconfont icon-tag, parent=null, sort=null, moduleId=3, createDate=, createTime=null, updateTime=null), ModuleDO(id=4, url=/, name=文章, imgUrl=null, parent=null, sort=null, moduleId=4, createDate=, createTime=null, updateTime=null), ModuleDO(id=5, url=/, name=权限管理, imgUrl=null, parent=null, sort=null, moduleId=5, createDate=, createTime=null, updateTime=null), ModuleDO(id=6, url=/, name=系统配置, imgUrl=null, parent=, sort=null, moduleId=6, createDate=, createTime=null, updateTime=null), ModuleDO(id=7, url=/admin/system/moduleList, name=模块管理, imgUrl=null, parent=系统配置, sort=null, moduleId=7, createDate=, createTime=null, updateTime=null), ModuleDO(id=8, url=/admin/categories, name=标签, imgUrl=null, parent=系统配置, sort=null, moduleId=8, createDate=, createTime=null, updateTime=null)], total=8), message=null}
+2021-11-25 22:51:56.152 [http-nio-8088-exec-7] INFO  com.munjie.blog.config.AopLogAspect - ----------- 前置通知 -----------
+2021-11-25 22:51:56.152 [http-nio-8088-exec-7] INFO  com.munjie.blog.config.AopLogAspect - 请求IP：0:0:0:0:0:0:0:1
+2021-11-25 22:51:56.152 [http-nio-8088-exec-7] INFO  com.munjie.blog.config.AopLogAspect - 方法签名：R com.munjie.blog.controller.BlogInfoController.getAbout()
+2021-11-25 22:51:56.152 [http-nio-8088-exec-7] INFO  com.munjie.blog.config.AopLogAspect - 方法名：getAbout
+2021-11-25 22:51:56.152 [http-nio-8088-exec-7] INFO  com.munjie.blog.config.AopLogAspect - 请求参数：[]
+2021-11-25 22:51:56.152 [http-nio-8088-exec-7] INFO  com.munjie.blog.config.AopLogAspect - ----------- 最终通知 -----------execution(R com.munjie.blog.controller.BlogInfoController.getAbout())
+2021-11-25 22:51:56.152 [http-nio-8088-exec-7] INFO  com.munjie.blog.config.AopLogAspect - ----------- 后置返回通知 -----------
+2021-11-25 22:51:56.152 [http-nio-8088-exec-7] INFO  com.munjie.blog.config.AopLogAspect - 后置返回通知的返回值：R(code=0, data=BlogInfoDTO(blogName=Munjie, articleCount=12, avatar=, categoryCount=20, github=wwww, sign=kkk), msg=执行成功)
+2021-11-25 22:51:56.234 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - ----------- 环绕通知 -----------
+2021-11-25 22:51:56.234 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - 环绕通知的目标方法名：listArticles
+2021-11-25 22:51:56.234 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - ----------- 前置通知 -----------
+2021-11-25 22:51:56.234 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - 请求IP：0:0:0:0:0:0:0:1
+2021-11-25 22:51:56.234 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - 方法签名：Response com.munjie.blog.controller.ArticleController.listArticles(Integer,Integer)
+2021-11-25 22:51:56.234 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - 方法名：listArticles
+2021-11-25 22:51:56.234 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - 请求参数：[5, 1]
+2021-11-25 22:51:56.234 [http-nio-8088-exec-8] INFO  com.munjie.blog.service.impl.ArticleServiceImpl - 
+2021-11-25 22:51:56.257 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - ---------- 环绕通知结束 -------------
+2021-11-25 22:51:56.257 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - ----------- 最终通知 -----------execution(Response com.munjie.blog.controller.ArticleController.listArticles(Integer,Integer))
+2021-11-25 22:51:56.257 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - ----------- 后置返回通知 -----------
+2021-11-25 22:51:56.257 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - 后置返回通知的返回值：{reason=SUCCESS, code=200, data=ArticleDTO(rows=[], total=0), message=null}
+2021-11-25 23:02:03.385 [MessageBroker-1] INFO  o.s.web.socket.config.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 0, completed tasks = 3]
+2021-11-25 23:02:07.246 [http-nio-8088-exec-10] INFO  com.munjie.blog.config.AopLogAspect - ----------- 前置通知 -----------
+2021-11-25 23:02:07.246 [http-nio-8088-exec-10] INFO  com.munjie.blog.config.AopLogAspect - 请求IP：0:0:0:0:0:0:0:1
+2021-11-25 23:02:07.246 [http-nio-8088-exec-10] INFO  com.munjie.blog.config.AopLogAspect - 方法签名：Response com.munjie.blog.controller.UserController.getMenus(HttpServletRequest,String)
+2021-11-25 23:02:07.246 [http-nio-8088-exec-10] INFO  com.munjie.blog.config.AopLogAspect - 方法名：getMenus
+2021-11-25 23:02:07.246 [http-nio-8088-exec-10] INFO  com.munjie.blog.config.AopLogAspect - 请求参数：[org.apache.catalina.connector.RequestFacade@2b2386b9, undefined]
+2021-11-25 23:02:07.290 [http-nio-8088-exec-10] INFO  com.munjie.blog.config.AopLogAspect - ----------- 最终通知 -----------execution(Response com.munjie.blog.controller.UserController.getMenus(HttpServletRequest,String))
+2021-11-25 23:02:07.290 [http-nio-8088-exec-10] INFO  com.munjie.blog.config.AopLogAspect - ----------- 后置返回通知 -----------
+2021-11-25 23:02:07.290 [http-nio-8088-exec-10] INFO  com.munjie.blog.config.AopLogAspect - 后置返回通知的返回值：{reason=SUCCESS, code=200, data=[], message=null}
+2021-11-25 23:02:07.299 [http-nio-8088-exec-1] INFO  com.munjie.blog.config.AopLogAspect - ----------- 前置通知 -----------
+2021-11-25 23:02:07.299 [http-nio-8088-exec-1] INFO  com.munjie.blog.config.AopLogAspect - 请求IP：0:0:0:0:0:0:0:1
+2021-11-25 23:02:07.299 [http-nio-8088-exec-1] INFO  com.munjie.blog.config.AopLogAspect - 方法签名：Response com.munjie.blog.controller.ModuleController.listModule(Integer,Integer)
+2021-11-25 23:02:07.299 [http-nio-8088-exec-1] INFO  com.munjie.blog.config.AopLogAspect - 方法名：listModule
+2021-11-25 23:02:07.299 [http-nio-8088-exec-1] INFO  com.munjie.blog.config.AopLogAspect - 请求参数：[15, 0]
+2021-11-25 23:02:07.370 [http-nio-8088-exec-1] INFO  com.munjie.blog.config.AopLogAspect - ----------- 最终通知 -----------execution(Response com.munjie.blog.controller.ModuleController.listModule(Integer,Integer))
+2021-11-25 23:02:07.370 [http-nio-8088-exec-1] INFO  com.munjie.blog.config.AopLogAspect - ----------- 后置返回通知 -----------
+2021-11-25 23:02:07.370 [http-nio-8088-exec-1] INFO  com.munjie.blog.config.AopLogAspect - 后置返回通知的返回值：{reason=SUCCESS, code=200, data=ModulesDTO(rows=Page{count=true, pageNum=1, pageSize=15, startRow=0, endRow=15, total=8, pages=1, reasonable=true, pageSizeZero=false}[ModuleDO(id=1, url=/admin/leftMenu/taskList, name=任务列表, imgUrl=, parent=批量算路, sort=1, moduleId=1, createDate=, createTime=null, updateTime=null), ModuleDO(id=2, url=/admin/leftMenu/excel, name=上传数据, imgUrl=, parent=批量算路, sort=2, moduleId=2, createDate=, createTime=null, updateTime=null), ModuleDO(id=3, url=/0, name=批量算路, imgUrl=iconfont icon-tag, parent=null, sort=null, moduleId=3, createDate=, createTime=null, updateTime=null), ModuleDO(id=4, url=/, name=文章, imgUrl=null, parent=null, sort=null, moduleId=4, createDate=, createTime=null, updateTime=null), ModuleDO(id=5, url=/, name=权限管理, imgUrl=null, parent=null, sort=null, moduleId=5, createDate=, createTime=null, updateTime=null), ModuleDO(id=6, url=/, name=系统配置, imgUrl=null, parent=, sort=null, moduleId=6, createDate=, createTime=null, updateTime=null), ModuleDO(id=7, url=/admin/system/moduleList, name=模块管理, imgUrl=null, parent=系统配置, sort=null, moduleId=7, createDate=, createTime=null, updateTime=null), ModuleDO(id=8, url=/admin/categories, name=标签, imgUrl=null, parent=系统配置, sort=null, moduleId=8, createDate=, createTime=null, updateTime=null)], total=8), message=null}
+2021-11-25 23:04:45.446 [http-nio-8088-exec-3] INFO  com.munjie.blog.config.AopLogAspect - ----------- 前置通知 -----------
+2021-11-25 23:04:45.446 [http-nio-8088-exec-3] INFO  com.munjie.blog.config.AopLogAspect - 请求IP：0:0:0:0:0:0:0:1
+2021-11-25 23:04:45.446 [http-nio-8088-exec-3] INFO  com.munjie.blog.config.AopLogAspect - 方法签名：Response com.munjie.blog.controller.UserController.getMenus(HttpServletRequest,String)
+2021-11-25 23:04:45.446 [http-nio-8088-exec-3] INFO  com.munjie.blog.config.AopLogAspect - 方法名：getMenus
+2021-11-25 23:04:45.446 [http-nio-8088-exec-3] INFO  com.munjie.blog.config.AopLogAspect - 请求参数：[org.apache.catalina.connector.RequestFacade@2b2386b9, undefined]
+2021-11-25 23:04:45.472 [http-nio-8088-exec-3] INFO  com.munjie.blog.config.AopLogAspect - ----------- 最终通知 -----------execution(Response com.munjie.blog.controller.UserController.getMenus(HttpServletRequest,String))
+2021-11-25 23:04:45.472 [http-nio-8088-exec-3] INFO  com.munjie.blog.config.AopLogAspect - ----------- 后置返回通知 -----------
+2021-11-25 23:04:45.472 [http-nio-8088-exec-3] INFO  com.munjie.blog.config.AopLogAspect - 后置返回通知的返回值：{reason=SUCCESS, code=200, data=[], message=null}
+2021-11-25 23:04:45.498 [http-nio-8088-exec-4] INFO  com.munjie.blog.config.AopLogAspect - ----------- 前置通知 -----------
+2021-11-25 23:04:45.498 [http-nio-8088-exec-4] INFO  com.munjie.blog.config.AopLogAspect - 请求IP：0:0:0:0:0:0:0:1
+2021-11-25 23:04:45.498 [http-nio-8088-exec-4] INFO  com.munjie.blog.config.AopLogAspect - 方法签名：Response com.munjie.blog.controller.ModuleController.listModule(Integer,Integer)
+2021-11-25 23:04:45.498 [http-nio-8088-exec-4] INFO  com.munjie.blog.config.AopLogAspect - 方法名：listModule
+2021-11-25 23:04:45.498 [http-nio-8088-exec-4] INFO  com.munjie.blog.config.AopLogAspect - 请求参数：[15, 0]
+2021-11-25 23:04:45.539 [http-nio-8088-exec-4] INFO  com.munjie.blog.config.AopLogAspect - ----------- 最终通知 -----------execution(Response com.munjie.blog.controller.ModuleController.listModule(Integer,Integer))
+2021-11-25 23:04:45.539 [http-nio-8088-exec-4] INFO  com.munjie.blog.config.AopLogAspect - ----------- 后置返回通知 -----------
+2021-11-25 23:04:45.539 [http-nio-8088-exec-4] INFO  com.munjie.blog.config.AopLogAspect - 后置返回通知的返回值：{reason=SUCCESS, code=200, data=ModulesDTO(rows=Page{count=true, pageNum=1, pageSize=15, startRow=0, endRow=15, total=8, pages=1, reasonable=true, pageSizeZero=false}[ModuleDO(id=1, url=/admin/leftMenu/taskList, name=任务列表, imgUrl=, parent=批量算路, sort=1, moduleId=1, createDate=, createTime=null, updateTime=null), ModuleDO(id=2, url=/admin/leftMenu/excel, name=上传数据, imgUrl=, parent=批量算路, sort=2, moduleId=2, createDate=, createTime=null, updateTime=null), ModuleDO(id=3, url=/0, name=批量算路, imgUrl=iconfont icon-tag, parent=null, sort=null, moduleId=3, createDate=, createTime=null, updateTime=null), ModuleDO(id=4, url=/, name=文章, imgUrl=null, parent=null, sort=null, moduleId=4, createDate=, createTime=null, updateTime=null), ModuleDO(id=5, url=/, name=权限管理, imgUrl=null, parent=null, sort=null, moduleId=5, createDate=, createTime=null, updateTime=null), ModuleDO(id=6, url=/, name=系统配置, imgUrl=null, parent=, sort=null, moduleId=6, createDate=, createTime=null, updateTime=null), ModuleDO(id=7, url=/admin/system/moduleList, name=模块管理, imgUrl=null, parent=系统配置, sort=null, moduleId=7, createDate=, createTime=null, updateTime=null), ModuleDO(id=8, url=/admin/categories, name=标签, imgUrl=null, parent=系统配置, sort=null, moduleId=8, createDate=, createTime=null, updateTime=null)], total=8), message=null}
+2021-11-25 23:05:28.726 [http-nio-8088-exec-5] INFO  com.munjie.blog.config.AopLogAspect - ----------- 前置通知 -----------
+2021-11-25 23:05:28.726 [http-nio-8088-exec-5] INFO  com.munjie.blog.config.AopLogAspect - 请求IP：0:0:0:0:0:0:0:1
+2021-11-25 23:05:28.726 [http-nio-8088-exec-5] INFO  com.munjie.blog.config.AopLogAspect - 方法签名：R com.munjie.blog.controller.BlogInfoController.getAbout()
+2021-11-25 23:05:28.726 [http-nio-8088-exec-5] INFO  com.munjie.blog.config.AopLogAspect - 方法名：getAbout
+2021-11-25 23:05:28.726 [http-nio-8088-exec-5] INFO  com.munjie.blog.config.AopLogAspect - 请求参数：[]
+2021-11-25 23:05:28.726 [http-nio-8088-exec-5] INFO  com.munjie.blog.config.AopLogAspect - ----------- 最终通知 -----------execution(R com.munjie.blog.controller.BlogInfoController.getAbout())
+2021-11-25 23:05:28.726 [http-nio-8088-exec-5] INFO  com.munjie.blog.config.AopLogAspect - ----------- 后置返回通知 -----------
+2021-11-25 23:05:28.727 [http-nio-8088-exec-5] INFO  com.munjie.blog.config.AopLogAspect - 后置返回通知的返回值：R(code=0, data=BlogInfoDTO(blogName=Munjie, articleCount=12, avatar=, categoryCount=20, github=wwww, sign=kkk), msg=执行成功)
+2021-11-25 23:05:28.785 [http-nio-8088-exec-6] INFO  com.munjie.blog.config.AopLogAspect - ----------- 环绕通知 -----------
+2021-11-25 23:05:28.785 [http-nio-8088-exec-6] INFO  com.munjie.blog.config.AopLogAspect - 环绕通知的目标方法名：listArticles
+2021-11-25 23:05:28.785 [http-nio-8088-exec-6] INFO  com.munjie.blog.config.AopLogAspect - ----------- 前置通知 -----------
+2021-11-25 23:05:28.785 [http-nio-8088-exec-6] INFO  com.munjie.blog.config.AopLogAspect - 请求IP：0:0:0:0:0:0:0:1
+2021-11-25 23:05:28.785 [http-nio-8088-exec-6] INFO  com.munjie.blog.config.AopLogAspect - 方法签名：Response com.munjie.blog.controller.ArticleController.listArticles(Integer,Integer)
+2021-11-25 23:05:28.785 [http-nio-8088-exec-6] INFO  com.munjie.blog.config.AopLogAspect - 方法名：listArticles
+2021-11-25 23:05:28.785 [http-nio-8088-exec-6] INFO  com.munjie.blog.config.AopLogAspect - 请求参数：[5, 1]
+2021-11-25 23:05:28.786 [http-nio-8088-exec-6] INFO  com.munjie.blog.service.impl.ArticleServiceImpl - 
+2021-11-25 23:05:28.805 [http-nio-8088-exec-6] INFO  com.munjie.blog.config.AopLogAspect - ---------- 环绕通知结束 -------------
+2021-11-25 23:05:28.805 [http-nio-8088-exec-6] INFO  com.munjie.blog.config.AopLogAspect - ----------- 最终通知 -----------execution(Response com.munjie.blog.controller.ArticleController.listArticles(Integer,Integer))
+2021-11-25 23:05:28.805 [http-nio-8088-exec-6] INFO  com.munjie.blog.config.AopLogAspect - ----------- 后置返回通知 -----------
+2021-11-25 23:05:28.805 [http-nio-8088-exec-6] INFO  com.munjie.blog.config.AopLogAspect - 后置返回通知的返回值：{reason=SUCCESS, code=200, data=ArticleDTO(rows=[], total=0), message=null}
+2021-11-25 23:16:56.054 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - ----------- 前置通知 -----------
+2021-11-25 23:16:56.054 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - 请求IP：0:0:0:0:0:0:0:1
+2021-11-25 23:16:56.054 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - 方法签名：R com.munjie.blog.controller.BlogInfoController.getAbout()
+2021-11-25 23:16:56.054 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - 方法名：getAbout
+2021-11-25 23:16:56.054 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - 请求参数：[]
+2021-11-25 23:16:56.054 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - ----------- 最终通知 -----------execution(R com.munjie.blog.controller.BlogInfoController.getAbout())
+2021-11-25 23:16:56.055 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - ----------- 后置返回通知 -----------
+2021-11-25 23:16:56.055 [http-nio-8088-exec-8] INFO  com.munjie.blog.config.AopLogAspect - 后置返回通知的返回值：R(code=0, data=BlogInfoDTO(blogName=Munjie, articleCount=12, avatar=, categoryCount=20, github=wwww, sign=kkk), msg=执行成功)
+2021-11-25 23:16:56.106 [http-nio-8088-exec-9] INFO  com.munjie.blog.config.AopLogAspect - ----------- 环绕通知 -----------
+2021-11-25 23:16:56.106 [http-nio-8088-exec-9] INFO  com.munjie.blog.config.AopLogAspect - 环绕通知的目标方法名：listArticles
+2021-11-25 23:16:56.106 [http-nio-8088-exec-9] INFO  com.munjie.blog.config.AopLogAspect - ----------- 前置通知 -----------
+2021-11-25 23:16:56.106 [http-nio-8088-exec-9] INFO  com.munjie.blog.config.AopLogAspect - 请求IP：0:0:0:0:0:0:0:1
+2021-11-25 23:16:56.106 [http-nio-8088-exec-9] INFO  com.munjie.blog.config.AopLogAspect - 方法签名：Response com.munjie.blog.controller.ArticleController.listArticles(Integer,Integer)
+2021-11-25 23:16:56.106 [http-nio-8088-exec-9] INFO  com.munjie.blog.config.AopLogAspect - 方法名：listArticles
+2021-11-25 23:16:56.106 [http-nio-8088-exec-9] INFO  com.munjie.blog.config.AopLogAspect - 请求参数：[5, 1]
+2021-11-25 23:16:56.107 [http-nio-8088-exec-9] INFO  com.munjie.blog.service.impl.ArticleServiceImpl - 
+2021-11-25 23:16:56.124 [http-nio-8088-exec-9] INFO  com.munjie.blog.config.AopLogAspect - ---------- 环绕通知结束 -------------
+2021-11-25 23:16:56.124 [http-nio-8088-exec-9] INFO  com.munjie.blog.config.AopLogAspect - ----------- 最终通知 -----------execution(Response com.munjie.blog.controller.ArticleController.listArticles(Integer,Integer))
+2021-11-25 23:16:56.124 [http-nio-8088-exec-9] INFO  com.munjie.blog.config.AopLogAspect - ----------- 后置返回通知 -----------
+2021-11-25 23:16:56.124 [http-nio-8088-exec-9] INFO  com.munjie.blog.config.AopLogAspect - 后置返回通知的返回值：{reason=SUCCESS, code=200, data=ArticleDTO(rows=[], total=0), message=null}

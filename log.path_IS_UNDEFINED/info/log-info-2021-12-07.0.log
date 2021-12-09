@@ -1,0 +1,64 @@
+2021-12-07 00:00:57.685 [MessageBroker-1] INFO  o.s.web.socket.config.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2021-12-07 00:20:52.047 [SpringContextShutdownHook] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Stopping...
+2021-12-07 00:20:52.047 [SpringContextShutdownHook] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2021-12-07 00:20:52.047 [SpringContextShutdownHook] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Stopped.
+2021-12-07 00:20:52.048 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'brokerChannelExecutor'
+2021-12-07 00:20:52.048 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'messageBrokerTaskScheduler'
+2021-12-07 00:20:52.050 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - DatebookHikariCP - Shutdown initiated...
+2021-12-07 00:20:52.052 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - DatebookHikariCP - Shutdown completed.
+2021-12-07 00:20:52.052 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientOutboundChannelExecutor'
+2021-12-07 00:20:52.052 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientInboundChannelExecutor'
+2021-12-07 00:20:54.925 [main] INFO  com.munjie.blog.BlogApplication - Starting BlogApplication on DESKTOP-AB71LST with PID 11260 (G:\web_project\blog_server\target\classes started by 86158 in G:\web_project\blog_server)
+2021-12-07 00:20:54.928 [main] INFO  com.munjie.blog.BlogApplication - The following profiles are active: dev
+2021-12-07 00:20:55.534 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor - Post-processing PropertySource instances
+2021-12-07 00:20:55.568 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-12-07 00:20:55.569 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-12-07 00:20:55.569 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-12-07 00:20:55.569 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-12-07 00:20:55.569 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2021-12-07 00:20:55.570 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-12-07 00:20:55.570 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource applicationConfig: [classpath:/application-dev.yml] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-12-07 00:20:55.570 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource applicationConfig: [classpath:/application.yml] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-12-07 00:20:55.612 [main] INFO  c.u.j.filter.DefaultLazyPropertyFilter - Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-12-07 00:20:55.740 [main] INFO  c.u.j.resolver.DefaultLazyPropertyResolver - Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-12-07 00:20:55.741 [main] INFO  c.u.j.detector.DefaultLazyPropertyDetector - Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-12-07 00:20:55.902 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http)
+2021-12-07 00:20:55.940 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+2021-12-07 00:20:55.941 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-12-07 00:20:55.941 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+2021-12-07 00:20:56.015 [main] INFO  o.a.c.c.ContainerBase.[Tomcat].[localhost].[/blog] - Initializing Spring embedded WebApplicationContext
+2021-12-07 00:20:56.015 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1054 ms
+2021-12-07 00:20:56.126 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientInboundChannelExecutor'
+2021-12-07 00:20:56.136 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientOutboundChannelExecutor'
+2021-12-07 00:20:56.736 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - Autowired annotation should only be used on methods with parameters: public com.munjie.blog.pojo.ArticleDTO com.munjie.blog.service.impl.ArticleServiceImpl.listArticles()
+2021-12-07 00:20:56.742 [main] INFO  com.munjie.blog.service.impl.ArticleServiceImpl - 
+2021-12-07 00:20:56.753 [main] INFO  com.zaxxer.hikari.HikariDataSource - DatebookHikariCP - Starting...
+2021-12-07 00:20:57.285 [main] INFO  com.zaxxer.hikari.HikariDataSource - DatebookHikariCP - Start completed.
+2021-12-07 00:20:57.617 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-12-07 00:20:57.634 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'messageBrokerTaskScheduler'
+2021-12-07 00:20:57.663 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'brokerChannelExecutor'
+2021-12-07 00:20:57.962 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2021-12-07 00:20:57.971 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-12-07 00:20:57.990 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2021-12-07 00:20:58.079 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listArticlesUsingGET_1
+2021-12-07 00:20:58.096 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: saveUsingPOST_1
+2021-12-07 00:20:58.118 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listTaskUsingGET_1
+2021-12-07 00:20:58.122 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteArticleUsingGET_1
+2021-12-07 00:20:58.129 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteArticleUsingGET_2
+2021-12-07 00:20:58.131 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listTaskUsingGET_2
+2021-12-07 00:20:58.139 [main] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Starting...
+2021-12-07 00:20:58.139 [main] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2021-12-07 00:20:58.139 [main] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Started.
+2021-12-07 00:20:58.146 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+2021-12-07 00:20:58.163 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (http) with context path '/blog'
+2021-12-07 00:20:58.165 [main] INFO  com.munjie.blog.BlogApplication - Started BlogApplication in 3.586 seconds (JVM running for 4.243)
+2021-12-07 00:20:58.166 [main] INFO  com.munjie.blog.BlogApplication - Server has been started successfully...
+2021-12-07 00:21:02.070 [SpringContextShutdownHook] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Stopping...
+2021-12-07 00:21:02.070 [SpringContextShutdownHook] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2021-12-07 00:21:02.070 [SpringContextShutdownHook] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Stopped.
+2021-12-07 00:21:02.072 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'brokerChannelExecutor'
+2021-12-07 00:21:02.072 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'messageBrokerTaskScheduler'
+2021-12-07 00:21:02.073 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - DatebookHikariCP - Shutdown initiated...
+2021-12-07 00:21:02.075 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - DatebookHikariCP - Shutdown completed.
+2021-12-07 00:21:02.075 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientOutboundChannelExecutor'
+2021-12-07 00:21:02.075 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientInboundChannelExecutor'

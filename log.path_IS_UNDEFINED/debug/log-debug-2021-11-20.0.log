@@ -1,0 +1,652 @@
+2021-11-20 10:54:27.151 [main] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - ==>  Preparing: select * from article where status = '1' order by article_create_time desc 
+2021-11-20 10:54:27.164 [main] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - ==> Parameters: 
+2021-11-20 10:54:27.179 [main] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - <==      Total: 0
+2021-11-20 10:55:11.261 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - ==>  Preparing: select * from article where status = '1' order by article_create_time desc 
+2021-11-20 10:55:11.262 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - ==> Parameters: 
+2021-11-20 10:55:11.270 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - <==      Total: 0
+2021-11-20 11:07:15.957 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - ==>  Preparing: select * from article where status = '1' order by article_create_time desc 
+2021-11-20 11:07:15.957 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - ==> Parameters: 
+2021-11-20 11:07:15.969 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - <==      Total: 0
+2021-11-20 18:10:14.097 [main] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - ==>  Preparing: select * from article where status = '1' order by article_create_time desc 
+2021-11-20 18:10:14.108 [main] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - ==> Parameters: 
+2021-11-20 18:10:14.122 [main] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - <==      Total: 0
+2021-11-20 18:10:53.777 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - ==>  Preparing: select * from article where status = '1' order by article_create_time desc 
+2021-11-20 18:10:53.778 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - ==> Parameters: 
+2021-11-20 18:10:53.790 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - <==      Total: 0
+2021-11-20 18:14:16.036 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - ==>  Preparing: select * from article where status = '1' order by article_create_time desc 
+2021-11-20 18:14:16.037 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - ==> Parameters: 
+2021-11-20 18:14:16.045 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - <==      Total: 0
+2021-11-20 19:50:00.922 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - ==>  Preparing: select * from article where status = '1' order by article_create_time desc 
+2021-11-20 19:50:00.923 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - ==> Parameters: 
+2021-11-20 19:50:00.934 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - <==      Total: 0
+2021-11-20 19:50:06.849 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,type,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-20 19:50:06.850 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: undefined(String)
+2021-11-20 19:50:06.862 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 0
+2021-11-20 19:50:06.862 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-20 19:50:06.862 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-20 19:50:06.875 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 1
+2021-11-20 19:50:08.848 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.UserMapper.getUser - ==>  Preparing: select * from user WHERE userName = ? 
+2021-11-20 19:50:08.848 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.UserMapper.getUser - ==> Parameters: admin(String)
+2021-11-20 19:50:08.861 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.UserMapper.getUser - <==      Total: 1
+2021-11-20 19:50:09.088 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,type,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-20 19:50:09.088 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-20 19:50:09.101 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 1
+2021-11-20 19:50:09.102 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-20 19:50:09.102 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-20 19:50:09.114 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 1
+2021-11-20 19:50:09.118 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 19:50:09.118 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 批量算路(String)
+2021-11-20 19:50:09.131 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 19:50:16.001 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==>  Preparing: SELECT count(0) FROM task_info 
+2021-11-20 19:50:16.001 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==> Parameters: 
+2021-11-20 19:50:16.013 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - <==      Total: 1
+2021-11-20 19:50:16.014 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==>  Preparing: select * from task_info order by createTime desc LIMIT ? 
+2021-11-20 19:50:16.014 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==> Parameters: 15(Integer)
+2021-11-20 19:50:16.028 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - <==      Total: 15
+2021-11-20 19:50:27.083 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.UserMapper.getUser - ==>  Preparing: select * from user WHERE userName = ? 
+2021-11-20 19:50:27.083 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.UserMapper.getUser - ==> Parameters: XW(String)
+2021-11-20 19:50:27.091 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.UserMapper.getUser - <==      Total: 1
+2021-11-20 19:50:27.378 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,type,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-20 19:50:27.378 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-20 19:50:27.387 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 1
+2021-11-20 19:50:27.388 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-20 19:50:27.388 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-20 19:50:27.396 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 1
+2021-11-20 19:50:27.396 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 19:50:27.397 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 批量算路(String)
+2021-11-20 19:50:27.406 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 19:51:16.348 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,type,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-20 19:51:16.348 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-20 19:51:16.357 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 1
+2021-11-20 19:51:16.358 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-20 19:51:16.358 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-20 19:51:16.365 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 1
+2021-11-20 19:51:16.366 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 19:51:16.366 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 批量算路(String)
+2021-11-20 19:51:16.374 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 19:51:29.101 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==>  Preparing: SELECT count(0) FROM task_info 
+2021-11-20 19:51:29.101 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==> Parameters: 
+2021-11-20 19:51:29.109 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - <==      Total: 1
+2021-11-20 19:51:29.110 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==>  Preparing: select * from task_info order by createTime desc LIMIT ? 
+2021-11-20 19:51:29.110 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==> Parameters: 15(Integer)
+2021-11-20 19:51:29.120 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - <==      Total: 15
+2021-11-20 19:51:51.997 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,type,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-20 19:51:51.998 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-20 19:51:52.010 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 1
+2021-11-20 19:51:52.011 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-20 19:51:52.011 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-20 19:51:52.022 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 1
+2021-11-20 19:51:52.023 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 19:51:52.023 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 批量算路(String)
+2021-11-20 19:51:52.035 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 19:51:56.673 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==>  Preparing: SELECT count(0) FROM task_info 
+2021-11-20 19:51:56.673 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==> Parameters: 
+2021-11-20 19:51:56.686 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - <==      Total: 1
+2021-11-20 19:51:56.687 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==>  Preparing: select * from task_info order by createTime desc LIMIT ? 
+2021-11-20 19:51:56.687 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==> Parameters: 15(Integer)
+2021-11-20 19:51:56.701 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - <==      Total: 15
+2021-11-20 19:54:53.759 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,type,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-20 19:54:53.760 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-20 19:54:53.770 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 1
+2021-11-20 19:54:53.770 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-20 19:54:53.770 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-20 19:54:53.779 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 1
+2021-11-20 19:54:53.780 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 19:54:53.780 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 批量算路(String)
+2021-11-20 19:54:53.789 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 21:00:30.775 [main] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - ==>  Preparing: select * from article where status = '1' order by article_create_time desc 
+2021-11-20 21:00:30.785 [main] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - ==> Parameters: 
+2021-11-20 21:00:30.800 [main] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - <==      Total: 0
+2021-11-20 21:00:41.531 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - ==>  Preparing: select * from article where status = '1' order by article_create_time desc 
+2021-11-20 21:00:41.531 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - ==> Parameters: 
+2021-11-20 21:00:41.539 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - <==      Total: 0
+2021-11-20 21:00:49.419 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,type,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-20 21:00:49.420 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: undefined(String)
+2021-11-20 21:00:51.611 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.UserMapper.getUser - ==>  Preparing: select * from user WHERE userName = ? 
+2021-11-20 21:00:51.611 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.UserMapper.getUser - ==> Parameters: XW(String)
+2021-11-20 21:00:51.621 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.UserMapper.getUser - <==      Total: 1
+2021-11-20 21:00:51.871 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,type,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-20 21:00:51.872 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-20 21:02:08.769 [main] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - ==>  Preparing: select * from article where status = '1' order by article_create_time desc 
+2021-11-20 21:02:08.780 [main] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - ==> Parameters: 
+2021-11-20 21:02:08.801 [main] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - <==      Total: 0
+2021-11-20 21:02:14.548 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.UserMapper.getUser - ==>  Preparing: select * from user WHERE userName = ? 
+2021-11-20 21:02:14.548 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.UserMapper.getUser - ==> Parameters: XW(String)
+2021-11-20 21:02:14.563 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.UserMapper.getUser - <==      Total: 1
+2021-11-20 21:02:15.320 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-20 21:02:15.320 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-20 21:02:15.336 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 1
+2021-11-20 21:02:15.337 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-20 21:02:15.337 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-20 21:02:15.351 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 3
+2021-11-20 21:02:15.355 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 21:02:15.355 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 批量算路(String)
+2021-11-20 21:02:15.370 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 21:02:18.526 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==>  Preparing: SELECT count(0) FROM task_info 
+2021-11-20 21:02:18.527 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - ==> Parameters: 
+2021-11-20 21:02:18.541 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask_COUNT - <==      Total: 1
+2021-11-20 21:02:18.542 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==>  Preparing: select * from task_info order by createTime desc LIMIT ? 
+2021-11-20 21:02:18.542 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - ==> Parameters: 15(Integer)
+2021-11-20 21:02:18.559 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.TaskInfoMapper.listTask - <==      Total: 15
+2021-11-20 21:25:02.202 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-20 21:25:02.202 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-20 21:25:02.210 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 1
+2021-11-20 21:25:02.211 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-20 21:25:02.211 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-20 21:25:02.218 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 3
+2021-11-20 21:25:02.218 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 21:25:02.219 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 批量算路(String)
+2021-11-20 21:25:02.231 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 21:25:49.801 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-20 21:25:49.801 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-20 21:25:49.815 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 1
+2021-11-20 21:25:49.816 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-20 21:25:49.816 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-20 21:25:49.827 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 3
+2021-11-20 21:25:49.828 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 21:25:49.829 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 批量算路(String)
+2021-11-20 21:25:49.841 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 21:25:56.617 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-20 21:25:56.617 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-20 21:25:56.630 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 1
+2021-11-20 21:25:56.631 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-20 21:25:56.631 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-20 21:25:56.643 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 3
+2021-11-20 21:25:56.644 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 21:25:56.644 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 批量算路(String)
+2021-11-20 21:25:56.657 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 21:26:27.475 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-20 21:26:27.475 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-20 21:26:27.488 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 1
+2021-11-20 21:26:27.489 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-20 21:26:27.490 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-20 21:26:27.502 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 3
+2021-11-20 21:26:27.503 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 21:26:27.503 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 批量算路(String)
+2021-11-20 21:26:27.515 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 21:26:51.013 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-20 21:26:51.014 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-20 21:26:51.027 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 1
+2021-11-20 21:26:51.028 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-20 21:26:51.028 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-20 21:26:51.039 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 3
+2021-11-20 21:26:51.040 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 21:26:51.040 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 批量算路(String)
+2021-11-20 21:26:51.052 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 21:26:58.959 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-20 21:26:58.959 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-20 21:26:58.968 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 1
+2021-11-20 21:26:58.968 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-20 21:26:58.968 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-20 21:26:58.976 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 3
+2021-11-20 21:26:58.977 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 21:26:58.977 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 批量算路(String)
+2021-11-20 21:26:58.985 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 21:27:30.961 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-20 21:27:30.961 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-20 21:27:30.973 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 1
+2021-11-20 21:27:30.974 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-20 21:27:30.974 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-20 21:27:30.986 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 3
+2021-11-20 21:27:30.986 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 21:27:30.986 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 批量算路(String)
+2021-11-20 21:27:30.998 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 21:27:45.981 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-20 21:27:45.981 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-20 21:27:45.993 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 1
+2021-11-20 21:27:45.994 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-20 21:27:45.994 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-20 21:27:46.006 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 3
+2021-11-20 21:27:46.006 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 21:27:46.006 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 批量算路(String)
+2021-11-20 21:27:46.018 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 21:27:51.048 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-20 21:27:51.048 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-20 21:27:51.061 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 1
+2021-11-20 21:27:51.061 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-20 21:27:51.061 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-20 21:27:51.073 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 3
+2021-11-20 21:27:51.073 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 21:27:51.073 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 批量算路(String)
+2021-11-20 21:27:51.085 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 21:30:57.489 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-20 21:30:57.489 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-20 21:30:57.498 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 1
+2021-11-20 21:30:57.498 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-20 21:30:57.498 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-20 21:30:57.506 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 3
+2021-11-20 21:30:57.506 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 21:30:57.506 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 批量算路(String)
+2021-11-20 21:30:57.514 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 21:41:18.430 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-20 21:41:18.430 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-20 21:41:18.444 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 1
+2021-11-20 21:41:18.444 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-20 21:41:18.444 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-20 21:41:18.457 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 3
+2021-11-20 21:41:18.457 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 21:41:18.457 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 批量算路(String)
+2021-11-20 21:41:18.470 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 21:42:44.521 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - ==>  Preparing: select * from article where status = '1' order by article_create_time desc 
+2021-11-20 21:42:44.521 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - ==> Parameters: 
+2021-11-20 21:42:44.530 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - <==      Total: 0
+2021-11-20 21:42:49.953 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-20 21:42:49.953 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: undefined(String)
+2021-11-20 21:42:49.961 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 0
+2021-11-20 21:42:49.962 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-20 21:42:49.962 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-20 21:42:49.969 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 3
+2021-11-20 21:42:53.812 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.UserMapper.getUser - ==>  Preparing: select * from user WHERE userName = ? 
+2021-11-20 21:42:53.813 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.UserMapper.getUser - ==> Parameters: admin(String)
+2021-11-20 21:42:53.821 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.UserMapper.getUser - <==      Total: 1
+2021-11-20 21:42:54.009 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-20 21:42:54.010 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-20 21:42:54.020 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 1
+2021-11-20 21:42:54.020 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-20 21:42:54.020 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-20 21:42:54.028 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 3
+2021-11-20 21:42:54.029 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 21:42:54.029 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 批量算路(String)
+2021-11-20 21:42:54.036 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 21:44:19.828 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-20 21:44:19.828 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-20 21:44:19.837 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 2
+2021-11-20 21:44:19.838 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-20 21:44:19.838 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-20 21:44:19.845 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 3
+2021-11-20 21:44:19.845 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 21:44:19.845 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 批量算路(String)
+2021-11-20 21:44:19.853 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 21:44:19.854 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 21:44:19.854 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 系统配置(String)
+2021-11-20 21:44:19.861 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 1
+2021-11-20 21:44:42.030 [main] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - ==>  Preparing: select * from article where status = '1' order by article_create_time desc 
+2021-11-20 21:44:42.040 [main] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - ==> Parameters: 
+2021-11-20 21:44:42.056 [main] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - <==      Total: 0
+2021-11-20 21:44:50.897 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-20 21:44:50.897 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-20 21:44:50.910 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 2
+2021-11-20 21:45:01.474 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-20 21:45:01.474 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-20 21:45:01.484 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 3
+2021-11-20 21:45:01.488 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 21:45:01.488 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 批量算路(String)
+2021-11-20 21:45:01.498 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 21:45:01.498 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 21:45:01.499 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 系统配置(String)
+2021-11-20 21:45:04.140 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 1
+2021-11-20 21:45:04.194 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - ==>  Preparing: SELECT count(0) FROM module 
+2021-11-20 21:45:04.195 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - ==> Parameters: 
+2021-11-20 21:45:04.212 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - <==      Total: 1
+2021-11-20 21:45:04.216 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - ==>  Preparing: select * from module order by createTime desc LIMIT ? 
+2021-11-20 21:45:04.216 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - ==> Parameters: 15(Integer)
+2021-11-20 21:45:04.239 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - <==      Total: 7
+2021-11-20 21:47:42.636 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-20 21:47:42.636 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-20 21:47:42.649 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 2
+2021-11-20 21:47:42.649 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-20 21:47:42.649 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-20 21:47:42.661 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 3
+2021-11-20 21:47:42.661 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 21:47:42.662 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 批量算路(String)
+2021-11-20 21:47:47.637 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 21:47:47.637 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 21:47:47.637 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 系统配置(String)
+2021-11-20 21:47:47.649 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 1
+2021-11-20 21:47:49.720 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - ==>  Preparing: SELECT count(0) FROM module 
+2021-11-20 21:47:49.720 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - ==> Parameters: 
+2021-11-20 21:47:49.728 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - <==      Total: 1
+2021-11-20 21:47:49.729 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - ==>  Preparing: select * from module order by createTime desc LIMIT ? 
+2021-11-20 21:47:49.729 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - ==> Parameters: 15(Integer)
+2021-11-20 21:47:49.738 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - <==      Total: 7
+2021-11-20 21:48:31.824 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - ==>  Preparing: SELECT count(0) FROM module 
+2021-11-20 21:48:31.825 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - ==> Parameters: 
+2021-11-20 21:48:31.837 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - <==      Total: 1
+2021-11-20 21:48:31.838 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - ==>  Preparing: select * from module order by createTime desc LIMIT ? 
+2021-11-20 21:48:31.838 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - ==> Parameters: 15(Integer)
+2021-11-20 21:48:31.852 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - <==      Total: 7
+2021-11-20 21:49:13.127 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - ==>  Preparing: SELECT count(0) FROM module 
+2021-11-20 21:49:13.128 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - ==> Parameters: 
+2021-11-20 21:49:13.137 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - <==      Total: 1
+2021-11-20 21:49:13.138 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - ==>  Preparing: select * from module order by createTime desc LIMIT ? 
+2021-11-20 21:49:13.138 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - ==> Parameters: 15(Integer)
+2021-11-20 21:49:13.147 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - <==      Total: 7
+2021-11-20 21:56:21.662 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-20 21:56:21.662 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-20 21:56:21.675 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 2
+2021-11-20 21:56:21.675 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-20 21:56:21.675 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-20 21:56:21.687 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 3
+2021-11-20 21:56:21.688 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 21:56:21.688 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 批量算路(String)
+2021-11-20 21:56:21.700 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 21:56:21.701 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 21:56:21.701 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 系统配置(String)
+2021-11-20 21:56:21.714 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 21:56:21.730 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - ==>  Preparing: SELECT count(0) FROM module 
+2021-11-20 21:56:21.730 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - ==> Parameters: 
+2021-11-20 21:56:21.742 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - <==      Total: 1
+2021-11-20 21:56:21.742 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - ==>  Preparing: select * from module order by createTime desc LIMIT ? 
+2021-11-20 21:56:21.743 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - ==> Parameters: 15(Integer)
+2021-11-20 21:56:21.754 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - <==      Total: 8
+2021-11-20 21:56:22.982 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.TagMapper.listTags - ==>  Preparing: SELECT COUNT( * ) AS total, t.tag_name AS tagName FROM article a LEFT JOIN tags t ON a.article_id = t.article_id GROUP BY t.tag_name 
+2021-11-20 21:56:22.982 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.TagMapper.listTags - ==> Parameters: 
+2021-11-20 21:56:22.995 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.TagMapper.listTags - <==      Total: 0
+2021-11-20 21:56:52.920 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-20 21:56:52.920 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-20 21:56:52.929 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 2
+2021-11-20 21:56:52.929 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-20 21:56:52.930 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-20 21:56:52.938 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 3
+2021-11-20 21:56:52.938 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 21:56:52.939 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 批量算路(String)
+2021-11-20 21:56:52.947 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 21:56:52.947 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 21:56:52.947 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 系统配置(String)
+2021-11-20 21:56:52.956 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 21:56:53.049 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.TagMapper.listTags - ==>  Preparing: SELECT COUNT( * ) AS total, t.tag_name AS tagName FROM article a LEFT JOIN tags t ON a.article_id = t.article_id GROUP BY t.tag_name 
+2021-11-20 21:56:53.049 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.TagMapper.listTags - ==> Parameters: 
+2021-11-20 21:56:53.058 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.TagMapper.listTags - <==      Total: 0
+2021-11-20 21:59:09.686 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.TagMapper.listTags - ==>  Preparing: SELECT COUNT( * ) AS total, t.tag_name AS tagName FROM article a LEFT JOIN tags t ON a.article_id = t.article_id GROUP BY t.tag_name 
+2021-11-20 21:59:09.686 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.TagMapper.listTags - ==> Parameters: 
+2021-11-20 21:59:09.701 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.TagMapper.listTags - <==      Total: 0
+2021-11-20 21:59:24.308 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - ==>  Preparing: SELECT count(0) FROM module 
+2021-11-20 21:59:24.309 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - ==> Parameters: 
+2021-11-20 21:59:24.323 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - <==      Total: 1
+2021-11-20 21:59:24.324 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - ==>  Preparing: select * from module order by createTime desc LIMIT ? 
+2021-11-20 21:59:24.324 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - ==> Parameters: 15(Integer)
+2021-11-20 21:59:24.339 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - <==      Total: 8
+2021-11-20 21:59:26.763 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.TagMapper.listTags - ==>  Preparing: SELECT COUNT( * ) AS total, t.tag_name AS tagName FROM article a LEFT JOIN tags t ON a.article_id = t.article_id GROUP BY t.tag_name 
+2021-11-20 21:59:26.764 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.TagMapper.listTags - ==> Parameters: 
+2021-11-20 21:59:26.778 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.TagMapper.listTags - <==      Total: 0
+2021-11-20 22:03:32.500 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - ==>  Preparing: SELECT count(0) FROM module 
+2021-11-20 22:03:32.500 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - ==> Parameters: 
+2021-11-20 22:03:32.510 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - <==      Total: 1
+2021-11-20 22:03:32.510 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - ==>  Preparing: select * from module order by createTime desc LIMIT ? 
+2021-11-20 22:03:32.510 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - ==> Parameters: 15(Integer)
+2021-11-20 22:03:32.520 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - <==      Total: 8
+2021-11-20 22:04:47.706 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - ==>  Preparing: select * from article where status = '1' order by article_create_time desc 
+2021-11-20 22:04:47.706 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - ==> Parameters: 
+2021-11-20 22:04:47.714 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - <==      Total: 0
+2021-11-20 22:04:51.682 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-20 22:04:51.683 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: undefined(String)
+2021-11-20 22:04:51.691 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 0
+2021-11-20 22:04:51.691 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-20 22:04:51.691 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-20 22:04:51.699 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 3
+2021-11-20 22:04:53.228 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.UserMapper.getUser - ==>  Preparing: select * from user WHERE userName = ? 
+2021-11-20 22:04:53.228 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.UserMapper.getUser - ==> Parameters: admin(String)
+2021-11-20 22:04:53.236 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.UserMapper.getUser - <==      Total: 1
+2021-11-20 22:04:53.501 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-20 22:04:53.502 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-20 22:04:53.511 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 2
+2021-11-20 22:04:53.530 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-20 22:04:53.531 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-20 22:04:53.540 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 3
+2021-11-20 22:04:53.540 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 22:04:53.541 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 批量算路(String)
+2021-11-20 22:04:53.549 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 22:04:53.549 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 22:04:53.549 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 系统配置(String)
+2021-11-20 22:04:53.558 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 22:04:57.181 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - ==>  Preparing: SELECT count(0) FROM module 
+2021-11-20 22:04:57.181 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - ==> Parameters: 
+2021-11-20 22:04:57.188 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - <==      Total: 1
+2021-11-20 22:04:57.189 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - ==>  Preparing: select * from module order by createTime desc LIMIT ? 
+2021-11-20 22:04:57.189 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - ==> Parameters: 15(Integer)
+2021-11-20 22:04:57.197 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - <==      Total: 8
+2021-11-20 22:07:40.232 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-20 22:07:40.232 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-20 22:07:40.249 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 2
+2021-11-20 22:07:40.250 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-20 22:07:40.250 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-20 22:07:40.261 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 3
+2021-11-20 22:07:40.262 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 22:07:40.262 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 批量算路(String)
+2021-11-20 22:07:40.273 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 22:07:40.274 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 22:07:40.274 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 系统配置(String)
+2021-11-20 22:07:40.286 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 22:07:40.308 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - ==>  Preparing: SELECT count(0) FROM module 
+2021-11-20 22:07:40.309 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - ==> Parameters: 
+2021-11-20 22:07:40.320 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - <==      Total: 1
+2021-11-20 22:07:40.321 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - ==>  Preparing: select * from module order by createTime desc LIMIT ? 
+2021-11-20 22:07:40.321 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - ==> Parameters: 15(Integer)
+2021-11-20 22:07:40.334 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - <==      Total: 8
+2021-11-20 22:09:10.589 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-20 22:09:10.590 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-20 22:09:10.602 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 2
+2021-11-20 22:09:10.603 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-20 22:09:10.603 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-20 22:09:10.615 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 3
+2021-11-20 22:09:10.616 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 22:09:10.616 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 批量算路(String)
+2021-11-20 22:09:10.628 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 22:09:10.629 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 22:09:10.629 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 系统配置(String)
+2021-11-20 22:09:10.641 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 22:09:10.668 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - ==>  Preparing: SELECT count(0) FROM module 
+2021-11-20 22:09:10.668 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - ==> Parameters: 
+2021-11-20 22:09:10.680 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - <==      Total: 1
+2021-11-20 22:09:10.680 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - ==>  Preparing: select * from module order by createTime desc LIMIT ? 
+2021-11-20 22:09:10.680 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - ==> Parameters: 15(Integer)
+2021-11-20 22:09:10.693 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - <==      Total: 8
+2021-11-20 22:09:25.865 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-20 22:09:25.865 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-20 22:09:25.878 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 2
+2021-11-20 22:09:25.878 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-20 22:09:25.878 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-20 22:09:25.890 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 3
+2021-11-20 22:09:25.890 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 22:09:25.890 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 批量算路(String)
+2021-11-20 22:09:25.903 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 22:09:25.904 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 22:09:25.904 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 系统配置(String)
+2021-11-20 22:09:25.916 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 22:09:25.956 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - ==>  Preparing: SELECT count(0) FROM module 
+2021-11-20 22:09:25.956 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - ==> Parameters: 
+2021-11-20 22:09:25.969 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - <==      Total: 1
+2021-11-20 22:09:25.969 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - ==>  Preparing: select * from module order by createTime desc LIMIT ? 
+2021-11-20 22:09:25.969 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - ==> Parameters: 15(Integer)
+2021-11-20 22:09:25.982 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - <==      Total: 8
+2021-11-20 22:09:37.508 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-20 22:09:37.508 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-20 22:09:37.523 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 2
+2021-11-20 22:09:37.523 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-20 22:09:37.523 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-20 22:09:37.537 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 3
+2021-11-20 22:09:37.537 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 22:09:37.537 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 批量算路(String)
+2021-11-20 22:09:37.551 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 22:09:37.551 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 22:09:37.551 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 系统配置(String)
+2021-11-20 22:09:37.565 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 22:09:37.583 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - ==>  Preparing: SELECT count(0) FROM module 
+2021-11-20 22:09:37.583 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - ==> Parameters: 
+2021-11-20 22:09:37.597 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - <==      Total: 1
+2021-11-20 22:09:37.598 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - ==>  Preparing: select * from module order by createTime desc LIMIT ? 
+2021-11-20 22:09:37.598 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - ==> Parameters: 15(Integer)
+2021-11-20 22:09:37.611 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - <==      Total: 8
+2021-11-20 22:09:46.108 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-20 22:09:46.108 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-20 22:09:46.123 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 2
+2021-11-20 22:09:46.123 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-20 22:09:46.123 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-20 22:09:46.136 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 3
+2021-11-20 22:09:46.137 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 22:09:46.137 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 批量算路(String)
+2021-11-20 22:09:46.150 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 22:09:46.150 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 22:09:46.150 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 系统配置(String)
+2021-11-20 22:09:46.165 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 22:09:46.186 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - ==>  Preparing: SELECT count(0) FROM module 
+2021-11-20 22:09:46.186 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - ==> Parameters: 
+2021-11-20 22:09:46.200 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - <==      Total: 1
+2021-11-20 22:09:46.200 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - ==>  Preparing: select * from module order by createTime desc LIMIT ? 
+2021-11-20 22:09:46.200 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - ==> Parameters: 15(Integer)
+2021-11-20 22:09:46.214 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - <==      Total: 8
+2021-11-20 22:10:02.867 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-20 22:10:02.867 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-20 22:10:02.880 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 2
+2021-11-20 22:10:02.880 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-20 22:10:02.880 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-20 22:10:02.891 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 3
+2021-11-20 22:10:02.892 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 22:10:02.892 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 批量算路(String)
+2021-11-20 22:10:02.903 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 22:10:02.904 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 22:10:02.904 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 系统配置(String)
+2021-11-20 22:10:02.915 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 22:10:02.932 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - ==>  Preparing: SELECT count(0) FROM module 
+2021-11-20 22:10:02.932 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - ==> Parameters: 
+2021-11-20 22:10:02.944 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - <==      Total: 1
+2021-11-20 22:10:02.945 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - ==>  Preparing: select * from module order by createTime desc LIMIT ? 
+2021-11-20 22:10:02.945 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - ==> Parameters: 15(Integer)
+2021-11-20 22:10:02.956 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - <==      Total: 8
+2021-11-20 22:10:15.908 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-20 22:10:15.909 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-20 22:10:15.921 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 2
+2021-11-20 22:10:15.921 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-20 22:10:15.922 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-20 22:10:15.932 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 3
+2021-11-20 22:10:15.933 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 22:10:15.933 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 批量算路(String)
+2021-11-20 22:10:15.945 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 22:10:15.945 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 22:10:15.945 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 系统配置(String)
+2021-11-20 22:10:15.956 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 22:10:15.988 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - ==>  Preparing: SELECT count(0) FROM module 
+2021-11-20 22:10:15.988 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - ==> Parameters: 
+2021-11-20 22:10:15.999 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - <==      Total: 1
+2021-11-20 22:10:16.000 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - ==>  Preparing: select * from module order by createTime desc LIMIT ? 
+2021-11-20 22:10:16.000 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - ==> Parameters: 15(Integer)
+2021-11-20 22:10:16.012 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - <==      Total: 8
+2021-11-20 22:10:31.560 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-20 22:10:31.560 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-20 22:10:31.570 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 2
+2021-11-20 22:10:31.570 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-20 22:10:31.571 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-20 22:10:31.579 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 3
+2021-11-20 22:10:31.580 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 22:10:31.580 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 批量算路(String)
+2021-11-20 22:10:31.588 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 22:10:31.588 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 22:10:31.588 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 系统配置(String)
+2021-11-20 22:10:31.597 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 22:10:31.645 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - ==>  Preparing: SELECT count(0) FROM module 
+2021-11-20 22:10:31.645 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - ==> Parameters: 
+2021-11-20 22:10:31.654 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - <==      Total: 1
+2021-11-20 22:10:31.655 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - ==>  Preparing: select * from module order by createTime desc LIMIT ? 
+2021-11-20 22:10:31.655 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - ==> Parameters: 15(Integer)
+2021-11-20 22:10:31.664 [http-nio-8088-exec-2] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - <==      Total: 8
+2021-11-20 22:10:53.852 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-20 22:10:53.852 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-20 22:10:53.862 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 2
+2021-11-20 22:10:53.862 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-20 22:10:53.863 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-20 22:10:53.871 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 3
+2021-11-20 22:10:53.872 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 22:10:53.872 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 批量算路(String)
+2021-11-20 22:10:53.880 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 22:10:53.881 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 22:10:53.881 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 系统配置(String)
+2021-11-20 22:10:53.889 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 22:10:53.931 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - ==>  Preparing: SELECT count(0) FROM module 
+2021-11-20 22:10:53.931 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - ==> Parameters: 
+2021-11-20 22:10:53.939 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - <==      Total: 1
+2021-11-20 22:10:53.940 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - ==>  Preparing: select * from module order by createTime desc LIMIT ? 
+2021-11-20 22:10:53.940 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - ==> Parameters: 15(Integer)
+2021-11-20 22:10:53.949 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - <==      Total: 8
+2021-11-20 22:12:53.540 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-20 22:12:53.541 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-20 22:12:53.555 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 2
+2021-11-20 22:12:53.555 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-20 22:12:53.555 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-20 22:12:53.567 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 3
+2021-11-20 22:12:53.567 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 22:12:53.567 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 批量算路(String)
+2021-11-20 22:12:53.579 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 22:12:53.580 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 22:12:53.580 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 系统配置(String)
+2021-11-20 22:12:53.592 [http-nio-8088-exec-6] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 22:12:53.618 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - ==>  Preparing: SELECT count(0) FROM module 
+2021-11-20 22:12:53.618 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - ==> Parameters: 
+2021-11-20 22:12:53.630 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - <==      Total: 1
+2021-11-20 22:12:53.631 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - ==>  Preparing: select * from module order by createTime desc LIMIT ? 
+2021-11-20 22:12:53.631 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - ==> Parameters: 15(Integer)
+2021-11-20 22:12:53.643 [http-nio-8088-exec-7] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - <==      Total: 8
+2021-11-20 22:13:35.531 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-20 22:13:35.531 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-20 22:13:35.540 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 2
+2021-11-20 22:13:35.540 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-20 22:13:35.540 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-20 22:13:35.549 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 3
+2021-11-20 22:13:35.549 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 22:13:35.549 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 批量算路(String)
+2021-11-20 22:13:35.557 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 22:13:35.557 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 22:13:35.557 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 系统配置(String)
+2021-11-20 22:13:35.565 [http-nio-8088-exec-8] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 22:13:35.617 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - ==>  Preparing: SELECT count(0) FROM module 
+2021-11-20 22:13:35.617 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - ==> Parameters: 
+2021-11-20 22:13:35.625 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - <==      Total: 1
+2021-11-20 22:13:35.625 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - ==>  Preparing: select * from module order by createTime desc LIMIT ? 
+2021-11-20 22:13:35.625 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - ==> Parameters: 15(Integer)
+2021-11-20 22:13:35.633 [http-nio-8088-exec-9] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - <==      Total: 8
+2021-11-20 22:13:53.275 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-20 22:13:53.275 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-20 22:13:53.284 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 2
+2021-11-20 22:13:53.284 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-20 22:13:53.284 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-20 22:13:53.292 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 3
+2021-11-20 22:13:53.292 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 22:13:53.292 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 批量算路(String)
+2021-11-20 22:13:53.300 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 22:13:53.300 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 22:13:53.300 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 系统配置(String)
+2021-11-20 22:13:53.308 [http-nio-8088-exec-10] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 22:13:53.362 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - ==>  Preparing: SELECT count(0) FROM module 
+2021-11-20 22:13:53.362 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - ==> Parameters: 
+2021-11-20 22:13:53.370 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.ModuleMapper.listModule_COUNT - <==      Total: 1
+2021-11-20 22:13:53.370 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - ==>  Preparing: select * from module order by createTime desc LIMIT ? 
+2021-11-20 22:13:53.371 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - ==> Parameters: 15(Integer)
+2021-11-20 22:13:53.378 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.ModuleMapper.listModule - <==      Total: 8
+2021-11-20 22:33:33.012 [main] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - ==>  Preparing: select * from article where status = '1' order by article_create_time desc 
+2021-11-20 22:33:33.022 [main] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - ==> Parameters: 
+2021-11-20 22:33:33.038 [main] DEBUG com.munjie.blog.dao.ArticleMapper.listArticle - <==      Total: 0
+2021-11-20 22:33:41.911 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-20 22:33:41.912 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-20 22:33:41.923 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 2
+2021-11-20 22:33:41.924 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-20 22:33:41.924 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-20 22:33:41.932 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 3
+2021-11-20 22:33:41.935 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 22:33:41.935 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 批量算路(String)
+2021-11-20 22:33:41.944 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 22:33:41.944 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 22:33:41.944 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 系统配置(String)
+2021-11-20 22:33:41.952 [http-nio-8088-exec-1] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 22:39:43.322 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-20 22:39:43.322 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 1(String)
+2021-11-20 22:39:43.337 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 2
+2021-11-20 22:39:43.337 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-20 22:39:43.337 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-20 22:39:43.349 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 3
+2021-11-20 22:39:43.349 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 22:39:43.350 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 批量算路(String)
+2021-11-20 22:39:43.361 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 22:39:43.362 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 22:39:43.362 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 系统配置(String)
+2021-11-20 22:39:43.374 [http-nio-8088-exec-3] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
+2021-11-20 22:39:57.362 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.UserMapper.getUser - ==>  Preparing: select * from user WHERE userName = ? 
+2021-11-20 22:39:57.363 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.UserMapper.getUser - ==> Parameters: XW(String)
+2021-11-20 22:39:57.375 [http-nio-8088-exec-4] DEBUG com.munjie.blog.dao.UserMapper.getUser - <==      Total: 1
+2021-11-20 22:39:57.769 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==>  Preparing: SELECT id,url,name,imgUrl,sort,moduleId FROM module m WHERE moduleId IN ( SELECT moduleId FROM privilege WHERE roleid IN ( SELECT roleId from user WHERE userNo = ? ) ) and (m.parent is null or m.parent = '') order by sort asc; 
+2021-11-20 22:39:57.769 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - ==> Parameters: 2(String)
+2021-11-20 22:39:57.783 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleById - <==      Total: 1
+2021-11-20 22:39:57.783 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==>  Preparing: select distinct m.parent from module m where m.parent is not null 
+2021-11-20 22:39:57.783 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listParent - ==> Parameters: 
+2021-11-20 22:39:57.795 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listParent - <==      Total: 3
+2021-11-20 22:39:57.796 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==>  Preparing: SELECT * FROM module WHERE parent =? order by sort asc; 
+2021-11-20 22:39:57.796 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - ==> Parameters: 批量算路(String)
+2021-11-20 22:39:57.809 [http-nio-8088-exec-5] DEBUG com.munjie.blog.dao.RoleMapper.listModuleByParent - <==      Total: 2
